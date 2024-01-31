@@ -1,0 +1,27 @@
+{
+   "name": "registro-saude",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "type": "commonjs",
+   "devDependencies": {
+      "@types/bcrypt": "^5.0.2",
+      "@types/node": "^16.11.10",
+      "@types/qrcode": "^1.5.5",
+      "nodemon": "^3.0.3",
+      "ts-node": "10.9.1",
+      "typescript": "4.5.2"
+   },
+   "dependencies": {
+      "@types/express": "^4.17.21",
+      "bcrypt": "^5.1.1",
+      "express": "^4.18.2",
+      "pg": "^8.4.0",
+      "qrcode": "^1.5.3",
+      "reflect-metadata": "^0.1.13",
+      "typeorm": "0.3.20"
+   },
+   "scripts": {
+      "start": "nodemon src/index.ts",
+      "typeorm": "typeorm-ts-node-commonjs"
+   }
+}
