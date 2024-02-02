@@ -1,6 +1,6 @@
 import { AppDataSource } from "../data-source";
 import { User } from "../model/User";
-import { UserDTO } from "../dto/UserDTO";
+import { UserDTO } from "../DTO/UserDTO";
 import bcrypt from "bcrypt"
 
 export class UserController {
