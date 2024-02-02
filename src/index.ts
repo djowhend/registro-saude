@@ -2,6 +2,7 @@ import { AppDataSource } from "./data-source"
 import express, {Request, Response} from 'express';
 import { User } from "./model/User"
 import { UserController } from "./controller/UserController";
+import { SessionController } from "./controller/SessionController";
 
 const SERVER_PORT = 3000;
 const server = express();
@@ -21,31 +22,35 @@ AppDataSource.initialize().then(async () => {
         const user = await userController.createUser(
             request.body.nome,
             request.body.email,
+            request.body.senha,
             request.body.cpf,
-            request.body.senha
         );
         return response.status(201).json(user);
         
     })
+
+    server.get("/users", async (request: Request, response: Response) => {
+        const userController = new UserController();
+        return response.json(await userController.getUsers());
+      });
+
+      server.post("/login", async (request: Request, response: Response) => {
+        const sessionController = new SessionController();
+        try {
+          const token = await sessionController.login(
+            request.body.email,
+            request.body.senha
+          );
+          return response.status(200).json({
+            token,
+          });
+        } catch (e) {
+          return response.status(400).json({
+            error: e.message,
+          });
+        }
+      });
     
-
-
-
 }).catch(error => console.log(error))
 
 
-    // console.log("Inserindo usuário ao banco de dados")
-    // const user = new User()
-    // user.nome = "Timber"
-    // user.email = "Saw@teste.com"
-    // user.cpf = 11122233344
-    // user.senha = "teste123"
-    // user.date =
-    // await AppDataSource.manager.save(user)
-    // console.log("Saved a new user with id: " + user.id)
-
-    // console.log("Loading users from the database...")
-    // const users = await AppDataSource.manager.find(User)
-    // console.log("Loaded users: ", users)
-
-    // console.log("Here you can setup and run express / fastify / any other framework.")
