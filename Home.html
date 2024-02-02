@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro Saúde</title>
+
+    <!-- Link do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Link do Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Link do CSS -->
+    <link rel="stylesheet" href="Home.css">
+
+    <!-- Link da Fonte Montserrat -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300&family=Roboto:wght@100;400&display=swap"
+        el="stylesheet">
+
+    <!-- link do FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg Navbar">
+        <div class="container-fluid">
+
+            <button class="btn text-white" data-bs-toggle="modal" data-bs-target="#Modal">
+                <i class="fa fa-ellipsis-v"></i>
+            </button>
+
+            <a class="navbar-brand NavbarTitulo" href="Login.html">
+                <img src="Logo.png" alt="Logo" width="30" height="25" class="d-inline-block align-text-top">
+                Registro Saúde
+            </a>
+        </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content ModalConteudo">
+                <div class="Usuario">
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <img src="PerfilFoto.jpg" class="rounded-circle border border-5" alt="FotoUsuário.png">
+                            <br>
+                            <div class="">
+                                <span class="mt-2">Nome</span>
+                                <span class="mt-2">Gênero</span>
+                                <span class="mt-2">Idade</span>
+                            </div>
+                            <br>
+                            <p>Adicione aqui a biografia ou recado do usuário.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-left Informacoes">
+                    <p><strong>CPF:</strong> 123.456.789-09</p>
+                    <hr>
+                    <p><strong>Email:</strong> emailteste@gmail.com</p>
+                    <hr>
+                    <p><strong>Telefone:</strong> +55 00 1234-5678</p>
+                    <hr>
+                    <p><strong>Tipo Sanguíneo:</strong> O+</p>
+                    <hr>
+                </div>
+                <div class="Icones">
+                    <a href="Login.html" class="btn btn-outline BotaoIcone">
+                        <i class="fas fa-power-off"></i>
+                    </a>
+                    <a href="url_das_configuracoes" class="btn btn-outline BotaoIcone">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cartões Vacinas, Medicamentos, Patologias-->
+    <div class="container mt-5 Cartoes">
+        <div class="card border-0 Cartao">
+            <img src="Vacina.png" class="card-img-top border border-bottom-0 border-5" alt="Vacina.png">
+            <div class="card-body border border-top-0 border-5 CartaoCorpo">
+                <h5 class="card-title CartaoTitulo">Vacinas</h5>
+                <a href="Vacina.html" class="btn CartaoBotao">Visualizar</a>
+            </div>
+        </div>
+
+        <div class="card border-0 Cartao">
+            <img src="Medicamento.png" class="card-img-top border border-bottom-0 border-5" alt="Medicamento.png">
+            <div class="card-body border border-top-0 border-5 CartaoCorpo">
+                <h5 class="card-title CartaoTitulo">Medicamentos</h5>
+                <a href="Medicamento.html" class="btn CartaoBotao">Visualizar</a>
+            </div>
+        </div>
+
+        <div class="card border-0 Cartao">
+            <img src="Patologia.png" class="card-img-top border border-bottom-0 border-5" alt="Patologia.png">
+            <div class="card-body border border-top-0 border-5 CartaoCorpo">
+                <h5 class="card-title CartaoTitulo">Patologias</h5>
+                <a href="Patologia.html" class="btn CartaoBotao">Visualizar</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
