@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #143934;
+}
+
+.Navbar {
+    background-color: #086e6162;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.NavbarTitulo {
+    color: #35dc7f;
+    position: relative;
+    right: 88%;
+    transition: color 0.3s ease;
+}
+
+.NavbarTitulo:hover {
+    color: #2ca569;
+}
+
+.ModalConteudo {
+    border: #257D58 10px solid;
+    border-radius: 10%;
+    padding: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.800000011920929);
+}
+
+.Usuario {
+    background-color: #143934;
+    color: #ffffff;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+}
+
+img[alt="FotoUsuário.png"] {
+    width: 140px;
+    height: 130px;
+}
+
+.UsuarioInfo {
+    font-size: 20px;
+    padding: 3px;
+}
+
+.Informacoes {
+    padding: 20px;
+}
+
+.Informacoes p {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+.Informacoes hr {
+    border: 2px solid #9baaaa;
+    opacity: 1;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.Icones {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 5px 25px;
+}
+
+.Icones a {
+    background-color: #257D58;
+}
+
+.Icones i {
+    color: #35DC7F;
+}
+
+.BotaoIcone:hover {
+    background-color: rgba(37, 125, 88, 0.8);
+}
+
+img[alt="Vacina.png"],
+img[alt="Medicamento.png"],
+img[alt="Patologia.png"] {
+    height: 250px;
+}
+
+.CartaoCorpo {
+    height: 6cm;
+    background-color: #35dc7f;
+    position: relative;
+    text-align: center;
+}
+
+.Cartoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 39vh;
+}
+
+.Cartao {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.800000011920929);
+    width: 26%;
+}
+
+.CartaoTitulo {
+    color: #143934;
+    font-size: xx-large;
+}
+
+.CartaoBotao {
+    transition: background-color 0.5s;
+    background-color: #052E11;
+    width: 55%;
+    height: 30%;
+    margin-top: 15%;
+    color: #ffffff;
+    font-size: x-large;
+}
+
+.CartaoBotao:hover {
+    background-color: #2ca569;
+}
