@@ -1,17 +1,19 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #00332b;
+* {
     margin: 0;
     padding: 0;
+}
+body {
+    height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    background-color: #00332b;
 }
 
 form {
-    background-color: #15ce68ad;
     padding: 20px;
+    background-color: #15ce68ad;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -30,7 +32,7 @@ input {
     border-radius: 5px;
 }
 
-button {
+.btn {
     background-color: #4caf50;
     color: #fff;
     padding: 10px 20px;
