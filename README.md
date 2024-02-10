@@ -6,7 +6,7 @@ O principal objetivo deste projeto é fornecer uma solução prática e eficient
 
 Além disso, o Registro Saúde oferece recursos adicionais, tais como:
 
-- Lembretes: Mantém os usuários informados sobre datas de vacinação, renovação de receitas e outras informações relevantes .
+- Lembretes: Mantém os usuários informados sobre datas de vacinação, renovação de receitas e outras informações relevantes.
 
 - Registro detalhado: Além das informações básicas de saúde, os usuários podem incluir detalhes específicos sobre alergias, doenças médicas crônicas, e outros dados relevantes.
 
