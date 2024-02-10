@@ -1,26 +1,149 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(90deg, #1e433e, #143934, #132b27);
+    background-size: 400% 400%;
+    animation: backgroundgradient 5s linear infinite;
+    animation: opacidade 3s ease;
+}
+
+@keyframes backgroundgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes opacidade {
+    0% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+img[alt="Template.png"] {
+    height: 100vh;
+    width: 50vw;
+    object-fit: none;
+    object-position: 25% 0;
+}
+
+.Overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: #354240;
+    opacity: 0.8;
+}
+
+.RegistroSaudeLgTi {
+    position: relative;
+    bottom: 100px;
+    height: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #143934;
+    margin-right: 45px;
+    font-family: 'Montserrat', sans-serif;
+    color: #35cd7d;
+}
+
+.RegistroSaudeLgTi img {
+    margin-right: 35px;
+}
+
+.Textos {
+    position: absolute;
+    top: 30vh;
+    left: 5vw;
+    height: 15vh;
+    width: 40vw;
+    background-color: rgba(238, 237, 234, 0.7);
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 55px;
+    text-align: center;
+    animation: AnimacaoTextos;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+
+
+.Textos h1 {
+    position: relative;
+    top: 2vh;
+    color: #143934;
+    font-size: 28px;
+}
+
+
+.Textos span {
+    display: block;
+    margin-top: 5px;
+}
+
+.Textos p {
+    position: relative;
+    top: 20vh;
+    height: 15vh;
+    width: 40vw;    
+    padding-top: 20px;
+    color: #e4e8e7;
+    font-size: 25px;
+    text-align: center;
+    background-color: rgba(20, 57, 52, 0.7);
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 55px; 
+}
+
+@keyframes AnimacaoTextos {
+    0% { 
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .Conteudo {
-    position: relative;
-    width: 400px;
-    height: 600px;
-    background-color: #000;
-    box-shadow: 0 0 50px #35cd7d;
+    position: absolute;
+    top: 10vh;
+    right: 8.5vw;
+    width: 30vw;
+    height: 80vh;
+    background: linear-gradient(0deg, #000, #143934, #143934, #000);
+    box-shadow: 0px 0px 15px #35cd7d;
     border-radius: 20px;
-    padding: 40px;
-    overflow: hidden;
+    animation: AnimacaoRegistro;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+
+@keyframes AnimacaoRegistro {
+    0% { 
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .Formulario {
@@ -33,18 +156,18 @@ body {
 
 .Formulario h2 {
     font-size: 30px;
-    color: white;
+    color: #fff;
     text-align: center;
 }
 
 .Input {
     position: relative;
-    margin: 30px 0;
+    margin: 30px;
     border-bottom: 2px solid #fff;
 }
 
 .Input input {
-    width: 320px;
+    width: 420px;
     height: 40px;
     font-size: 16px;
     color: #fff;
@@ -61,30 +184,31 @@ body {
     transform: translateY(-50%);
     font-size: 16px;
     color: #fff;
-    transition: .5s;
+    transition: .5s ease;
 }
 
-.Input input:focus~label,
-.Input input:valid~label {
+.Input input:focus~label {
     top: -5px;
 }
 
 .CriarContaBtn {
     position: relative;
+    top: 150px;
     width: 100%;
-    height: 40px;
+    height: 50px;
     background: #35cd7d;
     box-shadow: 0 0 10px #35cd7d;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     border-radius: 30px;
     border: none;
 }
 
 .EntrarContaBtn {
-    font-size: 14px;
+    position: relative;
+    top: 170px;
+    font-size: 15px;
     text-align: center;
-    margin: 15px 0;
 }
 
 .EntrarContaBtn p {
