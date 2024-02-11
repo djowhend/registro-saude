@@ -7,29 +7,26 @@ body {
     overflow: hidden;
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(90deg, #1e433e, #143934, #132b27);
+    background: linear-gradient(45deg, #1F7F4C, #1B6844, #18503C, #143934);
     background-size: 400% 400%;
-    animation: backgroundgradient 5s linear infinite;
-    animation: opacidade 3s ease;
+    animation: backgroundgradient 5s ease infinite, opacidade 3s ease;
 }
 
 @keyframes backgroundgradient {
     0% {
         background-position: 0% 50%;
-    }
-
-    50% {
+      }
+      50% {
         background-position: 100% 50%;
-    }
-
-    100% {
+      }
+      100% {
         background-position: 0% 50%;
-    }
+      }
 }
 
 @keyframes opacidade {
     0% {
-        opacity: 0.0;
+        opacity: 0.0;   
     }
 
     100% {
