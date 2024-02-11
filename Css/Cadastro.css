@@ -81,7 +81,6 @@ img[alt="Template.png"] {
     animation-timing-function: ease;
 }
 
-
 .Textos h1 {
     position: relative;
     top: 2vh;
@@ -204,6 +203,10 @@ img[alt="Template.png"] {
     font-weight: 500;
     border-radius: 30px;
     border: none;
+}
+
+.CriarContaBtn:hover {
+    background: rgba(53, 205, 125, 80%);
 }
 
 .EntrarContaBtn {

@@ -206,6 +206,10 @@ img[alt="Template.png"] {
     border: none;
 }
 
+.EntrarContaBtn:hover {
+    background: rgba(53, 205, 125, 80%);
+}
+
 .CriarContaBtn {
     position: relative;
     top: 205px;
