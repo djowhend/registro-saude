@@ -1,12 +1,45 @@
-body {
-    background-color: #143934;
-    overflow-x: hidden;
+* {
+    padding: 0;
     margin: 0;
 }
 
-img[alt="Template.png"] {
-    width: 50%;  
+body {
+    overflow: hidden;
     height: 100vh;
+    width: 100vw;
+    background: linear-gradient(90deg, #1e433e, #143934, #132b27);
+    background-size: 400% 400%;
+    animation: backgroundgradient 5s linear infinite;
+    animation: opacidade 3s ease;
+}
+
+@keyframes backgroundgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes opacidade {
+    0% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+img[alt="Template.png"] {
+    height: 100vh;
+    width: 50vw;
     object-fit: none;
     object-position: 25% 0;
 }
@@ -15,119 +48,185 @@ img[alt="Template.png"] {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 50vw;
     height: 100vh;
-    background-color: #3f5a56;
+    background-color: #354240;
     opacity: 0.8;
 }
 
-img[alt="LogoRegistroSaude.png"] {
-    position: absolute;
-    top: 10%;
-    left: 3%;
-}
-
-.RegistroSaude {
-    position: absolute;
-    top: 12.5%;
-    left: 12%;
-    color: #edeeea;
-    font-size: 70px;
+.RegistroSaudeLgTi {
+    position: relative;
+    bottom: 136px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-right: 45px;
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: 5px;
+    color: #35cd7d;
+}
+
+.RegistroSaudeLgTi img {
+    margin-right: 35px;
+}
+
+.Textos {
+    position: absolute;
+    top: 30vh;
+    left: 5vw;
+    height: 15vh;
+    width: 40vw;
+    background-color: rgba(238, 237, 234, 0.7);
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 55px;
+    text-align: center;
+    animation: AnimacaoTextos;
+    animation-duration: 2s;
+    animation-timing-function: ease;
 }
 
 
-.FundoTexto1 {
+.Textos h1 {
+    position: relative;
+    top: 2vh;
+    color: #143934;
+    font-size: 28px;
+}
+
+
+.Textos span {
+    display: block;
+    margin-top: 5px;
+}
+
+.Textos p {
+    position: relative;
+    top: 20vh;
+    height: 15vh;
+    width: 40vw;    
+    padding-top: 20px;
+    color: #e4e8e7;
+    font-size: 25px;
+    text-align: center;
+    background-color: rgba(20, 57, 52, 0.7);
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 55px; 
+}
+
+@keyframes AnimacaoTextos {
+    0% { 
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.Conteudo {
+    position: absolute;
+    top: 10vh;
+    right: 8.5vw;
+    width: 30vw;
+    height: 80vh;
+    background: linear-gradient(0deg, #000, #143934, #143934, #000);
+    box-shadow: 0px 0px 15px #35cd7d;
+    border-radius: 20px;
+    animation: AnimacaoRegistro;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+
+@keyframes AnimacaoRegistro {
+    0% { 
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.Formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.Formulario h2 {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.Input {
+    position: relative;
+    margin: 30px;
+    border-bottom: 2px solid #fff;
+}
+
+.Input input {
+    width: 420px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.Input label {
     position: absolute;
     top: 50%;
-    left: 0%;
-    width: 50%; 
-    height: auto; 
-    padding: 25px; 
-    background-color: rgba(237, 238, 234, 0.5); 
-    border-radius: 55px;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    transition: .5s ease;
 }
 
-.Texto1 {
-    color: #143934;
-    font-size: 30px;
-    text-align: center;
+.Input input:focus ~ label,
+.Input input:valid ~ label {
+    top: -5px;
 }
 
-.break {
-    display: block;
+.Input input:invalid ~ label {
+    color: #35cd7d;
 }
 
-.Texto2 {
-    color: #e4e8e7;
-    text-align: center;
-    font-size: 20px;
-    position: absolute;
-    bottom: 20%;
-    left: 15%;
-}
-
-
-.Login {
-    color: #888f70;
-    font-size: xx-large;
+.EntrarContaBtn {
+    position: relative;
+    top: 186px;
+    width: 100%;
+    height: 50px;
+    background: #35cd7d;
+    box-shadow: 0 0 10px #35cd7d;
+    font-size: 18px;
     font-weight: 500;
-    position: absolute;
-    right: 21%;
-    top: 15%;
+    border-radius: 30px;
+    border: none;
 }
 
-.Entradas1 {
-    position: absolute;
-    right: 25%;
-    top: 25%;
-}
-
-.Entradas1 label {
-    display: block;
-    color: #e4e8e7;
-    font-size: x-large;
-    margin-bottom: 5px;
-}
-
-.Entradas1 input {
-    display: block;
-    width: 250%; 
-    padding: 15px;
-    font-size: 15px; 
-    margin-bottom: 45px;
-    border: 3px solid #79dba5; 
-    border-radius: 5px; 
-}
-
-
-.Entradas2 {
-    position: absolute;
-    right: 19%;
-    bottom: 25%;
-}
-
-.Entradas2 a {
-    color: #143934;
-    font-size: xx-large;
-    font-weight: 500;
+.CriarContaBtn {
+    position: relative;
+    top: 205px;
+    font-size: 15px;
     text-align: center;
-    display: block; 
-    background-color: #35dc7f;
-    border: solid #eefcf4;
-    width: 150%;
-    padding: 10px; 
-    text-decoration: none; 
 }
 
-.EsqueceuSenha a {
-    color:#8f9f9b;
-    font-size: larger;
+.CriarContaBtn p {
+    color: #fff;
+}
+
+
+.CriarContaBtn p a {
+    color: #35cd7d;
+    text-decoration: none;
     font-weight: 500;
-    text-align: center;
-    position: absolute;
-    right: 19%;
-    bottom: 22%;
-    text-decoration: none; 
+}
+
+.CriarContaBtn p a:hover {
+    text-decoration: underline;
 }

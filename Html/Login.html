@@ -1,54 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Registro Saúde</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="/Css/Login.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300&family=Roboto:wght@100;400&display=swap"
-    rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Saúde</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="/Css/Login.css">
+    
+    <!-- Link Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Link Fonte Montserrat   -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    
+    <!-- Link Icons BoxIcons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 
-  <img src="/Resources/Template.jpg" alt="Template.png">
-  <div class="Overlay"></div>
-  <img src="/Resources/Logo.png" alt="LogoRegistroSaude.png">
-  <h1 class="RegistroSaude">Registro Saúde</h1>
+    <img src="/Resources/Template.jpg" alt="Template.png">
+    <div class="Overlay"></div>
 
+    <div class="Textos">
+        <h1> Sua saúde, nossa prioridade! <span></span> Facilite o acompanhamento de vacinas e medicamentos! 
+            <span></span> <i class='bx bxs-first-aid' style='color:#35cd7d' ></i></h1>
+        <p>Faça login agora para uma jornada mais <br> informada e saudável ! 
+            <span></span> <i class='bx bxs-leaf' style='color:#35cd7d' ></i></p>
+    </div>
 
-  <div class="FundoTexto1">
-    <h1 class="Texto1"> Sua saúde, nossa prioridade! <span class="break"></span> Facilite o acompanhamento de vacinas e
-      medicamentos</h1>
-  </div>
-  <p class="Texto2">Faça login agora para uma jornada mais <br> informada e saudável</p>
+    <div class="Conteudo">
+        <div class="Formulario">
+            <form action="/Html/Home.html">
+                <div class="RegistroSaudeLgTi">
+                    <img src="/Resources/Logo.png" alt="LogoRegistroSaude.png">
+                    <h1>Registro Saúde</h1>
+                </div>
+                <h2>Login</h2>
+                <div class="Input">
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="Input">
+                    <input type="password" required>
+                    <label>Senha</label>
+                </div>
+                <button type="submit" class="EntrarContaBtn">Entrar</button>
+                <div class="CriarContaBtn">
+                    <p>Não tem uma conta? <a href="/Html/Cadastro.html">Criar</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
 
-
-  <p class="Login">Login</p>
-  <div class="Entradas1">
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email">
-    <label for="senha">Senha</label>
-    <input type="password" id="senha" name="senha">
-  </div>
-
-
-  <div class="Entradas2">
-    <p class="Entrar"><a href="/Html/Home.html">Entrar</a></p>
-    <p class="CriarNovaConta"><a href="/Html/Cadastro.html" target="_blank">Criar Nova Conta</a></p>
-  </div>
-  <div class="EsqueceuSenha">
-  <a href="url-esqueceu" target="_blank">Esqueceu a senha ?</a>
-  </div>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+    <!-- Link Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>

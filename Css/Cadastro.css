@@ -187,8 +187,13 @@ img[alt="Template.png"] {
     transition: .5s ease;
 }
 
-.Input input:focus~label {
+.Input input:focus ~ label,
+.Input input:valid ~ label {
     top: -5px;
+}
+
+.Input input:invalid ~ label {
+    color: #35cd7d;
 }
 
 .CriarContaBtn {
