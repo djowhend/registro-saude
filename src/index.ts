@@ -4,9 +4,12 @@ import { User } from "./model/User"
 import { UserController } from "./controller/UserController";
 import { SessionController } from "./controller/SessionController";
 
+
 const SERVER_PORT = 3000;
 const server = express();
+const cors = require('cors');
 server.use(express.json());
+server.use(cors());
 
 AppDataSource.initialize().then(async () => {
 
