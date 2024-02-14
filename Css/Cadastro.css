@@ -194,7 +194,7 @@ img[alt="Template.png"] {
 
 .CriarContaBtn {
     position: relative;
-    top: 150px;
+    top: 115px;
     width: 100%;
     height: 50px;
     background: #35cd7d;
@@ -211,7 +211,7 @@ img[alt="Template.png"] {
 
 .EntrarContaBtn {
     position: relative;
-    top: 170px;
+    top: 135px;
     font-size: 15px;
     text-align: center;
 }
