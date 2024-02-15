@@ -13,45 +13,124 @@ body {
 }
 
 @keyframes backgroundgradient {
-    0% {
-        background-position: 0% 50%;
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
     }
 
-    50% {
-        background-position: 100% 50%;
-    }
+    @keyframes opacidade {
+        0% {
+            opacity: 0.0;   
+        }
 
-    100% {
-        background-position: 0% 50%;
-    }
+        100% {
+            opacity: 1;
+        }
+    } 
+
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5vh;
+    width: 100%;
+
+    background-color: #10493d;
+    box-shadow: 0px 0px 15px #35cd7d;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-@keyframes opacidade {
-    0% {
-        opacity: 0.0;   
-    }
+.Logo img {
+    position: relative;
+    width: 30px;
+    height: 25px;
+    top: 0;
+    left: 30%;
+}
 
-    100% {
-        opacity: 1;
-    }
+.Logo::after {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3rem;
+    width: 15rem;
+
+    content: attr(data-message);
+    color: #35dc7f;
+    text-align: center;
+    padding: 10px;
+
+    background: #10493d;
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 1rem;
+
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.Logo:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Navbar a {
+    position: relative;
+    margin-left: 4rem;
+    margin-right: 4rem;
+
+    color: #35cd7d;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.Navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+
+    transition: .3s ease;
+}
+
+.Navbar a:hover::before {
+    background-color: #35dc7f;
+    width: 100%;
 }
 
 .Cartoes {
-    position: relative;
+    position: absolute;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 66vh;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 79%;
 }
 
 .Cartao {
     overflow: hidden;
     position: relative;
 
-    width: 18rem;
-    height: 20rem;
+    width: 20vw;
+    height: 20vh;
 
-    border: 5px solid #fff;
+    box-shadow: 0px 0px 15px #35cd7d;
+    border: 5px solid #10493d;
     border-radius: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -66,27 +145,28 @@ body {
 }
 
 .CartaoBody {
+    position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    right: -100%;
-    position: absolute;
+    left: 0;
+    bottom: -100%;
 
     background: #105942b4;
     backdrop-filter: blur(5px);
 
-    border-radius: 0.1rem;
+    border-radius: 0.5rem;
     border: 5px solid #35dc7f;
 
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+
     transition: 1s ease;
 }
 
 .Cartao:hover .CartaoBody {
-    right: 0;
+    bottom: 0;
 }
 
 .CartaoTitulo {
@@ -96,9 +176,10 @@ body {
 }
 
 .CartaoBotao {
-    color: #fff;
+    color: #133b26;
     font-weight: 500;
-    background-color: #35dc7f;
+    background: #35cd7d;
+    box-shadow: 0 0 10px #35cd7d;
 
     padding: 10px 20px;
     width: 120px;
