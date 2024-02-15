@@ -177,11 +177,13 @@ body {
 
 .CartaoBotao {
     color: #133b26;
+    text-align: center;
+    text-decoration: none;
     font-weight: 500;
     background: #35cd7d;
     box-shadow: 0 0 10px #35cd7d;
 
-    padding: 10px 20px;
+    padding: 10px;
     width: 120px;
 
     border-radius: 5px;
