@@ -4,15 +4,16 @@
 }
 
 body {
+    overflow: hidden;
     height: 100vh;
     width: 100vw;
 
     background: linear-gradient(45deg, #1b6945, #105942, #10493d, #143934);
     background-size: 400% 400%;
-    animation: backgroundgradient 5s ease infinite, opacidade 3s ease;
+    animation: backgroundgradient 5s ease infinite, opacidade 2s ease;
 }
 
-/* @keyframes backgroundgradient {
+@keyframes backgroundgradient {
     0% {
         background-position: 0% 50%;
     }
@@ -34,7 +35,7 @@ body {
     100% {
         opacity: 1;
     }
-} */
+}
 
 .Header {
     position: fixed;
@@ -106,7 +107,7 @@ body {
     width: 0;
     height: 2px;
 
-    transition: .3s ease;
+    transition: .2s ease;
 }
 
 .Navbar a:hover::before {
@@ -117,13 +118,26 @@ body {
 .CarrosselNoticias {
     position: absolute;
     display: flex;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 25%;
     top: 15%;
     
     border-radius: 1rem;
     background-color: #10493d;
     box-shadow: 0px 0px 15px #35cd7d;
+
+    animation: Carrossel;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+
+@keyframes Carrossel {
+    0% { 
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .CarrosselConteudo {
@@ -169,7 +183,7 @@ body {
     top: 79%;
 }
 
-.Cartao {
+.Cartao1, .Cartao2, .Cartao3 {
     overflow: hidden;
     position: relative;
 
@@ -181,6 +195,54 @@ body {
     border-radius: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
+}
+
+.Cartao1 {
+    animation: Cartao1;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+
+.Cartao2 {
+    animation: Cartao2;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+
+.Cartao3 {
+    animation: Cartao3;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+
+@keyframes Cartao1 {
+    0% { 
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes Cartao2 {
+    0% { 
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes Cartao3 {
+    0% { 
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .CartaoImg {
