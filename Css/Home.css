@@ -274,7 +274,7 @@ body {
     transition: 1s ease;
 }
 
-.Cartao:hover .CartaoBody {
+.Cartao1:hover .CartaoBody, .Cartao2:hover .CartaoBody, .Cartao3:hover .CartaoBody {
     bottom: 0;
 }
 
