@@ -12,29 +12,29 @@ body {
     animation: backgroundgradient 5s ease infinite, opacidade 3s ease;
 }
 
-@keyframes backgroundgradient {
-        0% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-
-        100% {
-            background-position: 0% 50%;
-        }
+/* @keyframes backgroundgradient {
+    0% {
+        background-position: 0% 50%;
     }
 
-    @keyframes opacidade {
-        0% {
-            opacity: 0.0;   
-        }
+    50% {
+        background-position: 100% 50%;
+    }
 
-        100% {
-            opacity: 1;
-        }
-    } 
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes opacidade {
+    0% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} */
 
 .Header {
     position: fixed;
@@ -112,6 +112,53 @@ body {
 .Navbar a:hover::before {
     background-color: #35dc7f;
     width: 100%;
+}
+
+.CarrosselNoticias {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15%;
+    
+    border-radius: 1rem;
+    background-color: #10493d;
+    box-shadow: 0px 0px 15px #35cd7d;
+}
+
+.CarrosselConteudo {
+    border-radius: 1rem;
+}
+
+.CarrosselItem img {
+    width: 50vw;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.CarrosselTexto {
+    background: rgba(16, 73, 61, 0.7);
+
+    border: 0.2rem solid #35dc7f;
+    border-radius: 0.5rem;
+}
+
+.CarrosselTexto h5,
+.CarrosselTexto p {
+    padding: 15px;
+    color: #35dc7f;
+}
+
+.CarrosselBtnAnterior,
+.CarrosselBtnProximo {
+    top: calc(50%);
+    width: 30px;
+    height: 30px;
+}
+
+.CarrosselBtnAnterior-icon,
+.CarrosselBtnProximo-icon {
+    background-color: #35dc7f;
 }
 
 .Cartoes {
