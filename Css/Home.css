@@ -300,3 +300,39 @@ body {
     outline: none;
     cursor: pointer;
 }
+
+.popup-container {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    max-width: 300px;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.popup-content a:hover {
+    text-decoration: underline;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+}
