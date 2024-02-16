@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -27,121 +27,124 @@
 </head>
 
 <body>
+    <!-- Header / Navbar -->
+    <header class="Header">
+        <nav class="Navbar">
+            <a href="/Html/Login.html">Página Inicial</a>
+            <a href="/Html/Contatos.html">Contatos</a>
+        </nav>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg Navbar">
-        <div class="container-fluid">
+        <a class="Logo" href="https://github.com/djowhend/registro-saude" data-message="Github do Registro Saúde">
+            <img src="/Resources/Logo.png" alt="Logo.png">
+        </a>
 
-            <button class="btn text-white" data-bs-toggle="modal" data-bs-target="#Modal">
-                <i class="fa fa-ellipsis-v"></i>
-            </button>
+        <nav class="Navbar">
+            <a href="Url_Acessar_Perfil">Acessar Perfil</a>
+            <a href="Url_Editar_Perfil">Editar Perfil</a>
+        </nav>
+    </header>
 
-            <a class="navbar-brand NavbarTitulo" href="/Html/Login.html">
-                <img src="/Resources/Logo.png" alt="Logo" width="30" height="25" class="d-inline-block align-text-top">
-                Registro Saúde
-            </a>
+    <!-- Carrossel de Notícias -->
+    <div class="carousel slide CarrosselNoticias">
+        <div class="carousel-inner CarrosselConteudo">
+            <!-- Noticia 1 -->
+            <div class="carousel-item active CarrosselItem">
+                <img src="/Resources/Template1.png" alt="Noticia1.png">
+                <div class="carousel-caption CarrosselTexto">
+                    <h5>Manchete Notícia 1</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus nulla at iure eius facilis.
+                        Eveniet iusto, recusandae earum possimus libero repellendus aliquam qui, veritatis, fugit eos a
+                        nobis ratione placeat.</p>
+                </div>
+            </div>
+
+            <!-- Noticia 2 -->
+            <div class="carousel-item CarrosselItem">
+                <img src="/Resources/Template2.jpg" alt="Noticia2.png">
+                <div class="carousel-caption CarrosselTexto">
+                    <h5>Manchete Notícia 2</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur blanditiis architecto
+                        recusandae at nisi aspernatur placeat, eligendi quibusdam atque maiores ut nemo numquam deleniti
+                        sapiente totam, iste consectetur non quo.</p>
+                </div>
+            </div>
         </div>
-    </nav>
 
-    <!-- Modal -->
-    <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ModalConteudo">
-                <div class="Usuario">
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="/Resources/PerfilFoto.jpg" class="rounded-circle border border-5"
-                                alt="FotoUsuário.png">
-                            <br>
-                            <div class="">
-                                <span class="mt-2">Nome</span>
-                                <span class="mt-2">Gênero</span>
-                                <span class="mt-2">Idade</span>
-                            </div>
-                            <br>
-                            <p>Adicione aqui a biografia ou recado do usuário.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-left Informacoes">
-                    <p><strong>CPF:</strong> 123.456.789-09</p>
-                    <hr>
-                    <p><strong>Email:</strong> emailteste@gmail.com</p>
-                    <hr>
-                    <p><strong>Telefone:</strong> +55 00 1234-5678</p>
-                    <hr>
-                    <p><strong>Tipo Sanguíneo:</strong> O+</p>
-                    <hr>
-                </div>
-                <div class="Icones">
-                    <a href="/Html/Login.html" class="btn btn-outline BotaoIcone">
-                        <i class="fas fa-power-off"></i>
-                    </a>
-                    <a href="url_das_configuracoes" class="btn btn-outline BotaoIcone">
-                        <i class="fas fa-cog"></i>
-                    </a>
-                </div>
+        <!-- Botões de Navegação -->
+        <button class="carousel-control-prev CarrosselBtnAnterior" type="button" data-bs-target=".CarrosselNoticias"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next CarrosselBtnProximo" type="button" data-bs-target=".CarrosselNoticias"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+
+
+    <!-- Cartões Vacinas, Medicamentos, Patologias -->
+    <div class="Cartoes">
+        <!-- Cartão Vacina -->
+        <div class="Cartao1">
+            <img src="/Resources/Vacina.png" class="CartaoImg" alt="Vacina.png">
+            <div class="CartaoBody">
+                <h1 class="CartaoTitulo">Vacinas</h1>
+                <a class="CartaoBotao" href="/Html/Vacina.html">Visualizar</a>
+            </div>
+        </div>
+
+        <!-- Cartão Medicamento -->
+        <div class="Cartao2">
+            <img src="/Resources/Medicamento.png" class="CartaoImg" alt="Medicamento.png">
+            <div class="CartaoBody">
+                <h1 class="CartaoTitulo">Medicamentos</h1>
+                <a class="CartaoBotao" href="/Html/Medicamento.html">Visualizar</a>
+            </div>
+        </div>
+
+        <!-- Cartão Patologia -->
+        <div class="Cartao3">
+            <img src="/Resources/Patologia.png" class="CartaoImg" alt="Patologia.png">
+            <div class="CartaoBody">
+                <h1 class="CartaoTitulo">Patologias</h1>
+                <a class="CartaoBotao" href="/Html/Patologia.html">Visualizar</a>
             </div>
         </div>
     </div>
 
-    <div class="BodyBackground">
-        <!-- Cartões Vacinas, Medicamentos, Patologias-->
-        <div class="container Cartoes">
-            <div class="card border-0 Cartao">
-                <img src="/Resources/Vacina.png" class="card-img-top border border-bottom-0 border-5" alt="Vacina.png">
-                <div class="card-body border border-top-0 border-5 CartaoCorpo">
-                    <h5 class="card-title CartaoTitulo">Vacinas</h5>
-                    <a href="/Html/Vacina.html" class="btn CartaoBotao">Visualizar</a>
-                </div>
-            </div>
-
-            <div class="card border-0 Cartao">
-                <img src="/Resources/Medicamento.png" class="card-img-top border border-bottom-0 border-5"
-                    alt="Medicamento.png">
-                <div class="card-body border border-top-0 border-5 CartaoCorpo">
-                    <h5 class="card-title CartaoTitulo">Medicamentos</h5>
-                    <a href="/Html/Medicamento.html" class="btn CartaoBotao">Visualizar</a>
-                </div>
-            </div>
-
-            <div class="card border-0 Cartao">
-                <img src="/Resources/Patologia.png" class="card-img-top border border-bottom-0 border-5"
-                    alt="Patologia.png">
-                <div class="card-body border border-top-0 border-5 CartaoCorpo">
-                    <h5 class="card-title CartaoTitulo">Patologias</h5>
-                    <a href="/Html/Patologia.html" class="btn CartaoBotao">Visualizar</a>
-                </div>
-            </div>
+    <div id="popup-container" class="popup-container">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">X</span>
+            <p>Não esqueça de completar suas informações da sua conta para futuras emergências, queremos o seu bem !</p>
+            <a href="sua_pagina.html">Clique aqui para completar suas informações</a>
         </div>
     </div>
 
-    <!-- <footer>
-        <div class="Footer">
-            <div class="Footer_Logo_Box">
-                <a href="/Alerta_Cheia/frontend/pages/login.html"> <img class="Footer_Logo_Image"
-                        src="/Alerta_Cheia/assets/Logo_01_SemFundo.png" alt="Alerta Cheias" height="35px"></a>
-            </div>
-            <div class="Footer_Text_Box">
-                <a class="custom-no-underline" href="#">&copy; 2024 AlertaCheias</a>
-                <a class="custom-no-underline" href="/Alerta_Cheia/frontend/pages/footer_pages/terms.html">Terms</a>
-                <a class="custom-no-underline" href="/Alerta_Cheia/frontend/pages/footer_pages/privacy.html">Privacy</a>
-                <a class="custom-no-underline" href="/Alerta_Cheia/frontend/pages/footer_pages/docs.html">Docs</a>
-                <a class="custom-no-underline" href="/Alerta_Cheia/frontend/pages/footer_pages/contact.html">Contact</a>
- 
-            </div>
-            <div class="Footer_FAQ_Box">
-                <button class="Botão_FAQ" id="FAQ_Button" onclick="buttonClick()">
-                    <a class="FAQ_Text" href="/Alerta_Cheia/frontend/pages/footer_pages/FAQ.html">FAQ</a>
-                </button>
-            </div>
-        </div>
-    </footer> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var popupContainer = document.getElementById('popup-container');
 
+            // Exibir o popup
+            popupContainer.style.display = 'block';
+
+            // Ocultar o popup após 15 segundos
+            setTimeout(function () {
+                popupContainer.style.display = 'none';
+            }, 10000);
+        });
+
+        function closePopup() {
+            var popupContainer = document.getElementById('popup-container');
+            popupContainer.style.display = 'none';
+        }
+    </script>
+
+    <!-- Bootstrap Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>
