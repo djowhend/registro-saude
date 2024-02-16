@@ -115,6 +115,57 @@ img[alt="FotoUsuário.png"] {
     cursor: pointer;
 }
 
+#caixa {
+    color: white;
+    width: 30%;
+    height: 40%;
+    overflow: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: absolute;
+    left: 60%;
+    top: 53%;
+}
+.Pesquisa{
+    color: white;
+    position: absolute;
+    left: 60%;
+    top: 30%;
+}
+.PesquisarPorNome{
+    color: white;
+    position: absolute;
+    left: 60%;
+    top: 15%;
+   
+}
+.BotaoPesquisar{
+   
+    position: absolute;
+    right: -45%;
+    top: 45%;
+    color: white;
+    background-color: #052E11;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.ExibirVacinas{
+    position: absolute;
+    right: 28%;
+    top: 45%;
+    color: white;
+    background-color: #052E11;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+
+
 /* .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
