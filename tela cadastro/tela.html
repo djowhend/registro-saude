@@ -1,87 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="tela.css">
-    <title>pagina login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="tela.css">
+  <script type="module" src="../src/front/index.js"></script>
+  <title>Página de login</title>
 
 </head>
+
 <body>
-    <img class="imagem"src="3.png" alt="imagel logo"/>
-    
-    <img class= "qrcode" src="resoluçãpo.jpg" alt="">
-   
-    <img class="letreiro"src="letreiro.jpg" alt="imagel logo"/>
-    
-   
-   
-<div class="caixa"  >
+
+
+  <img class="imagem" src="3.png" alt="imagel logo" />
+
+  <img class="qrcode" src="resoluçãpo.jpg" alt="">
+
+  <img class="letreiro" src="letreiro.jpg" alt="imagel logo" />
+
+
+
+  <div class="caixa">
 
 
     <h3>Criar Conta</h3>
-    
 
-    <h5>Nome</h5>
-    <div class="input-group my-3">
-        <input
-          type="text"
-          class="form-control border-secondary rounded-0"
-          placeholder="Digite seu nome"
-          aria-label="Digite seu nome"
-          aria-describedby="button-addon2"
-        />
-    </div>
+    <form id="user-form">
+
+      <h5>Nome</h5>
+      <div class="input-group my-3">
+        <input id="inputnome" type="text" class="form-control border-secondary rounded-0" placeholder="Digite seu nome"
+          aria-label="Digite seu nome" aria-describedby="button-addon2" />
+      </div>
 
 
-    <h5>Email</h5>
-    <div class="input-group my-3">
-        <input
-          type="text"
-          class="form-control border-secondary rounded-0"
-          placeholder="Digite seu e-mail"
-          aria-label="Digite seu e-mail"
-          aria-describedby="button-addon2"
-        />
-    </div>
-  
+      <h5>Email</h5>
+      <div class="input-group my-3">
+        <input id="inputemail" type="text" class="form-control border-secondary rounded-0"
+          placeholder="Digite seu e-mail" aria-label="Digite seu e-mail" aria-describedby="button-addon2" />
+      </div>
 
-    <h5>CPF</h5>
-    <div class="input-group my-3">
-        <input
-          type="number"
-          class="form-control border-secondary rounded-0"
-          placeholder="Digite seu CPF"
-          aria-label="Digite seu CPF"
-       aria-describedby="button-addon2"
-        />
-    </div>
+
+      <h5>CPF</h5>
+      <div class="input-group my-3">
+        <input id="inputcpf" type="number" class="form-control border-secondary rounded-0" placeholder="Digite seu CPF"
+          aria-label="Digite seu CPF" aria-describedby="button-addon2" />
+      </div>
 
       <h5>Senha</h5>
-    <div class="input-group my-3">
-        <input
-          type="password"
-          class="form-control border-secondary rounded-0"
-          placeholder="Digite uma senha"
-          aria-label="Digite uma senha"
-          aria-describedby="button-addon2"
-          width="100px"
-        />
-    </div>
-    <h5>Confime sua senha</h5>
-    <div class="input-group my-3">
-        <input
-         type= "password"
-          
-          class="form-control border-secondary rounded-0"
-          placeholder="Confirme sua senha"
-          aria-label="Confirme sua senha"
-       aria-describedby="button-addon2"
-        />
-    </div>
-    <button> Cadastrar </button>
-</div>
-
+      <div class="input-group my-3">
+        <input id="inputsenha" type="password" class="form-control border-secondary rounded-0"
+          placeholder="Digite uma senha" aria-label="Digite uma senha" aria-describedby="button-addon2" width="100px" />
+      </div>
+      <h5>Confime sua senha</h5>
+      <div class="input-group my-3">
+        <input id="inputconfirmasenha" type="password" class="form-control border-secondary rounded-0"
+          placeholder="Confirme sua senha" aria-label="Confirme sua senha" aria-describedby="button-addon2" />
+      </div>
+      <button> Cadastrar </button>
+  </div>
+  </form>
 </body>
+
 </html>
