@@ -53,7 +53,7 @@ img[alt="Template.png"] {
 
 .RegistroSaudeLgTi {
     position: relative;
-    bottom: 136px;
+    bottom: 100px;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -80,7 +80,6 @@ img[alt="Template.png"] {
     animation-duration: 2s;
     animation-timing-function: ease;
 }
-
 
 .Textos h1 {
     position: relative;
@@ -193,9 +192,9 @@ img[alt="Template.png"] {
     color: #35cd7d;
 }
 
-.EntrarContaBtn {
+.CriarContaBtn {
     position: relative;
-    top: 186px;
+    top: 115px;
     width: 100%;
     height: 50px;
     background: #35cd7d;
@@ -206,28 +205,28 @@ img[alt="Template.png"] {
     border: none;
 }
 
-.EntrarContaBtn:hover {
+.CriarContaBtn:hover {
     background: rgba(53, 205, 125, 80%);
 }
 
-.CriarContaBtn {
+.EntrarContaBtn {
     position: relative;
-    top: 205px;
+    top: 135px;
     font-size: 15px;
     text-align: center;
 }
 
-.CriarContaBtn p {
+.EntrarContaBtn p {
     color: #fff;
 }
 
 
-.CriarContaBtn p a {
+.EntrarContaBtn p a {
     color: #35cd7d;
     text-decoration: none;
     font-weight: 500;
 }
 
-.CriarContaBtn p a:hover {
+.EntrarContaBtn p a:hover {
     text-decoration: underline;
 }
