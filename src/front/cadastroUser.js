@@ -1,4 +1,7 @@
 
+//CADASTRA O USUÁRIO CHAMANDO A ROTA DE USUARIO
+
+
 document.getElementById('user-form').addEventListener('submit', async function(event) {
     event.preventDefault();
     
@@ -40,3 +43,6 @@ document.getElementById('user-form').addEventListener('submit', async function(e
         console.error('Erro:', error.message);
     }
 });
+
+    //"email": "rafaaaaaaa@gmail.com",
+    //"senha": "testeee",

@@ -11,6 +11,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300&family=Roboto:wght@100;400&display=swap"
     rel="stylesheet">
+  <script type="module" src="../src/front/loginUser.js"></script>
 </head>
 
 <body>
@@ -29,20 +30,23 @@
 
 
   <p class="Login">Login</p>
-  <div class="Entradas1">
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email">
-    <label for="senha">Senha</label>
-    <input type="password" id="senha" name="senha">
-  </div>
+  <form id="login-form">
+    <div class="Entradas1">
+      <label id="emaillogar" for="email">Email</label>
+      <input type="email" id="email" name="email">
+      <label id="senhalogar" for="senha">Senha</label>
+      <input type="password" id="senha" name="senha">
+
+    </div>
 
 
-  <div class="Entradas2">
-    <p class="Entrar"><a href="/Html/Home.html">Entrar</a></p>
-    <p class="CriarNovaConta"><a href="url-criarnovaconta" target="_blank">Criar Nova Conta</a></p>
-  </div>
+    <div class="Entradas2">
+      <button type="submit" class="Entrar">Entrar</button>
+      <p class="CriarNovaConta"><a href="url-criarnovaconta" target="_blank">Criar Nova Conta</a></p>
+    </div>
+  </form>
   <div class="EsqueceuSenha">
-  <a href="url-esqueceu" target="_blank">Esqueceu a senha ?</a>
+    <a href="url-esqueceu" target="_blank">Esqueceu a senha ?</a>
   </div>
 
 
