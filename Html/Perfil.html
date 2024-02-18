@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Saúde</title>
+
+    <!-- Link do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Link do Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Link do CSS -->
+    <link rel="stylesheet" href="/Css/Perfil.css">
+
+    <!-- Link da Fonte Montserrat -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300&family=Roboto:wght@100;400&display=swap"
+        el="stylesheet">
+
+    <!-- link do FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Script para Mudança de Foto Perfil -->
+    <script src="/Scripts//Perfil-PerfilFoto.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="Header">
+        <nav class="Navbar">
+            <a href="/Html/Login.html">Página Inicial</a>
+            <a href="/Html/Contatos.html">Contatos</a>
+        </nav>
+
+        <a class="Logo" href="https://github.com/djowhend/registro-saude" data-message="Github do Registro Saúde">
+            <img src="/Resources/Logo.png" alt="Logo.png">
+        </a>
+
+        <nav class="Navbar">
+            <a href="/Html/Perfil.html">Acessar Perfil</a>
+            <a href="Url_Editar_Perfil">Editar Perfil</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Perfil -->
+    <div class="BoxUsuario">
+        <form class="FormUsuario">
+
+            <!-- Foto Perfil Usuário -->
+
+            <div class="FotoUsuario" id="FotoUsuario">
+                <input type="file" id="InputFoto" accept="image/*" onchange="handleFileSelect(event)">
+                <label for="InputFoto">
+                    <img id="PerfilFoto" src="/Resources/PerfilFoto2.svg" alt="FotoUsuario.png">
+                </label>
+            </div>
+
+            <div class="FormGrupo">
+                <!-- Informações Esquerda -->
+                <div class="FormGrupoEsquerda">
+                    <label for="NomeCompleto">Nome Completo</label>
+                    <input type="Text" class="FormInput" id="NomeCompleto">
+
+                    <label for="DataNascimento">Data de Nascimento</label>
+                    <input type="Date" class="FormInput" id="DataNascimento">
+
+                    <label for="Email">Email</label>
+                    <input type="Email" class="FormInput" id="Email">
+
+                    <label for=Senha>Senha</label>
+                    <input type="Text" class="FormInput" id="Senha">
+
+                    <label for="CPF">CPF</label>
+                    <input type="Text" class="FormInput" id="Cpf">
+                </div>
+
+                <!-- Informações Direita -->
+                <div class="FormGrupoDireita">
+                    <label for="NumeroTelefone">Número de Telefone</label>
+                    <input type="Text" class="FormInput" id="NumeroTelefone">
+
+                    <label for="NumeroTelefoneEmergencia">Número de Telefone de Emergência</label>
+                    <input type="Text" class="FormInput" id="NumeroTelefoneEmergencia">
+
+                    <label for="TipoSanguineo">Tipo Sanguíneo</label>
+                    <input type="Text" class="FormInput" id="TipoSanguineo">
+
+                    <label for="Alergias">Alergias</label>
+                    <input type="Text" class="FormInput" id="Alergias">
+
+                    <label for="DoencasCronicas">Doenças Crônicas</label>
+                    <input type="Text" class="FormInput" id="DoencasCronicas">
+                </div>
+            </div>
+
+            <!-- Botões -->
+            <div class="Botoes">
+                <div class="Botao1">
+                    <button type="button">Atualizar Mudanças</button>
+                </div>
+
+                <div class="Botao2">
+                    <button type="button">Cancelar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
