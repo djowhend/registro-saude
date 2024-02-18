@@ -11,7 +11,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- Link do Bootstrap CSS -->
-    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Link do CSS -->
     <link rel="stylesheet" href="/Css/Home.css">
@@ -24,6 +24,8 @@
     <!-- link do FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 
+    <!-- Script do Popup -->
+    <script src="/Scripts//Home-Popup.js"></script>
 </head>
 
 <body>
@@ -39,7 +41,7 @@
         </a>
 
         <nav class="Navbar">
-            <a href="Url_Acessar_Perfil">Acessar Perfil</a>
+            <a href="/Html/Perfil.html">Acessar Perfil</a>
             <a href="Url_Editar_Perfil">Editar Perfil</a>
         </nav>
     </header>
@@ -47,6 +49,7 @@
     <!-- Carrossel de Notícias -->
     <div class="carousel slide CarrosselNoticias">
         <div class="carousel-inner CarrosselConteudo">
+
             <!-- Noticia 1 -->
             <div class="carousel-item active CarrosselItem">
                 <img src="/Resources/Template1.png" alt="Noticia1.png">
@@ -114,37 +117,15 @@
         </div>
     </div>
 
-    <div id="popup-container" class="popup-container">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">X</span>
-            <p>Não esqueça de completar suas informações da sua conta para futuras emergências, queremos o seu bem !</p>
-            <a href="sua_pagina.html">Clique aqui para completar suas informações</a>
+    <!-- Popup -->
+    <div id="PopupContainerID" class="PopupContainer">
+        <div class="PopupConteudo">
+            <span class="PopupBtnFechar" onclick="FecharPopup()">X</span>
+            <p>Não esqueça de completar suas informações da sua conta para futuras emergências na aba de Editar Perfil !
+            </p>
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var popupContainer = document.getElementById('popup-container');
-
-            // Exibir o popup
-            popupContainer.style.display = 'block';
-
-            // Ocultar o popup após 15 segundos
-            setTimeout(function () {
-                popupContainer.style.display = 'none';
-            }, 10000);
-        });
-
-        function closePopup() {
-            var popupContainer = document.getElementById('popup-container');
-            popupContainer.style.display = 'none';
-        }
-    </script>
-
-    <!-- Bootstrap Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
