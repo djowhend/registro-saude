@@ -3,6 +3,9 @@ import express, {Request, Response} from 'express';
 import { User } from "./model/User"
 import { UserController } from "./controller/UserController";
 import { SessionController } from "./controller/SessionController";
+import { VacinaController } from "./controller/VacinaController"
+import { MedicamentoController } from "./controller/MedicamentoController";
+import { PatologiaController } from "./controller/PatologiaController";
 
 
 const SERVER_PORT = 3000;
@@ -25,8 +28,8 @@ AppDataSource.initialize().then(async () => {
         const user = await userController.createUser(
             request.body.nome,
             request.body.email,
-            request.body.senha,
-            request.body.cpf,
+            request.body.senha
+            // request.body.cpf,
         );
         return response.status(201).json(user);
         
@@ -36,6 +39,55 @@ AppDataSource.initialize().then(async () => {
         const userController = new UserController();
         return response.json(await userController.getUsers());
       });
+
+      server.post("/vacina", async(request: Request, response: Response ) => {
+        const vacinaController = new VacinaController();
+        const vacina = await vacinaController.createVacina(
+            request.body.nomeVacina,
+            request.body.loteVacina,
+            request.body.dataVacinacao,
+            request.body.validadeVacina
+        );
+        return response.status(201).json(vacina);
+        
+    })
+
+    server.get("/vacinas", async (request: Request, response: Response) => {
+      const vacinaController = new VacinaController();
+      return response.json(await vacinaController.getVacinas());
+    });
+
+    server.post("/medicamento", async(request: Request, response: Response ) => {
+      const medicamentoController = new MedicamentoController();
+      const medicamento = await medicamentoController.createMedicamento(
+          request.body.nomeMedicamento,
+          request.body.inicioTratamento,
+          request.body.terminoTratamento,
+          request.body.intervaloTempo
+      );
+      return response.status(201).json(medicamento);
+      
+  })
+
+  server.get("/medicamentos", async (request: Request, response: Response) => {
+    const medicamentoController = new MedicamentoController();
+    return response.json(await medicamentoController.getMedicamentos());
+  });
+
+  server.post("/patologia", async(request: Request, response: Response ) => {
+    const patologiaController = new PatologiaController();
+    const patologia = await patologiaController.createPatologia(
+        request.body.nomePatologia
+        
+    );
+    return response.status(201).json(patologia);
+    
+})
+
+server.get("/patologias", async (request: Request, response: Response) => {
+  const patologiaController = new PatologiaController();
+  return response.json(await patologiaController.getPatologias());
+});
 
       server.post("/login", async (request: Request, response: Response) => {
         const sessionController = new SessionController();

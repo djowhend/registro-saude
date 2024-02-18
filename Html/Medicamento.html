@@ -82,69 +82,40 @@
             </div>
         </div>
     </div>
-
+<!-- --------- -->
+    
     <div class="text-center Campo">
         <h3>Cadastro de Medicamentos</h3>
-        <h4>Nome da Medicação</h4>
-        <div class="input-group my-3">
-            <input type="text" class="form-control border-secondary rounded-0" placeholder="Digite o nome do medicamento"
-                aria-describedby="button-addon2" />
-        </div>
-
-        <h4>Início da Medicação</h4>
-        <div class="input-group my-3">
-            <input type="date" class="form-control border-secondary rounded-0"
-                aria-describedby="button-addon2" />
-        </div>
-
-        <h4>Término da Medicação</h4>
-        <div class="input-group my-3">
-            <input type="date" class="form-control border-secondary rounded-0"
-            aria-describedby="button-addon2" />
-        </div>
-        <button class="Botao">Cadastrar Medicamento</button> 
+        <form onsubmit="cadastrarMedicamento(); return false;">
+            <h4>Nome da Medicação</h4>
+            <div class="input-group my-3">
+                <input type="text" id="nomeMedicamento" class="form-control border-secondary rounded-0" placeholder="Digite o nome do medicamento"
+                    aria-describedby="button-addon2" />
+            </div>
+    
+            <h4>Início da Medicação</h4>
+            <div class="input-group my-3">
+                <input type="date" id="inicioMedicacao" class="form-control border-secondary rounded-0"
+                    aria-describedby="button-addon2" />
+            </div>
+    
+            <h4>Término da Medicação</h4>
+            <div class="input-group my-3">
+                <input type="date" id="terminoMedicacao" class="form-control border-secondary rounded-0"
+                    aria-describedby="button-addon2" />
+            </div>
+            <button type="submit" class="Botao">Cadastrar Medicamento</button>
+        </form>
     </div>
-
-    <!-- <div class="container">
-        <div class="card">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Vacina</li>
-                <li class="list-group-item">Data de vacinação</li>
-                <li class="list-group-item">Valência</li>
-            </ul>
-        </div>
-    </div> -->
+    <div id="listaMedicamentos"></div>
 
     
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-        <script>
-            function cadastrarMedicamento() {
-                var nomeMedicamento = document.getElementById("nomeMedicamento").value;
-                var inicioMedicacao = document.getElementById("inicioMedicacao").value;
-                var terminoMedicacao = document.getElementById("terminoMedicacao").value;
-        
-                var informacoesMedicamento = "Nome do Medicamento: " + nomeMedicamento + "<br>" +
-                                             "Início da Medicação: " + inicioMedicacao + "<br>" +
-                                             "Término da Medicação: " + terminoMedicacao;
-        
-                var novoParagrafo = document.createElement("p");
-                novoParagrafo.innerHTML = informacoesMedicamento;
-        
-                var botaoExcluir = document.createElement("button");
-                botaoExcluir.textContent = "Excluir";
-                botaoExcluir.onclick = function() {
-                    novoParagrafo.remove();
-                };
-        
-                novoParagrafo.appendChild(botaoExcluir);
-                document.getElementById("listaMedicamentos").appendChild(novoParagrafo);
-            }
-        </script>
+        <script src="../src/front/cadastroMedicamento.js"></script>
 
 </body>
 

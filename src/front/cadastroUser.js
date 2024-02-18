@@ -9,7 +9,8 @@ document.getElementById('user-form').addEventListener('submit', async function(e
     const email = document.getElementById('inputemail').value;
     const senha = document.getElementById('inputsenha').value;
     const confirmarSenha = document.getElementById('inputconfirmasenha').value;
-    const cpf = document.getElementById('inputcpf').value;
+    // const cpf = document.getElementById('inputcpf').value;
+    console.log("chegou");
     
     if (senha !== confirmarSenha) {
         console.error('As senhas não correspondem.');
@@ -20,8 +21,8 @@ document.getElementById('user-form').addEventListener('submit', async function(e
     const userData = {
         nome,
         email,
-        senha,
-        cpf
+        senha
+        // cpf
     };
     
     try {
