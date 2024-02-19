@@ -256,6 +256,27 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.FormGrupo select {
+    width: 24rem;
+    height: 20rem;
+    padding: 0 15px;
+
+    color: #fff;
+    font-size: 1rem;
+
+    background: #ffffff1a;
+    border-radius: 1.5rem;
+    border: none;
+    outline: none;
+
+    margin-left: 1rem;
+}
+
+.FormGrupo select option {
+    background: #143934;
+    color: #fff;
+}
+
 .FormGrupoEsquerda {
     display: flex;
     flex-direction: column;
@@ -275,6 +296,7 @@ body {
     width: 35rem;
     height: 20rem;
 }
+
 
 .FormInput {
     width: 24rem;
@@ -336,7 +358,6 @@ body {
     box-shadow: 0 0 10px #35cd7d;
     border: 0.15rem solid #fff;
     border-radius: 0.8rem;
-    /* border: none; */
     outline: none;
 
     cursor: pointer;

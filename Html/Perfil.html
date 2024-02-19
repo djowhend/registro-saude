@@ -35,16 +35,16 @@
     <header class="Header">
         <nav class="Navbar">
             <a href="/Html/Login.html">Página Inicial</a>
-            <a href="/Html/Contatos.html">Contatos</a>
+            <a href="/Html/Perfil.html">Perfil</a>
         </nav>
 
-        <a class="Logo" href="https://github.com/djowhend/registro-saude" data-message="Github do Registro Saúde">
+        <a class="Logo" href="https://linktr.ee/registrosaude" target="_blank" data-message="Linktree">
             <img src="/Resources/Logo.png" alt="Logo.png">
         </a>
 
         <nav class="Navbar">
-            <a href="/Html/Perfil.html">Acessar Perfil</a>
-            <a href="Url_Editar_Perfil">Editar Perfil</a>
+            <a href="https://github.com/djowhend/registro-saude">Github</a>
+            <a href="/Html/Contatos.html">Sobre Nós</a>
         </nav>
     </header>
 
@@ -64,10 +64,17 @@
                 <!-- Informações Esquerda -->
                 <div class="FormGrupoEsquerda">
                     <label for="NomeCompleto">Nome Completo</label>
-                    <input type="Text" class="FormInput" id="NomeCompleto">
+                    <input type="Text" class="FormInput" id="NomeCompleto" disabled>
+
+                    <label for="Genero">Gênero</label>
+                    <select id="Genero" class="FormInput">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Outro">Outro</option>
+                    </select>
 
                     <label for="DataNascimento">Data de Nascimento</label>
-                    <input type="Date" class="FormInput" id="DataNascimento">
+                    <input type="Date" class="FormInput" id="DataNascimento" disabled>
 
                     <label for="Email">Email</label>
                     <input type="Email" class="FormInput" id="Email">
@@ -75,12 +82,13 @@
                     <label for=Senha>Senha</label>
                     <input type="Text" class="FormInput" id="Senha">
 
-                    <label for="CPF">CPF</label>
-                    <input type="Text" class="FormInput" id="Cpf">
                 </div>
 
                 <!-- Informações Direita -->
                 <div class="FormGrupoDireita">
+                    <label for="CPF">CPF</label>
+                    <input type="Text" class="FormInput" id="Cpf" disabled>
+
                     <label for="NumeroTelefone">Número de Telefone</label>
                     <input type="Text" class="FormInput" id="NumeroTelefone">
 
@@ -88,24 +96,30 @@
                     <input type="Text" class="FormInput" id="NumeroTelefoneEmergencia">
 
                     <label for="TipoSanguineo">Tipo Sanguíneo</label>
-                    <input type="Text" class="FormInput" id="TipoSanguineo">
+                    <select id="TipoSanguineo" class="FormInput">
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
 
-                    <label for="Alergias">Alergias</label>
+                    <label for="Alergias">Alergias - Patologias</label>
                     <input type="Text" class="FormInput" id="Alergias">
-
-                    <label for="DoencasCronicas">Doenças Crônicas</label>
-                    <input type="Text" class="FormInput" id="DoencasCronicas">
                 </div>
             </div>
 
             <!-- Botões -->
             <div class="Botoes">
                 <div class="Botao1">
-                    <button type="button">Atualizar Mudanças</button>
+                    <button type="button">Atualizar Perfil</button>
                 </div>
 
                 <div class="Botao2">
-                    <button type="button">Cancelar</button>
+                    <button type="button">Editar Perfil</button>
                 </div>
             </div>
         </form>
