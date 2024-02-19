@@ -10,7 +10,7 @@ body {
 
     background: linear-gradient(45deg, #1b6945, #105942, #10493d, #143934);
     background-size: 400% 400%;
-    animation: backgroundgradient 5s ease infinite, opacidade 2s ease;
+    animation: backgroundgradient 5s ease infinite;
 }
 
 @keyframes backgroundgradient {
@@ -24,16 +24,6 @@ body {
 
     100% {
         background-position: 0% 50%;
-    }
-}
-
-@keyframes opacidade {
-    0% {
-        opacity: 0.0;
-    }
-
-    100% {
-        opacity: 1;
     }
 }
 
@@ -185,23 +175,25 @@ body {
     display: flex;
     left: 25%;
     top: 15%;
-    
+
     border-radius: 1rem;
     background-color: #10493d;
     box-shadow: 0px 0px 15px #35cd7d;
 
-    animation: Carrossel;
-    animation-duration: 2s;
-    animation-timing-function: ease;
+    animation: Carrossel 0.7s 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 @keyframes Carrossel {
-    0% { 
-        transform: translateY(-50%);
+    0% {
+        transform: scale(2);
+        filter: blur(4px);
+        opacity: 0;
     }
 
     100% {
-        transform: translateY(0);
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
     }
 }
 
@@ -248,7 +240,9 @@ body {
     top: 79%;
 }
 
-.Cartao1, .Cartao2, .Cartao3 {
+.Cartao1,
+.Cartao2,
+.Cartao3 {
     overflow: hidden;
     position: relative;
 
@@ -263,50 +257,56 @@ body {
 }
 
 .Cartao1 {
-    animation: Cartao1;
-    animation-duration: 2s;
-    animation-timing-function: ease;
+    animation: Cartao1 1.3s 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .Cartao2 {
-    animation: Cartao2;
-    animation-duration: 2s;
-    animation-timing-function: ease;
+    animation: Cartao2 1.3s 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .Cartao3 {
-    animation: Cartao3;
-    animation-duration: 2s;
-    animation-timing-function: ease;
+    animation: Cartao3 1.3s 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes Cartao1 {
-    0% { 
-        transform: translateX(-100%);
+    0% {
+        transform: translateX(-800px) rotateY(30deg) scale(0);
+        transform-origin: -100% 50%;
+        opacity: 0;
     }
 
     100% {
-        transform: translateX(0);
+        transform: translateX(0) rotateY(0) scale(1);
+        transform-origin: 1800px 50%;
+        opacity: 1;
     }
 }
 
 @keyframes Cartao2 {
-    0% { 
-        transform: translateY(100%);
+    0% {
+        transform: translateY(600px) rotateX(30deg) scale(0);
+        transform-origin: 50% 100%;
+        opacity: 0;
     }
 
     100% {
-        transform: translateY(0);
+        transform: translateY(0) rotateX(0) scale(1);
+        transform-origin: 50% -1400px;
+        opacity: 1;
     }
 }
 
 @keyframes Cartao3 {
-    0% { 
-        transform: translateX(100%);
+    0% {
+        transform: translateX(800px) rotateY(-30deg) scale(0);
+        transform-origin: -100% 50%;
+        opacity: 0;
     }
 
     100% {
-        transform: translateY(0);
+        transform: translateX(0) rotateY(0) scale(1);
+        transform-origin: -1800px 50%;
+        opacity: 1;
     }
 }
 
@@ -339,7 +339,9 @@ body {
     transition: 1s ease;
 }
 
-.Cartao1:hover .CartaoBody, .Cartao2:hover .CartaoBody, .Cartao3:hover .CartaoBody {
+.Cartao1:hover .CartaoBody,
+.Cartao2:hover .CartaoBody,
+.Cartao3:hover .CartaoBody {
     bottom: 0;
 }
 
@@ -379,11 +381,27 @@ body {
 
     padding: 5px;
     max-width: 300px;
-    animation: bounceInDown 1.5s ease;
+    animation: Popup 1.5s 5s ease, Opacidade 5s ease;
 }
 
-@keyframes bounceInDown {
-    0%, 20%, 50%, 80%, 100% {
+
+@keyframes Opacidade {
+    0% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes Popup {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
         transform: translateY(0);
     }
