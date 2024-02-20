@@ -13,6 +13,11 @@
     <!-- Link do Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Link do Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
     <!-- Link do CSS -->
     <link rel="stylesheet" href="/Css/Vacina.css">
 
@@ -23,269 +28,78 @@
 
     <!-- link do FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Link do Script  -->
+    <script src="/Scripts/Vacina.js"></script>
 </head>
 
 <body>
+    <!-- Header / Navbar -->
+    <header class="Header">
+        <nav class="Navbar">
+            <a href="/Html/Home.html">Página Inicial</a>
+            <a href="/Html/Perfil.html">Perfil</a>
+        </nav>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg Navbar">
-        <div class="container-fluid">
+        <a class="Logo" href="https://linktr.ee/registrosaude" target="_blank" data-message="Linktree">
+            <img src="/Resources/Logo.png" alt="Logo.png">
+        </a>
 
-            <button class="btn text-white" data-bs-toggle="modal" data-bs-target="#Modal">
-                <i class="fa fa-ellipsis-v"></i>
-            </button>
+        <nav class="Navbar">
+            <a href="https://github.com/djowhend/registro-saude">Github</a>
+            <a href="/Html/Contatos.html">Sobre Nós</a>
+        </nav>
+    </header>
 
-            <a class="navbar-brand NavbarTitulo" href="/Html/Home.html">
-                <img src="/Resources/Logo.png" alt="Logo" width="30" height="25" class="d-inline-block align-text-top">
-                Registro Saúde
-            </a>
-        </div>
-    </nav>
+    <!-- Informações da Vacina -->
+    <div class="Conteudo">
+        <div class="Formulario">
+            <h3>Cadastro de Vacinas</h3>
+            <h4>Nome da Vacina</h4>
 
-    <!-- Modal -->
-    <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ModalConteudo">
-                <div class="Usuario">
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="/Resources/PerfilFoto.jpg" class="rounded-circle border border-5" alt="FotoUsuário.png">
-                            <br>
-                            <div class="UsuarioInfo">
-                                <span class="mt-2">Nome</span>
-                                <span class="mt-2">Gênero</span>
-                                <span class="mt-2">Idade</span>
-                            </div>
-                            <br>
-                            <p>Adicione aqui a biografia ou recado do usuário.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-left Informacoes">
-                    <p><strong>CPF:</strong> 123.456.789-09</p>
-                    <hr>
-                    <p><strong>Email:</strong> emailteste@gmail.com</p>
-                    <hr>
-                    <p><strong>Telefone:</strong> +55 00 1234-5678</p>
-                    <hr>
-                    <p><strong>Tipo Sanguíneo:</strong> O+</p>
-                    <hr>
-                </div>
-                <div class="Icones">
-                    <a href="/Html/Login.html" class="btn btn-outline BotaoIcone">
-                        <i class="fas fa-power-off"></i>
-                    </a>
-                    <a href="url_das_configuracoes" class="btn btn-outline BotaoIcone">
-                        <i class="fas fa-cog"></i>
-                    </a>
-                </div>
+            <div class="Input">
+                <input id="nomeVacina" type="text" placeholder="Digite o nome da vacina" />
             </div>
+
+
+            <h4>Lote da Vacina</h4>
+            <div class="Input">
+                <input id="loteVacina" type="text" placeholder="Digite o lote da vacina" />
+            </div>
+
+            <h4>Data de Vacinação</h4>
+            <div class="Input">
+                <input id="dataVacina" type="date">
+            </div>
+
+            <h4>Validação da Vacina</h4>
+            <div class="Input">
+                <input id="validacaoVacina" type="date">
+            </div>
+            <button class="Botao" onclick="repassarInformacao()">Cadastrar Vacina</button>
         </div>
     </div>
 
-    <!-- <div class="text-center Campo">
-        <h3>Cadastro de Vacinas</h3>
-        <h4>Nome da Vacina</h4>
-        <div class="input-group my-3">
-            <input type="text" class="form-control border-secondary rounded-0" placeholder="Digite o nome da vacina"
-                aria-describedby="button-addon2" />
-        </div>
-
-        <h4>Data de Vacinação</h4>
-        <div class="input-group my-3">
-            <input type="date" class="form-control border-secondary rounded-0"
-                aria-describedby="button-addon2" />
-        </div>
-
-        <h4>Validação da Vacina</h4>
-        <div class="input-group my-3">
-            <input type="date" class="form-control border-secondary rounded-0"
-            aria-describedby="button-addon2" />
-        </div>
-        <button class="Botao">Cadastrar Vacina</button> 
-    </div> -->
-
-  
-
-      
-
-    <!-- <div class="container">
-        <div class="card">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Vacina</li>
-                <li class="list-group-item">Data de vacinação</li>
-                <li class="list-group-item">Valência</li>
-            </ul>
-        </div>
-    </div> -->
- <!-- caixa de informação -->
-    <div class="text-center Campo">
-        <h3>Cadastro de Vacinas</h3>
-        <h4>Nome da Vacina</h4>
-        <div class="input-group my-3">
-            <input id="nomeVacina" type="text" class="form-control border-secondary rounded-0" placeholder="Digite o nome da vacina"
-                aria-describedby="button-addon2" />
-        </div>
-
-        
-    <h4>Lote da Vacina</h4>
-    <div class="input-group my-3">
-        <input id="loteVacina" type="text" class="form-control border-secondary rounded-0" placeholder="Digite o lote da vacina"
-            aria-describedby="button-addon2" />
-    </div>
-    
-        <h4>Data de Vacinação</h4>
-        <div class="input-group my-3">
-            <input id="dataVacina" type="date" class="form-control border-secondary rounded-0"
-                aria-describedby="button-addon2" />
-        </div>
-    
-        <h4>Validação da Vacina</h4>
-        <div class="input-group my-3">
-            <input id="validacaoVacina" type="date" class="form-control border-secondary rounded-0"
-            aria-describedby="button-addon2" />
-        </div>
-        <button class="Botao" onclick="repassarInformacao()">Cadastrar Vacina</button> 
-    </div>
-    
-    <div id="caixa" class="text-center Campo">
+    <div id="caixa" class="text-center">
         <h3>Informações Cadastradas</h3>
     </div>
-    <!-- pesquisar por nome -->
+
+    <!-- Pesquisar Vacina por Nome -->
     <div class="PesquisarPorNome">
         <h3>Pesquisar por Nome</h3>
-        <div class="input-group my-3">
-            <input id="nomePesquisa" type="text" class="form-control border-secondary rounded-0" placeholder="Digite o nome da vacina"
-                aria-describedby="button-addon2" />
+        <div class="Input">
+            <input id="nomePesquisa" type="text" placeholder="Digite o nome da vacina" />
         </div>
         <button class="BotaoPesquisar" onclick="pesquisarPorNome()">Pesquisar</button>
     </div>
-    
-    <!-- pesquisa por data -->
-    <div class = "Pesquisa">
-        <h3>Pesquisar por Data</h3>
-        <div class="input-group my-3">
-            <input id="dataPesquisa" type="date" class="form-control border-secondary rounded-0" aria-describedby="button-addon2" />
-        </div>
-        <button class="BotaoPesquisar" onclick="pesquisarPorData()">Pesquisar</button>
-    </div>
-    
-    <!-- exibir as vacinas -->
+
+
+
+    <!-- Exibição das Vacinas -->
     <div class="ExibirVacinas">
         <button class="Botao" onclick="exibirTodasVacinas()">Ver Todas as Vacinas</button>
     </div>
 
-    <script>
-        // Função para repassar as informações dos campos para a caixa de texto e adicionar ao div "caixa"
-        function repassarInformacao() {
-            var nomeVacina = document.getElementById("nomeVacina").value;
-            var loteVacina = document.getElementById("loteVacina").value;
-            var dataVacina = document.getElementById("dataVacina").value;
-            var validacaoVacina = document.getElementById("validacaoVacina").value;
-    
-            var informacoesRepassadas = "Nome da Vacina: " + nomeVacina + "<br>" +
-                                        "Lote da Vacina: " + loteVacina + "<br>" +
-                                        "Data de Vacinação: " + dataVacina + "<br>" +
-                                        "Validação da Vacina: " + validacaoVacina;
-    
-            var novoParagrafo = document.createElement("p");
-            novoParagrafo.innerHTML = informacoesRepassadas;
-    
-            var botaoExcluir = document.createElement("button");
-            botaoExcluir.textContent = "Excluir";
-            botaoExcluir.onclick = function() {
-                novoParagrafo.remove();
-                //  excluir os dados 
-                localStorage.removeItem("nomeVacina");
-                localStorage.removeItem("loteVacina");
-                localStorage.removeItem("dataVacina");
-                localStorage.removeItem("validacaoVacina");
-            };
-    
-            novoParagrafo.appendChild(botaoExcluir);
-            document.getElementById("caixa").appendChild(novoParagrafo);
-    
-        //  Salvando os dados 
-            localStorage.setItem("nomeVacina", nomeVacina);
-            localStorage.setItem("loteVacina", loteVacina);
-            localStorage.setItem("dataVacina", dataVacina);
-            localStorage.setItem("validacaoVacina", validacaoVacina);
-        }
-        //    pesquisar vacinas por nome
-    function pesquisarPorNome() {
-        var nomePesquisa = document.getElementById("nomePesquisa").value.toLowerCase();
-        var paragrafos = document.getElementById("caixa").getElementsByTagName("p");
-
-        for (var i = 0; i < paragrafos.length; i++) {
-            var paragrafo = paragrafos[i];
-            var texto = paragrafo.textContent || paragrafo.innerText;
-            var nomeVacina = texto.substring(texto.indexOf("Nome da Vacina: ") + 16, texto.indexOf("<br>"));
-            if (nomeVacina.toLowerCase().indexOf(nomePesquisa) > -1) {
-                paragrafo.style.display = "";
-            } else {
-                paragrafo.style.display = "none";
-            }
-        }
-    }
-    
-    //    pesquisar vacinas por data
-        function pesquisarPorData() {
-            var dataPesquisa = document.getElementById("dataPesquisa").value;
-            var paragrafos = document.getElementById("caixa").getElementsByTagName("p");
-    
-            for (var i = 0; i < paragrafos.length; i++) {
-                var paragrafo = paragrafos[i];
-                var texto = paragrafo.textContent || paragrafo.innerText;
-                if (texto.indexOf(dataPesquisa) > -1) {
-                    paragrafo.style.display = "";
-                } else {
-                    paragrafo.style.display = "none";
-                }
-            }
-        }
-    
-        //  carregar os dados salvos 
-        window.onload = function() {
-            var nomeVacinaSalvo = localStorage.getItem("nomeVacina");
-            var loteVacinaSalvo = localStorage.getItem("loteVacina");
-            var dataVacinaSalvo = localStorage.getItem("dataVacina");
-            var validacaoVacinaSalvo = localStorage.getItem("validacaoVacina");
-    
-            if (nomeVacinaSalvo) {
-                document.getElementById("nomeVacina").value = nomeVacinaSalvo;
-            }
-            
-            if (loteVacinaSalvo) {
-            document.getElementById("loteVacina").value = loteVacinaSalvo;
-            }
-    
-            if (dataVacinaSalvo) {
-                document.getElementById("dataVacina").value = dataVacinaSalvo;
-            }
-    
-            if (validacaoVacinaSalvo) {
-                document.getElementById("validacaoVacina").value = validacaoVacinaSalvo;
-            }
-    
-            // trecar as informações 
-            repassarInformacao();
-    
-        }
-         //  apaerecer todas as vacinas
-    function exibirTodasVacinas() {
-        var paragrafos = document.getElementById("caixa").getElementsByTagName("p");
-
-        for (var i = 0; i < paragrafos.length; i++) {
-            paragrafos[i].style.display = "";
-        }
-    }
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-
-        
 </body>
 
 </html>

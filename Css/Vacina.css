@@ -4,90 +4,181 @@
 }
 
 body {
-    background-color: #143934;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+
+    background: linear-gradient(45deg, #1b6945, #105942, #10493d, #143934);
+    background-size: 400% 400%;
+    animation: backgroundgradient 5s ease infinite;
 }
 
-.Navbar {
-    background-color: #086e6162;
-    font-family: 'Montserrat', sans-serif;
+@keyframes backgroundgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-.NavbarTitulo {
-    color: #35dc7f;
-    position: relative;
-    right: 88%;
-    transition: color 0.3s ease;
-}
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5vh;
+    width: 100%;
 
-.NavbarTitulo:hover {
-    color: #2ca569;
-}
+    background-color: #10493d;
+    box-shadow: 0px 0px 15px #35cd7d;
+    border-bottom: 0.15rem solid #35cd7d;
 
-.ModalConteudo {
-    border: #257D58 10px solid;
-    border-radius: 10%;
-    padding: 5px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.800000011920929);
-}
-
-.Usuario {
-    background-color: #143934;
-    color: #ffffff;
-    border-top-left-radius: 45px;
-    border-top-right-radius: 45px;
-}
-
-img[alt="FotoUsuário.png"] {
-    width: 140px;
-    height: 130px;
-}
-
-.UsuarioInfo {
-    font-size: 20px;
-    padding: 3px;
-}
-
-.Informacoes {
-    padding: 20px;
-}
-
-.Informacoes p {
-    font-size: 20px;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-}
-
-.Informacoes hr {
-    border: 2px solid #9baaaa;
-    opacity: 1;
-    margin-top: -20px;
-    margin-bottom: 30px;
-}
-
-.Icones {
     display: flex;
-    justify-content: space-between;
-    margin: 5px;
-    padding: 5px 25px;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.Icones a {
-    background-color: #257D58;
+.Logo img {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    top: 0.8%;
+    left: 49%;
+    padding-bottom: 0.2rem;
+
+    animation: AnimacaoLogo 1.5s 1s both;
 }
 
-.Icones i {
-    color: #35DC7F;
+@keyframes AnimacaoLogo {
+    0% {
+        transform: translateY(-500px);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+
+    55% {
+        transform: translateY(-65px);
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+
+    81% {
+        transform: translateY(-28px);
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        transform: translateY(-8px);
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
 }
 
-.BotaoIcone:hover {
-    background-color: rgba(37, 125, 88, 0.8);
-}
-
-.Campo {
+.Logo::after {
     position: absolute;
-    left: 15%;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2rem;
+    width: 15rem;
+
+    content: attr(data-message);
+    color: #35dc7f;
+    text-align: center;
+    padding: 5px;
+
+    background: #10493d;
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.Logo:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Navbar a {
+    position: relative;
+    margin-left: 4rem;
+    margin-right: 4rem;
+
+    color: #35cd7d;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    animation: AnimacaoNavbar 0.8s 0.8s both;
+}
+
+@keyframes AnimacaoNavbar {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+
+.Navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+
+    transition: .2s ease;
+}
+
+.Navbar a:hover::before {
+    background-color: #35dc7f;
+    width: 100%;
+}
+
+.Conteudo {
+    position: absolute;
     top: 30%;
-    width: 25%;
+    left: 15%;
+    width: 30vw;
+    height: 60vh;
+    background: linear-gradient(0deg, #000, #143934, #143934, #000);
+    box-shadow: 0px 0px 15px #35cd7d;
+    border-radius: 20px;
 }
 
 .Campo h3 {
@@ -162,11 +253,3 @@ img[alt="FotoUsuário.png"] {
     border-radius: 15px;
     cursor: pointer;
 }
-
-
-
-
-/* .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-} */
