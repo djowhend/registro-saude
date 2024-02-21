@@ -43,6 +43,91 @@ body {
     align-items: center;
 }
 
+.PaginaInicial::after {
+    position: absolute;
+    top: 165%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2rem;
+    width: 15rem;
+
+    content: attr(data-message);
+    color: #35dc7f;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1px;
+
+    background: #10493d;
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.PaginaInicial:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Perfil::after {
+    position: absolute;
+    top: 165%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2rem;
+    width: 26rem;
+
+    content: attr(data-message);
+    color: #35dc7f;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1px;
+
+    background: #10493d;
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.Perfil:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Logo::after {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2rem;
+    width: 15rem;
+
+    content: attr(data-message);
+    color: #35dc7f;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1px;
+
+    background: #10493d;
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.Logo:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
 .Logo img {
     position: fixed;
     width: 35px;
@@ -98,18 +183,19 @@ body {
     }
 }
 
-.Logo::after {
+.Github::after {
     position: absolute;
-    top: 120%;
+    top: 165%;
     left: 50%;
     transform: translateX(-50%);
     height: 2rem;
-    width: 15rem;
+    width: 17rem;
 
     content: attr(data-message);
     color: #35dc7f;
+    font-size: 1.1rem;
     text-align: center;
-    padding: 5px;
+    padding: 1px;
 
     background: #10493d;
     box-shadow: 0 0 10px #35cd7d;
@@ -120,7 +206,35 @@ body {
     transition: opacity 0.5s, visibility 0.5s;
 }
 
-.Logo:hover::after {
+.Github:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.SobreNos::after {
+    position: absolute;
+    top: 165%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2rem;
+    width: 22rem;
+
+    content: attr(data-message);
+    color: #35dc7f;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1px;
+
+    background: #10493d;
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.SobreNos:hover::after {
     opacity: 1;
     visibility: visible;
 }
@@ -257,15 +371,15 @@ body {
 }
 
 .Cartao1 {
-    animation: Cartao1 1.3s 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: Cartao1 1.3s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .Cartao2 {
-    animation: Cartao2 1.3s 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: Cartao2 1.3s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .Cartao3 {
-    animation: Cartao3 1.3s 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: Cartao3 1.3s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes Cartao1 {

@@ -104,7 +104,7 @@ body {
 
 .Logo::after {
     position: absolute;
-    top: 120%;
+    top: 95%;
     left: 50%;
     transform: translateX(-50%);
     height: 2rem;
@@ -338,8 +338,7 @@ body {
     }
 }
 
-.Botao1,
-.Botao2 {
+.Botao1 {
     margin: 0 -20rem;
 }
 
@@ -351,11 +350,9 @@ body {
     color: #fff;
     font-weight: bold;
 
-    box-shadow: 0 5px #57cc99;
-    background: #80ed99;
-
     background: #35cd7d;
     box-shadow: 0 0 10px #35cd7d;
+
     border: 0.15rem solid #fff;
     border-radius: 0.8rem;
     outline: none;
@@ -372,14 +369,21 @@ body {
     box-shadow: 0 2px 10px #fff;
 }
 
-.PreviaPaginas {
+.InfoUsuario {
     display: flex;
     position: relative;
     justify-content: space-evenly;
-    bottom: 0rem;
+    bottom: 2rem;
 }
 
-.PreviaPaginas iframe {
+#InfoVacinas,
+#InfoMedicamentos,
+#InfoPatologias {
     height: 20rem;
     width: 30rem;
+
+    background-color: #105942;
+    box-shadow: 0 0 10px 5px #35cd7d;
+    border: 0.15rem solid #fff;
+    border-radius: 0.8rem;
 }
