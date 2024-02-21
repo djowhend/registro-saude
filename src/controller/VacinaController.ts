@@ -27,4 +27,3 @@ export class VacinaController {
 
 }
 
-//parei no vídeo 9:20

@@ -27,4 +27,3 @@ export class MedicamentoController {
 
 }
 
-//parei no vídeo 9:20

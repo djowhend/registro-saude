@@ -18,4 +18,7 @@ export class Vacina {
     @Column()
     validadeVacina: string;
 
+    // @ManyToOne(() => User, user => user.vacinas)
+    // user: User;
+
 }

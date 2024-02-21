@@ -12,10 +12,37 @@ export class User {
     @Column()
     email: string;
 
-    // @Column()
-    // cpf: string;
-
     @Column()
     senha: string;
+    
+    @Column({nullable: true})
+    cpf: string;
 
+    @Column({nullable: true})
+    genero: string;
+
+    @Column({nullable: true})
+    dataNascimento: string;
+
+    @Column({nullable: true})
+    numTelefone: string;
+
+    @Column({nullable: true})
+    numTelefoneEmergencia: string;
+
+    @Column({nullable: true})
+    tipoSanguineo: string;
+
+    @Column({nullable: true})
+    alergia: string;
+
+    // @OneToMany(() => Vacina, vacina => vacina.user)
+    // vacinas: Vacina[];
+
+    // @ManyToMany(() => Patologia)
+    // @JoinTable()
+    // patologias: Patologia[];
+
+    // @OneToMany(() => Medicamento, medicamento => medicamento.user)
+    // medicamentos: Medicamento[];
 }

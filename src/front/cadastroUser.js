@@ -26,7 +26,7 @@ document.getElementById('user-form').addEventListener('submit', async function(e
     };
     
     try {
-        const response = await fetch('http://localhost:3000/user', {
+        const response = await fetch("http://localhost:3000/user", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

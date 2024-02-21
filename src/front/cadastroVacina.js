@@ -1,19 +1,19 @@
 function repassarInformacao() {
-    var nomeVacina = document.getElementById("nomeVacina").value;
-    var loteVacina = document.getElementById("loteVacina").value;
-    var dataVacina = document.getElementById("dataVacina").value;
-    var validacaoVacina = document.getElementById("validacaoVacina").value;
+    const nomeVacina = document.getElementById("nomeVacina").value;
+    const loteVacina = document.getElementById("loteVacina").value;
+    const dataVacina = document.getElementById("dataVacina").value;
+    const validacaoVacina = document.getElementById("validacaoVacina").value;
 
-    var informacoesRepassadas = "Nome da Vacina: " + nomeVacina + "<br>" +
+    const informacoesRepassadas = "Nome da Vacina: " + nomeVacina + "<br>" +
         "Lote da Vacina: " + loteVacina + "<br>" +
         "Data de Vacinação: " + dataVacina + "<br>" +
         "Validação da Vacina: " + validacaoVacina;
 
    
-     var novoParagrafo = document.createElement("p");
+    const novoParagrafo = document.createElement("p");
     novoParagrafo.innerHTML = informacoesRepassadas;
 
-    var botaoExcluir = document.createElement("button");
+    const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "Excluir";
     botaoExcluir.onclick = function () {
         novoParagrafo.remove();
@@ -27,6 +27,10 @@ function repassarInformacao() {
     novoParagrafo.appendChild(botaoExcluir);
     document.getElementById("caixa").appendChild(novoParagrafo);
 
+    console.log("Chegou!!!");
+
+    cadastrarVacina();
+
     //  Salvando os dados 
     localStorage.setItem("nomeVacina", nomeVacina);
     localStorage.setItem("loteVacina", loteVacina);
@@ -35,13 +39,13 @@ function repassarInformacao() {
 }
 //    pesquisar vacinas por nome
 function pesquisarPorNome() {
-    var nomePesquisa = document.getElementById("nomePesquisa").value.toLowerCase();
-    var paragrafos = document.getElementById("caixa").getElementsByTagName("p");
+    const nomePesquisa = document.getElementById("nomePesquisa").value.toLowerCase();
+    const paragrafos = document.getElementById("caixa").getElementsByTagName("p");
     
-    for (var i = 0; i < paragrafos.length; i++) {
-        var paragrafo = paragrafos[i];
-        var texto = paragrafo.textContent || paragrafo.innerText;
-        var nomeVacina = texto.toLowerCase(); // Convertendo para minúsculas para comparar
+    for (const i = 0; i < paragrafos.length; i++) {
+        const paragrafo = paragrafos[i];
+        const texto = paragrafo.textContent || paragrafo.innerText;
+        const nomeVacina = texto.toLowerCase(); // Convertendo para minúsculas para comparar
 
         if (nomeVacina.includes(nomePesquisa)) { // Verificando se o nome da vacina inclui o texto de pesquisa
             paragrafo.style.display = ""; // Exibindo o parágrafo se houver correspondência
@@ -53,10 +57,10 @@ function pesquisarPorNome() {
 
 //  carregar os dados salvos 
 window.onload = function () {
-    var nomeVacinaSalvo = localStorage.getItem("nomeVacina");
-    var loteVacinaSalvo = localStorage.getItem("loteVacina");
-    var dataVacinaSalvo = localStorage.getItem("dataVacina");
-    var validacaoVacinaSalvo = localStorage.getItem("validacaoVacina");
+    const nomeVacinaSalvo = localStorage.getItem("nomeVacina");
+    const loteVacinaSalvo = localStorage.getItem("loteVacina");
+    const dataVacinaSalvo = localStorage.getItem("dataVacina");
+    const validacaoVacinaSalvo = localStorage.getItem("validacaoVacina");
 
     if (nomeVacinaSalvo) {
         document.getElementById("nomeVacina").value = nomeVacinaSalvo;
@@ -79,9 +83,46 @@ window.onload = function () {
 }
 //  apaerecer todas as vacinas
 function exibirTodasVacinas() {
-    var paragrafos = document.getElementById("caixa").getElementsByTagName("p");
+    const paragrafos = document.getElementById("caixa").getElementsByTagName("p");
 
-    for (var i = 0; i < paragrafos.length; i++) {
+    for (const i = 0; i < paragrafos.length; i++) {
         paragrafos[i].style.display = "";
     }
+}
+
+function cadastrarVacina() {
+    const nomeVacina = document.getElementById("nomeVacina").value;
+    const loteVacina = document.getElementById("loteVacina").value;
+    const dataVacina = document.getElementById("dataVacina").value;
+    const validacaoVacina = document.getElementById("validacaoVacina").value;
+
+    // Objeto contendo os dados a serem enviados para o servidor
+    const dados = {
+        nomeVacina: nomeVacina,
+        loteVacina: loteVacina,
+        dataVacinacao: dataVacina,
+        validadeVacina: validacaoVacina
+    };
+
+    fetch("http://localhost:3000/vacina", {
+        method: "POST",
+        headers: {
+            "Authorization": `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dados)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Erro ao salvar os dados no servidor.");
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Dados foram salvos com sucesso, você pode tratar a resposta do servidor aqui se necessário
+        console.log("Dados salvos com sucesso:", data);
+    })
+    .catch(error => {
+        console.error("Erro:", error);
+    });
 }

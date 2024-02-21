@@ -15,7 +15,10 @@ export class Medicamento {
     @Column()
     terminoTratamento: string;
 
-    @Column()
+    @Column({nullable: true})
     intervaloTempo: string;
+
+    // @ManyToOne(() => User, user => user.medicamentos)
+    // user: User;
 
 }

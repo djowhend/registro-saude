@@ -24,5 +24,3 @@ export class PatologiaController {
     }
 
 }
-
-//parei no vídeo 9:20
