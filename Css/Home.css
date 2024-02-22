@@ -8,10 +8,7 @@ body {
     height: 100vh;
     width: 100vw;
 
-    /* background: linear-gradient(45deg, #1b6945, #105942, #10493d, #143934); */
-    /* background-size: 400% 400%; */
-    /* animation: backgroundgradient 5s ease infinite; */
-    background-image: url(/Resources/Fundo.png);
+    background-image: url(/Resources/Fundo2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
