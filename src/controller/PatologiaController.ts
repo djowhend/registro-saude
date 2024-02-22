@@ -5,11 +5,12 @@ import { Patologia } from "../model/Patologia";
 
 export class PatologiaController {
 
-    async createPatologia(nomePatologia: string) {
+    async createPatologia(nomePatologia: string, userId: number) {
 
         const patologiaRepository = AppDataSource.getRepository(Patologia);
         const patologia = new Patologia();
         patologia.nomePatologia = nomePatologia;
+        patologia.userId = userId;
         
 
         return await patologiaRepository.save(patologia);

@@ -5,7 +5,7 @@ import { Medicamento } from "../model/Medicamento";
 
 export class MedicamentoController {
 
-    async createMedicamento(nomeMedicamento: string, inicioTratamento: string, terminoTratamento: string, intervaloTempo: string) {
+    async createMedicamento(nomeMedicamento: string, inicioTratamento: string, terminoTratamento: string, intervaloTempo: string, userId: number) {
 
         const medicamentoRepository = AppDataSource.getRepository(Medicamento);
         const medicamento = new Medicamento();
@@ -13,6 +13,7 @@ export class MedicamentoController {
         medicamento.inicioTratamento = inicioTratamento;
         medicamento.terminoTratamento = terminoTratamento;
         medicamento.intervaloTempo = intervaloTempo;
+        medicamento.userId = userId;
 
         return await medicamentoRepository.save(medicamento);
 

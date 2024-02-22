@@ -58,21 +58,27 @@ server.get("/users", async (request: Request, response: Response) => {
   return response.json(await userController.getUsers());
 });
 
-server.post("/vacina", async (request: Request, response: Response) => {
+server.post("/vacina", async (request: AuthenticatedRequest, response: Response) => {
   const vacinaController = new VacinaController();
   const vacina = await vacinaController.createVacina(
     request.body.nomeVacina,
     request.body.loteVacina,
     request.body.dataVacinacao,
-    request.body.validadeVacina
-  );
+    request.body.validadeVacina,
+    request.userId
+  )
   return response.status(201).json(vacina);
 
 })
 
-server.get("/vacinas", async (request: Request, response: Response) => {
+// server.get("/vacinas", async (request: Request, response: Response) => {
+//   const vacinaController = new VacinaController();
+//   return response.json(await vacinaController.getVacinas());
+// });
+server.get("/vacinas", async (request: AuthenticatedRequest, response: Response) => {
+  const userId = request.userId
   const vacinaController = new VacinaController();
-  return response.json(await vacinaController.getVacinas());
+  return response.json(await vacinaController.getVacinasByUserId(userId));
 });
 
 server.post("/medicamento", async (request: Request, response: Response) => {
@@ -81,7 +87,8 @@ server.post("/medicamento", async (request: Request, response: Response) => {
     request.body.nomeMedicamento,
     request.body.inicioTratamento,
     request.body.terminoTratamento,
-    request.body.intervaloTempo
+    request.body.intervaloTempo,
+    request.body.userId
   );
   return response.status(201).json(medicamento);
 
@@ -95,7 +102,8 @@ server.get("/medicamentos", async (request: Request, response: Response) => {
 server.post("/patologia", async (request: Request, response: Response) => {
   const patologiaController = new PatologiaController();
   const patologia = await patologiaController.createPatologia(
-    request.body.nomePatologia
+    request.body.nomePatologia,
+    request.body.userId
 
   );
   return response.status(201).json(patologia);

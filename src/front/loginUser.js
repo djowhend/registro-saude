@@ -72,7 +72,9 @@ document.getElementById('login-form').addEventListener('submit', async function(
     }
     
     console.log("chegou");
-    
+
+    // console.log(response.json())
+
     const { token } = await response.json();
     console.log('Token de autenticação:', token);
     

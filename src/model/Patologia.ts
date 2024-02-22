@@ -9,5 +9,8 @@ export class Patologia {
     @Column()
     nomePatologia: string;
 
+    @Column()
+    userId: number;
+
 
 }

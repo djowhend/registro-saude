@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from "typeorm"
+import { User } from "./User"
 
 @Entity()
 export class Vacina {
@@ -18,7 +19,11 @@ export class Vacina {
     @Column()
     validadeVacina: string;
 
-    // @ManyToOne(() => User, user => user.vacinas)
-    // user: User;
+    @Column()
+    userId: number;
+
+    @ManyToOne(() => User)
+    @JoinColumn({name: "userId"})
+    user: User;
 
 }

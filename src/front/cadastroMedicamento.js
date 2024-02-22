@@ -42,7 +42,8 @@
     const dadosMedicamento = {
         nomeMedicamento: nomeMedicamento,
         inicioTratamento: inicioMedicacao,
-        terminoTratamento: terminoMedicacao
+        terminoTratamento: terminoMedicacao,
+        userId: userId
     };
 
     fetch("http://localhost:3000/medicamento", {

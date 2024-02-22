@@ -18,6 +18,9 @@ export class Medicamento {
     @Column({nullable: true})
     intervaloTempo: string;
 
+    @Column()
+    userId: number;
+
     // @ManyToOne(() => User, user => user.medicamentos)
     // user: User;
 

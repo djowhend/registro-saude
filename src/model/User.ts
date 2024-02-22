@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, OneToMany, Column } from "typeorm"
+import { Vacina } from "./Vacina"
 
 @Entity()
 export class User {
@@ -36,13 +37,6 @@ export class User {
     @Column({nullable: true})
     alergia: string;
 
-    // @OneToMany(() => Vacina, vacina => vacina.user)
-    // vacinas: Vacina[];
-
-    // @ManyToMany(() => Patologia)
-    // @JoinTable()
-    // patologias: Patologia[];
-
-    // @OneToMany(() => Medicamento, medicamento => medicamento.user)
-    // medicamentos: Medicamento[];
+    @OneToMany(() => Vacina, vacina => vacina.user)
+    vacinas: Vacina[];
 }

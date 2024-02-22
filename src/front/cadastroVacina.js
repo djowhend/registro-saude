@@ -101,7 +101,7 @@ function cadastrarVacina() {
         nomeVacina: nomeVacina,
         loteVacina: loteVacina,
         dataVacinacao: dataVacina,
-        validadeVacina: validacaoVacina
+        validadeVacina: validacaoVacina,
     };
 
     fetch("http://localhost:3000/vacina", {
@@ -126,3 +126,40 @@ function cadastrarVacina() {
         console.error("Erro:", error);
     });
 }
+
+//GET VACINA COM O VINCULO DO USUARIO
+
+document.getElementById('buscar-vacinas-btn').addEventListener('click', () => {
+    fetch("http://localhost:3000/vacinas", {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Erro ao obter informações das vacinas.");
+        }
+        return response.json();
+    })
+    .then(vacinas => {
+        console.log('Informações das vacinas:', vacinas);
+        // Limpa o conteúdo anteriormente exibido
+        document.getElementById('vacinas-container').innerHTML = '';
+
+        // Loop através das vacinas e exibe cada uma no HTML
+        vacinas.forEach(vacina => {
+            const vacinaElement = document.createElement('div');
+            vacinaElement.innerHTML = `
+                <p>Nome da Vacina: ${vacina.nomeVacina}</p>
+                <p>Lote da Vacina: ${vacina.loteVacina}</p>
+                <p>Data de Vacinação: ${vacina.dataVacinacao}</p>
+                <p>Validação da Vacina: ${vacina.validadeVacina}</p>
+            `;
+            document.getElementById('vacinas-container').appendChild(vacinaElement);
+        });
+    })
+    .catch(error => {
+        console.error("Erro:", error);
+    });
+});
