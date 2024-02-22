@@ -13,6 +13,11 @@
     <!-- Link do Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Link do Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
     <!-- Link do CSS -->
     <link rel="stylesheet" href="/Css/Patologia.css">
 
@@ -23,6 +28,9 @@
 
     <!-- link do FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Link do Script  -->
+    <script src="/Scripts/Patologia.js"></script>
 </head>
 
 <body>
@@ -30,7 +38,8 @@
     <header class="Header">
         <nav class="Navbar">
             <a class="PaginaInicial" href="/Html/Home.html" data-message="Home do Registro Saúde">Página Inicial</a>
-            <a class="Perfil" href="/Html/Perfil.html" data-message="Visualize seu perfil ou atualize suas informações">Perfil</a>
+            <a class="Perfil" href="/Html/Perfil.html"
+                data-message="Visualize seu perfil ou atualize suas informações">Perfil</a>
         </nav>
 
         <a class="Logo" href="https://linktr.ee/registrosaude" target="_blank" data-message="Linktree">
@@ -38,42 +47,50 @@
         </a>
 
         <nav class="Navbar">
-            <a class="Github" href="https://github.com/djowhend/registro-saude" data-message="Repositório do Registro Saúde">Github</a>
-            <a class="SobreNos" href="/Html/Contatos.html" data-message="Conheça os criadores do Registro Saúde">Sobre Nós</a>
+            <a class="Github" href="https://github.com/djowhend/registro-saude"
+                data-message="Repositório do Registro Saúde">Github</a>
+            <a class="SobreNos" href="/Html/Contatos.html" data-message="Conheça os criadores do Registro Saúde">Sobre
+                Nós</a>
         </nav>
     </header>
 
-    <div class="text-center Campo">
-        <h3>Cadastro de Patologias</h3>
-        <h4>Tipo Sanguíneo</h4>
-        <div class="input-group my-3">
-            <input type="text" class="form-control border-secondary rounded-0" placeholder="Digite seu tipo sanguíneo"
-                aria-describedby="button-addon2" />
-        </div>
+    <!-- Informações da Patologia -->
+    <div class="Conteudo1">
+        <div class="Formulario">
+            <h3>Cadastro de Patologias</h3>
 
-        <h4>Condições Médicas Crônicas</h4>
-        <div class="input-group my-3">
-            <input type="text" class="form-control border-secondary rounded-0"
-                placeholder="Digite suas alergias, entre outras doênças crônicas" aria-describedby="button-addon2" />
-        </div>
+            <div class="Informacoes">
+                <p>Condições Médicas Crônicas</p>
+                <input id="doencasCronicas" type="text"
+                    placeholder="Digite suas alergias, entre outras doênças crônicas">
+            </div>
 
-        <h4>Peso</h4>
-        <div class="input-group my-3">
-            <input type="number" class="form-control border-secondary rounded-0" placeholder="Digite seu peso"
-                aria-describedby="button-addon2" />
+            <div class="CadastrarRegistros">
+                <button>Cadastrar Patologia</button>
+            </div>
         </div>
-
-        <h4>Altura</h4>
-        <div class="input-group my-3">
-            <input type="number" class="form-control border-secondary rounded-0" placeholder="Digite seu altura"
-                aria-describedby="button-addon2" />
-        </div>
-        <button class="Botao">Atualizar Registros</button>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <!-- Pesquisar Patologia por Nome/Exibição das Patologias -->
+    <div class="Conteudo2">
+        <div class="Pesquisa-Exibição">
+            <h3>Pesquisa de Patologias</h3>
+
+            <div class="PesquisarPatologia">
+                <p>Pesquisar por Nome</p>
+                <input id="nomePesquisa" type="text" placeholder="Digite o nome da patologia">
+                <button onclick="pesquisarPorNome()">Pesquisar</button>
+            </div>
+        </div>
+
+        <div id="caixa" class="text-center">
+            <h3>Informações Cadastradas</h3>
+        </div>
+
+        <div class="ExibirPatologias">
+            <button onclick="exibirTodasPatologias()">Ver Todas As Patologias</button>
+        </div>
+    </div>
 
 </body>
 

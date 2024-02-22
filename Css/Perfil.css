@@ -2,7 +2,6 @@
 
 * {
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
     margin: 0;
     padding: 0;
 }
@@ -102,33 +101,6 @@ body {
     }
 }
 
-.Logo::after {
-    position: absolute;
-    top: 95%;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 2rem;
-    width: 15rem;
-
-    content: attr(data-message);
-    color: #35dc7f;
-    text-align: center;
-    padding: 5px;
-
-    background: #10493d;
-    box-shadow: 0 0 10px #35cd7d;
-    border-radius: 1rem;
-
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s, visibility 0.5s;
-}
-
-.Logo:hover::after {
-    opacity: 1;
-    visibility: visible;
-}
-
 .Navbar a {
     position: relative;
     margin-left: 4rem;
@@ -187,7 +159,7 @@ body {
     border: 0.15rem solid #35cd7d;
     border-radius: 3rem;
 
-    animation: AnimacaoPerfil 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    /* animation: AnimacaoPerfil 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both; */
 }
 
 @keyframes AnimacaoPerfil {
@@ -205,7 +177,6 @@ body {
 }
 
 .FotoUsuario {
-    position: relative;
     position: relative;
     top: 4rem;
     left: 50%;
@@ -284,7 +255,7 @@ body {
     padding-left: 1.5rem;
 
     width: 35rem;
-    height: 20rem;
+    height: 22rem;
 }
 
 .FormGrupoDireita {
@@ -294,7 +265,7 @@ body {
     padding-left: 7.5rem;
 
     width: 35rem;
-    height: 20rem;
+    height: 22rem;
 }
 
 
@@ -321,8 +292,8 @@ body {
 .Botoes {
     display: flex;
     position: relative;
-    justify-content: space-evenly;
-    bottom: 10rem;
+    justify-content: center;
+    bottom: 7rem;
     animation: AnimacaoBotoes 3s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
@@ -336,10 +307,6 @@ body {
         transform: translateZ(0);
         opacity: 1;
     }
-}
-
-.Botao1 {
-    margin: 0 -20rem;
 }
 
 .Botoes button {
@@ -373,7 +340,7 @@ body {
     display: flex;
     position: relative;
     justify-content: space-evenly;
-    bottom: 2rem;
+    bottom: 4rem;
 }
 
 #InfoVacinas,
@@ -386,4 +353,40 @@ body {
     box-shadow: 0 0 10px 5px #35cd7d;
     border: 0.15rem solid #fff;
     border-radius: 0.8rem;
+
+    overflow-y: auto;
+}
+
+#InfoVacinas p,
+#InfoMedicamentos p,
+#InfoPatologias p {
+    color: #fff;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    border: 0.2rem solid #35cd7d;
+
+    padding: 0 15px;
+    margin: 1rem;
+}
+
+#InfoVacinas::-webkit-scrollbar,
+#InfoMedicamentos::-webkit-scrollbar,
+#InfoPatologias::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+#InfoVacinas::-webkit-scrollbar-thumb,
+#InfoMedicamentos::-webkit-scrollbar-thumb,
+#InfoPatologias::-webkit-scrollbar-thumb {
+    background-color: #35cd7d;
+    border-radius: 1rem;
+}
+
+#InfoVacinas::-webkit-scrollbar-track,
+#InfoMedicamentos::-webkit-scrollbar-track,
+#InfoPatologias::-webkit-scrollbar-track {
+    border-radius: 1rem;
+    background-color: #ffffff80;
+    margin: 2rem 0;
 }

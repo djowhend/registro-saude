@@ -11,7 +11,5 @@ function handleFileSelect(event) {
             perfilFoto.src = e.target.result;
         };
         reader.readAsDataURL(file);
-
-        // You can add additional logic here to resize or process the image as needed.
     }
 }

@@ -38,7 +38,8 @@
     <header class="Header">
         <nav class="Navbar">
             <a class="PaginaInicial" href="/Html/Home.html" data-message="Home do Registro Saúde">Página Inicial</a>
-            <a class="Perfil" href="/Html/Perfil.html" data-message="Visualize seu perfil ou atualize suas informações">Perfil</a>
+            <a class="Perfil" href="/Html/Perfil.html"
+                data-message="Visualize seu perfil ou atualize suas informações">Perfil</a>
         </nav>
 
         <a class="Logo" href="https://linktr.ee/registrosaude" target="_blank" data-message="Linktree">
@@ -46,58 +47,57 @@
         </a>
 
         <nav class="Navbar">
-            <a class="Github" href="https://github.com/djowhend/registro-saude" data-message="Repositório do Registro Saúde">Github</a>
-            <a class="SobreNos" href="/Html/Contatos.html" data-message="Conheça os criadores do Registro Saúde">Sobre Nós</a>
+            <a class="Github" href="https://github.com/djowhend/registro-saude"
+                data-message="Repositório do Registro Saúde">Github</a>
+            <a class="SobreNos" href="/Html/Contatos.html" data-message="Conheça os criadores do Registro Saúde">Sobre
+                Nós</a>
         </nav>
     </header>
 
     <!-- Informações da Vacina -->
-    <div class="Conteudo">
+    <div class="Conteudo1">
         <div class="Formulario">
             <h3>Cadastro de Vacinas</h3>
-            <h4>Nome da Vacina</h4>
 
-            <div class="Input">
-                <input id="nomeVacina" type="text" placeholder="Digite o nome da vacina" />
-            </div>
+            <div class="Informacoes">
+                <p>Nome da Vacina</p>
+                <input id="nomeVacina" type="text" placeholder="Digite o nome da vacina">
 
+                <p>Lote da Vacina</p>
+                <input id="loteVacina" type="text" placeholder="Digite o lote da vacina">
 
-            <h4>Lote da Vacina</h4>
-            <div class="Input">
-                <input id="loteVacina" type="text" placeholder="Digite o lote da vacina" />
-            </div>
-
-            <h4>Data de Vacinação</h4>
-            <div class="Input">
+                <p>Data de Vacinação</p>
                 <input id="dataVacina" type="date">
-            </div>
 
-            <h4>Validação da Vacina</h4>
-            <div class="Input">
+                <p>Validação da Vacina</p>
                 <input id="validacaoVacina" type="date">
             </div>
-            <button class="Botao" onclick="repassarInformacao()">Cadastrar Vacina</button>
+
+            <div class="CadastrarVacina">
+                <button onclick="repassarInformacao()">Cadastrar Vacina</button>
+            </div>
         </div>
     </div>
 
-    <div id="caixa" class="text-center">
-        <h3>Informações Cadastradas</h3>
-    </div>
+    <!-- Pesquisar Vacina por Nome/Exibição das Vacinas -->
+    <div class="Conteudo2">
+        <div class="Pesquisa-Exibição">
+            <h3>Pesquisa de Vacinas</h3>
 
-    <!-- Pesquisar Vacina por Nome -->
-    <div class="PesquisarPorNome">
-        <h3>Pesquisar por Nome</h3>
-        <div class="Input">
-            <input id="nomePesquisa" type="text" placeholder="Digite o nome da vacina" />
+            <div class="PesquisarVacina">
+                <p>Pesquisar por Nome</p>
+                <input id="nomePesquisa" type="text" placeholder="Digite o nome da vacina">
+                <button onclick="pesquisarPorNome()">Pesquisar</button>
+            </div>
         </div>
-        <button class="BotaoPesquisar" onclick="pesquisarPorNome()">Pesquisar</button>
-    </div>
 
+        <div id="caixa" class="text-center">
+            <h3>Informações Cadastradas</h3>
+        </div>
 
-
-    <!-- Exibição das Vacinas -->
-    <div class="ExibirVacinas">
-        <button class="Botao" onclick="exibirTodasVacinas()">Ver Todas as Vacinas</button>
+        <div class="ExibirVacinas">
+            <button onclick="exibirTodasVacinas()">Ver Todas As Vacinas</button>
+        </div>
     </div>
 
 </body>

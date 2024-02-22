@@ -33,17 +33,17 @@
     <!-- Header / Navbar -->
     <header class="Header">
         <nav class="Navbar">
-            <a class="PaginaInicial" href="/Html/Home.html" data-message="Home do Registro Saúde">Página Inicial</a>
-            <a class="Perfil" href="/Html/Perfil.html" data-message="Visualize seu perfil ou atualize suas informações">Perfil</a>
+            <a class="PaginaInicial" href="/Html/Home.html">Página Inicial</a>
+            <a class="Perfil" href="/Html/Perfil.html">Perfil</a>
         </nav>
 
-        <a class="Logo" href="https://linktr.ee/registrosaude" target="_blank" data-message="Linktree">
+        <a class="Logo" href="https://linktr.ee/registrosaude" target="_blank">
             <img src="/Resources/Logo.png" alt="Logo.png">
         </a>
 
         <nav class="Navbar">
-            <a class="Github" href="https://github.com/djowhend/registro-saude" data-message="Repositório do Registro Saúde">Github</a>
-            <a class="SobreNos" href="/Html/Contatos.html" data-message="Conheça os criadores do Registro Saúde">Sobre Nós</a>
+            <a class="Github" href="https://github.com/djowhend/registro-saude">Github</a>
+            <a class="SobreNos" href="/Html/Contatos.html">Sobre Nós</a>
         </nav>
     </header>
 
@@ -55,15 +55,18 @@
             <div class="FotoUsuario" id="FotoUsuario">
                 <input type="file" id="InputFoto" accept="image/*" onchange="handleFileSelect(event)">
                 <label for="InputFoto">
-                    <img id="PerfilFoto" src="/Resources/PerfilFoto2.svg" alt="FotoUsuario.png">
+                    <img id="PerfilFoto" src="/Resources/PerfilFoto.svg" alt="FotoUsuario.png">
                 </label>
             </div>
 
             <div class="FormGrupo">
                 <!-- Informações Esquerda -->
                 <div class="FormGrupoEsquerda">
-                    <label for="NomeCompleto">Nome Completo</label>
-                    <input type="Text" class="FormInput" id="NomeCompleto" disabled>
+                    <label for="Nome">Nome</label>
+                    <input type="Text" class="FormInput" id="Nome">
+
+                    <label for="Sobrenome">Sobrenome</label>
+                    <input type="Text" class="FormInput" id="Sobrenome">
 
                     <label for="Genero">Gênero</label>
                     <select id="Genero" class="FormInput">
@@ -73,14 +76,33 @@
                     </select>
 
                     <label for="DataNascimento">Data de Nascimento</label>
-                    <input type="Date" class="FormInput" id="DataNascimento" disabled>
+                    <input type="Date" class="FormInput" id="DataNascimento">
 
-                    <label for="CPF">CPF</label>
-                    <input type="Text" class="FormInput" id="Cpf" disabled>
+
+                    <label for="Peso">Peso</label>
+                    <input type="Text" class="FormInput" id="Peso">
+
+                    <label for="Altura">Altura</label>
+                    <input type="Text" class="FormInput" id="Altura">
                 </div>
 
                 <!-- Informações Direita -->
                 <div class="FormGrupoDireita">
+                    <label for="CPF">CPF</label>
+                    <input type="Text" class="FormInput" id="Cpf">
+
+                    <label for="TipoSanguineo">Tipo Sanguíneo</label>
+                    <select id="TipoSanguineo" class="FormInput">
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+
                     <label for="NumeroTelefone">Número de Telefone</label>
                     <input type="Text" class="FormInput" id="NumeroTelefone">
 
@@ -90,7 +112,7 @@
                     <label for="Email">Email</label>
                     <input type="Email" class="FormInput" id="Email">
 
-                    <label for=Senha>Senha</label>
+                    <label for="Senha">Senha</label>
                     <input type="Text" class="FormInput" id="Senha">
                 </div>
             </div>

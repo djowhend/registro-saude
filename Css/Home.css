@@ -8,9 +8,22 @@ body {
     height: 100vh;
     width: 100vw;
 
-    background: linear-gradient(45deg, #1b6945, #105942, #10493d, #143934);
-    background-size: 400% 400%;
-    animation: backgroundgradient 5s ease infinite;
+    /* background: linear-gradient(45deg, #1b6945, #105942, #10493d, #143934); */
+    /* background-size: 400% 400%; */
+    /* animation: backgroundgradient 5s ease infinite; */
+    background-image: url(/Resources/Fundo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(2rem);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 @keyframes backgroundgradient {
@@ -291,6 +304,7 @@ body {
     top: 15%;
 
     border-radius: 1rem;
+    border: 5px solid #10493d;
     background-color: #10493d;
     box-shadow: 0px 0px 15px #35cd7d;
 
@@ -313,6 +327,22 @@ body {
 
 .CarrosselConteudo {
     border-radius: 1rem;
+}
+
+.CarrosselItem {
+    animation: AnimacaoSlide 3s ease;
+}
+
+@keyframes AnimacaoSlide {
+    0% {
+        transform: translateZ(-1400px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateZ(0);
+        opacity: 1;
+    }
 }
 
 .CarrosselItem img {
@@ -485,19 +515,17 @@ body {
 .PopupContainer {
     display: none;
     position: fixed;
-    top: 6%;
+    top: 10%;
     right: 0.5%;
 
-    color: #fff;
-    background-color: #000;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #022c23;
+    border: 5px solid #10493d;
+    box-shadow: 0 0 10px 3px #35cd7d;
 
-    padding: 5px;
-    max-width: 300px;
-    animation: Popup 1.5s 5s ease, Opacidade 5s ease;
+    padding: 0.5rem;
+    max-width: 20rem;
+    animation: AnimacaoPopup 1.5s 5s 3 ease, Opacidade 2.5s ease;
 }
-
 
 @keyframes Opacidade {
     0% {
@@ -509,7 +537,7 @@ body {
     }
 }
 
-@keyframes Popup {
+@keyframes AnimacaoPopup {
 
     0%,
     20%,
@@ -532,6 +560,7 @@ body {
 }
 
 .PopupConteudo {
+    color: #35cd7d;
     text-align: center;
 }
 
@@ -539,8 +568,9 @@ body {
     position: absolute;
     top: 5px;
     right: 10px;
-    cursor: pointer;
-    font-size: 18px;
+
+    color: #fff;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #555;
+    cursor: pointer;
 }

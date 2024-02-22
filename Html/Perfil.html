@@ -35,7 +35,7 @@
             <a href="/Html/Perfil.html">Perfil</a>
         </nav>
 
-        <a class="Logo" href="https://linktr.ee/registrosaude" target="_blank" data-message="Linktree">
+        <a class="Logo">
             <img src="/Resources/Logo.png" alt="Logo.png">
         </a>
 
@@ -53,15 +53,18 @@
             <div class="FotoUsuario" id="FotoUsuario">
                 <input type="file" id="InputFoto" accept="image/*" onchange="handleFileSelect(event)">
                 <label for="InputFoto">
-                    <img id="PerfilFoto" src="/Resources/PerfilFoto2.svg" alt="FotoUsuario.png">
+                    <img id="PerfilFoto" src="/Resources/PerfilFoto.svg" alt="FotoUsuario.png">
                 </label>
             </div>
 
             <div class="FormGrupo">
                 <!-- Informações Esquerda -->
                 <div class="FormGrupoEsquerda">
-                    <label for="NomeCompleto">Nome Completo</label>
-                    <input type="Text" class="FormInput" id="NomeCompleto" disabled>
+                    <label for="Nome">Nome</label>
+                    <input type="Text" class="FormInput" id="Nome" disabled>
+                    
+                    <label for="Sobrenome">Sobrenome</label>
+                    <input type="Text" class="FormInput" id="Sobrenome" disabled>
 
                     <label for="Genero">Gênero</label>
                     <select id="Genero" class="FormInput" disabled>
@@ -73,12 +76,22 @@
                     <label for="DataNascimento">Data de Nascimento</label>
                     <input type="Date" class="FormInput" id="DataNascimento" disabled>
 
-                    <label for="CPF">CPF</label>
-                    <input type="Text" class="FormInput" id="Cpf" disabled>
+                    
+                    <label for="Peso">Peso</label>
+                    <input type="Text" class="FormInput" id="Peso" disabled>
+                    
+                    <label for="Altura">Altura</label>
+                    <input type="Text" class="FormInput" id="Altura" disabled>
                 </div>
-
+                
                 <!-- Informações Direita -->
                 <div class="FormGrupoDireita">
+                    <label for="CPF">CPF</label>
+                    <input type="Text" class="FormInput" id="Cpf" disabled>
+                    
+                    <label for="TipoSanguineo">Tipo Sanguíneo</label>
+                    <input type="Text" class="FormInput" id="TipoSanguineo" disabled>
+
                     <label for="NumeroTelefone">Número de Telefone</label>
                     <input type="Text" class="FormInput" id="NumeroTelefone" disabled>
 
@@ -88,18 +101,16 @@
                     <label for="Email">Email</label>
                     <input type="Email" class="FormInput" id="Email" disabled>
 
-                    <label for=Senha>Senha</label>
+                    <label for="Senha">Senha</label>
                     <input type="Text" class="FormInput" id="Senha" disabled>
                 </div>
             </div>
 
             <!-- Botões -->
             <div class="Botoes">
-                <div class="Botao1">
                     <a href="/Html/EditarPerfil.html">
                         <button type="button">Editar Perfil</button>
                     </a>
-                </div>
             </div>
 
             <!-- Informações do Usuário de Vacinas, Medicamentos e Patologias -->
@@ -108,18 +119,26 @@
                     <p>Nome da Vacina: (NomeVacina)</p>
                     <p>Lote da Vacina: (LoteVacina)</p>
                     <p>Data de Vacinação: (DataVacinação)</p>
-                    <p>Validação de Vacinação: (ValidaçãoVacinação)</p> 
+                    <p>Validação de Vacinação: (ValidaçãoVacinação)</p>
+                    <br>
+                    <p>Nome da Vacina: (NomeVacina)</p>
+                    <p>Lote da Vacina: (LoteVacina)</p>
+                    <p>Data de Vacinação: (DataVacinação)</p>
+                    <p>Validação de Vacinação: (ValidaçãoVacinação)</p>
                 </div>
                 <div id="InfoMedicamentos">
                     <p>Nome da Medicação: (NomeMedicação)</p>
                     <p>Início da Medicação: (InicioMedicação)</p>
-                    <p>Término da Medicação: (TérminoMedicação)</p>    
+                    <p>Término da Medicação: (TérminoMedicação)</p>
+                    <br>
+                    <p>Nome da Medicação: (NomeMedicação)</p>
+                    <p>Início da Medicação: (InicioMedicação)</p>
+                    <p>Término da Medicação: (TérminoMedicação)</p>
                 </div>
                 <div id="InfoPatologias">
-                    <p>Tipo Sanguíneo: (TipoSanguíneo)</p>
                     <p>Condições Médicas Crônicas: (CondiçõesMédicas)</p>
-                    <p>Peso: (Peso)</p>    
-                    <p>Altura: (Altura)</p>    
+                    <br>
+                    <p>Condições Médicas Crônicas: (CondiçõesMédicas)</p>
                 </div>
             </div>
         </form>
