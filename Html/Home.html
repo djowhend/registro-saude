@@ -10,8 +10,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+    <!-- Link do Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- Link do Bootstrap CSS -->
-    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
 
     <!-- Link do CSS -->
     <link rel="stylesheet" href="../Css/Home.css">
@@ -24,29 +28,35 @@
     <!-- link do FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 
+    <!-- Link do Script -->
+    <script src="/Scripts//Home.js"></script>
 </head>
 
 <body>
     <!-- Header / Navbar -->
     <header class="Header">
         <nav class="Navbar">
-            <a href="/Html/Login.html">Página Inicial</a>
-            <a href="/Html/Contatos.html">Contatos</a>
+            <a class="PaginaInicial" href="/Html/Home.html" data-message="Home do Registro Saúde">Página Inicial</a>
+            <a class="Perfil" href="/Html/Perfil.html"
+                data-message="Visualize seu perfil ou atualize suas informações">Perfil</a>
         </nav>
 
-        <a class="Logo" href="https://github.com/djowhend/registro-saude" data-message="Github do Registro Saúde">
+        <a class="Logo" href="https://linktr.ee/registrosaude" target="_blank" data-message="Linktree">
             <img src="/Resources/Logo.png" alt="Logo.png">
         </a>
 
         <nav class="Navbar">
-            <a href="Url_Acessar_Perfil">Acessar Perfil</a>
-            <a href="Url_Editar_Perfil">Editar Perfil</a>
+            <a class="Github" href="https://github.com/djowhend/registro-saude"
+                data-message="Repositório do Registro Saúde">Github</a>
+            <a class="SobreNos" href="/Html/Contatos.html" data-message="Conheça os criadores do Registro Saúde">Sobre
+                Nós</a>
         </nav>
     </header>
 
     <!-- Carrossel de Notícias -->
-    <div class="carousel slide CarrosselNoticias">
+    <div id="CarrosselNoticias" class="carousel slide CarrosselNoticias"">
         <div class="carousel-inner CarrosselConteudo">
+
             <!-- Noticia 1 -->
             <div class="carousel-item active CarrosselItem">
                 <img src="/Resources/Template1.png" alt="Noticia1.png">
@@ -68,27 +78,37 @@
                         sapiente totam, iste consectetur non quo.</p>
                 </div>
             </div>
+
+            <!-- Notícia 3 -->
+            <div class="carousel-item CarrosselItem">
+                <img src="/Resources/Template3.png" alt="Noticia3.png">
+                <div class="carousel-caption CarrosselTexto">
+                    <h5>Manchete Notícia 3</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur blanditiis architecto
+                        recusandae at nisi aspernatur placeat, eligendi quibusdam atque maiores ut nemo numquam deleniti
+                        sapiente totam, iste consectetur non quo.</p>
+                </div>
+            </div>
         </div>
 
         <!-- Botões de Navegação -->
-        <button class="carousel-control-prev CarrosselBtnAnterior" type="button" data-bs-target=".CarrosselNoticias"
+        <button class="carousel-control-prev CarrosselBtnAnterior" type="button" data-bs-target="#CarrosselNoticias"
             data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Anterior</span>
         </button>
-        <button class="carousel-control-next CarrosselBtnProximo" type="button" data-bs-target=".CarrosselNoticias"
+        <button class="carousel-control-next CarrosselBtnProximo" type="button" data-bs-target="#CarrosselNoticias"
             data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Próximo</span>
         </button>
     </div>
-
 
     <!-- Cartões Vacinas, Medicamentos, Patologias -->
     <div class="Cartoes">
         <!-- Cartão Vacina -->
         <div class="Cartao1">
-            <img src="/Resources/Vacina.png" class="CartaoImg" alt="Vacina.png">
+            <img src="/Resources//FotoVacina.png" class="CartaoImg" alt="Vacina.png">
             <div class="CartaoBody">
                 <h1 class="CartaoTitulo">Vacinas</h1>
                 <a class="CartaoBotao" href="/Html/Vacina.html">Visualizar</a>
@@ -97,7 +117,7 @@
 
         <!-- Cartão Medicamento -->
         <div class="Cartao2">
-            <img src="/Resources/Medicamento.png" class="CartaoImg" alt="Medicamento.png">
+            <img src="/Resources//FotoMedicamento.png" class="CartaoImg" alt="Medicamento.png">
             <div class="CartaoBody">
                 <h1 class="CartaoTitulo">Medicamentos</h1>
                 <a class="CartaoBotao" href="/Html/Medicamento.html">Visualizar</a>
@@ -106,45 +126,23 @@
 
         <!-- Cartão Patologia -->
         <div class="Cartao3">
-            <img src="/Resources/Patologia.png" class="CartaoImg" alt="Patologia.png">
-            <div class="CartaoBody">
+            <img src="/Resources//FotoPatologia.png" class="CartaoImg" alt="Patologia.png">
+            <div class="CartaoBody">    
                 <h1 class="CartaoTitulo">Patologias</h1>
                 <a class="CartaoBotao" href="/Html/Patologia.html">Visualizar</a>
             </div>
         </div>
     </div>
 
-    <div id="popup-container" class="popup-container">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">X</span>
-            <p>Não esqueça de completar suas informações da sua conta para futuras emergências, queremos o seu bem !</p>
-            <a href="sua_pagina.html">Clique aqui para completar suas informações</a>
+    <!-- Popup -->
+    <div id="PopupContainerID" class="PopupContainer">
+        <div class="PopupConteudo">
+            <span class="PopupBtnFechar" onclick="FecharPopup()">X</span>
+            <p>Não esqueça de completar suas informações da sua conta para futuras emergências na aba Perfil !
+            </p>
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var popupContainer = document.getElementById('popup-container');
-
-            // Exibir o popup
-            popupContainer.style.display = 'block';
-
-            // Ocultar o popup após 15 segundos
-            setTimeout(function () {
-                popupContainer.style.display = 'none';
-            }, 10000);
-        });
-
-        function closePopup() {
-            var popupContainer = document.getElementById('popup-container');
-            popupContainer.style.display = 'none';
-        }
-    </script>
-
-    <!-- Bootstrap Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

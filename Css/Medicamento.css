@@ -4,119 +4,574 @@
 }
 
 body {
-    background-color: #143934;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+
+    background: linear-gradient(45deg, #1b6945, #105942, #10493d, #143934);
+    background-size: 400% 400%;
+    animation: backgroundgradient 5s ease infinite;
 }
 
-.Navbar {
-    background-color: #086e6162;
-    font-family: 'Montserrat', sans-serif;
+@keyframes backgroundgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-.NavbarTitulo {
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5vh;
+    width: 100%;
+
+    background-color: #10493d;
+    box-shadow: 0px 0px 15px #35cd7d;
+    border-bottom: 0.15rem solid #35cd7d;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.PaginaInicial::after {
+    position: absolute;
+    top: 165%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2rem;
+    width: 15rem;
+
+    content: attr(data-message);
     color: #35dc7f;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1px 1px;
+
+    background: #10493d;
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.PaginaInicial:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Perfil::after {
+    position: absolute;
+    top: 165%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2rem;
+    width: 27rem;
+
+    content: attr(data-message);
+    color: #35dc7f;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1px 1px;
+
+    background: #10493d;
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.Perfil:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Logo::after {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2rem;
+    width: 15rem;
+
+    content: attr(data-message);
+    color: #35dc7f;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1px;
+
+    background: #10493d;
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.Logo:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Logo img {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    top: 0.8%;
+    left: 49%;
+    padding-bottom: 0.2rem;
+
+    animation: AnimacaoLogo 1.5s 1s both;
+}
+
+@keyframes AnimacaoLogo {
+    0% {
+        transform: translateY(-500px);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+
+    55% {
+        transform: translateY(-65px);
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+
+    81% {
+        transform: translateY(-28px);
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        transform: translateY(-8px);
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+}
+
+.Github::after {
+    position: absolute;
+    top: 165%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2rem;
+    width: 18rem;
+
+    content: attr(data-message);
+    color: #35dc7f;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1px 1px;
+
+    background: #10493d;
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.Github:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.SobreNos::after {
+    position: absolute;
+    top: 165%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2rem;
+    width: 22rem;
+
+    content: attr(data-message);
+    color: #35dc7f;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1px 1px;
+
+    background: #10493d;
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.SobreNos:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Navbar a {
     position: relative;
-    right: 88%;
-    transition: color 0.3s ease;
+    margin-left: 4rem;
+    margin-right: 4rem;
+
+    color: #35cd7d;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    animation: AnimacaoNavbar 0.8s 0.8s both;
 }
 
-.NavbarTitulo:hover {
-    color: #2ca569;
+@keyframes AnimacaoNavbar {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
 }
 
-.ModalConteudo {
-    border: #257D58 10px solid;
-    border-radius: 10%;
-    padding: 5px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.800000011920929);
+.Navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+
+    transition: .2s ease;
 }
 
-.Usuario {
-    background-color: #143934;
-    color: #ffffff;
-    border-top-left-radius: 45px;
-    border-top-right-radius: 45px;
+.Navbar a:hover::before {
+    background-color: #35dc7f;
+    width: 100%;
 }
 
-img[alt="FotoUsuário.png"] {
-    width: 140px;
-    height: 130px;
+.Navbar a {
+    position: relative;
+    margin-left: 4rem;
+    margin-right: 4rem;
+
+    color: #35cd7d;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    animation: AnimacaoNavbar 0.8s 0.8s both;
 }
 
-.UsuarioInfo {
-    font-size: 20px;
-    padding: 3px;
+@keyframes AnimacaoNavbar {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+
+.Navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+
+    transition: .2s ease;
+}
+
+.Navbar a:hover::before {
+    background-color: #35dc7f;
+    width: 100%;
+}
+
+.Conteudo1 {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    width: 30vw;
+    height: 60vh;
+
+    background: linear-gradient(0deg, #000, #143934, #143934, #000);
+    box-shadow: 0px 0px 15px #35cd7d;
+    border-radius: 20px;
+}
+
+.Formulario h3 {
+    color: #36C67E;
+    font-size: 2rem;
+    font-weight: 500;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: 5rem;
 }
 
 .Informacoes {
-    padding: 20px;
+    padding: 0 1rem;
 }
 
 .Informacoes p {
-    font-size: 20px;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-}
-
-.Informacoes hr {
-    border: 2px solid #9baaaa;
-    opacity: 1;
-    margin-top: -20px;
-    margin-bottom: 30px;
-}
-
-.Icones {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px;
-    padding: 5px 25px;
-}
-
-.Icones a {
-    background-color: #257D58;
-}
-
-.Icones i {
-    color: #35DC7F;
-}
-
-.BotaoIcone:hover {
-    background-color: rgba(37, 125, 88, 0.8);
-}
-
-.Campo {
-    position: absolute;
-    left: 15%;
-    top: 30%;
-    width: 25%;
-}
-
-.Campo h3 {
     color: #36C67E;
-    font-size: xx-large;
-    font-weight: 500;
-    position: absolute;
-    left: 10%;
-    top: -80px;
-    width: 400px;
-}
+    font-size: 1.2rem;
 
-.Campo h4 {
-    color: white;
-    align-items: center;
+    margin-bottom: 0.5rem;
+
+    display: flex;
     justify-content: center;
 }
 
-.Botao {
-    color: white;
-    background-color: #052E11;
-    padding: 10px 20px;
+.Informacoes input {
+    width: 30.5rem;
+    height: 2rem;
+
+    color: #fff;
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1.5rem;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
     border: none;
-    border-radius: 15px;
-    cursor: pointer;
+    outline: none;
+
+    position: relative;
+    left: 5%;
 }
 
-/* .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-} */
+.CadastrarMedicamento {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    bottom: -5rem;
+    animation: AnimacaoBotoes 3s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
+@keyframes AnimacaoBotoes {
+    0% {
+        transform: translateZ(-25%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+.CadastrarMedicamento button {
+    width: 13.5rem;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    color: #fff;
+    font-weight: bold;
+
+    background: #35cd7d;
+    box-shadow: 0 0 10px #35cd7d;
+
+    border: 0.15rem solid #fff;
+    border-radius: 0.8rem;
+    outline: none;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.CadastrarMedicamento button:hover {
+    box-shadow: 0 2px 10px #fff;
+}
+
+.CadastrarMedicamento button:active {
+    box-shadow: 0 2px 10px #fff;
+}
+
+.Conteudo2 {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    width: 30vw;
+    height: 60vh;
+
+    background: linear-gradient(0deg, #000, #143934, #143934, #000);
+    box-shadow: 0px 0px 15px #35cd7d;
+    border-radius: 20px;
+}
+
+.Pesquisa-Exibição h3 {
+    color: #36C67E;
+    font-size: 2rem;
+    font-weight: 500;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: 5rem;
+}
+
+.PesquisarMedicamento p {
+    color: #36C67E;
+    font-size: 1.2rem;
+
+    margin-bottom: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+.PesquisarMedicamento input {
+    width: 30.5rem;
+    height: 2rem;
+
+    color: #fff;
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1.5rem;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+
+    position: relative;
+    left: 5%;
+}
+
+.PesquisarMedicamento button {
+    width: 13.5rem;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 0 auto; 
+    margin-bottom: 5%;
+
+    color: #fff;
+    font-weight: bold;
+
+    background: #35cd7d;
+    box-shadow: 0 0 10px #35cd7d;
+
+    border: 0.15rem solid #fff;
+    border-radius: 0.8rem;
+    outline: none;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.PesquisarMedicamento button:hover {
+    box-shadow: 0 2px 10px #fff;
+}
+
+.PesquisarMedicamento button:active {
+    box-shadow: 0 2px 10px #fff;
+}
+
+#caixa {
+    position: relative;
+    width: 25vw;
+    height: 27.5vh;
+    bottom: 0%;
+    margin: 0 auto; 
+    
+    overflow: auto;
+    
+    background-color: #105942;
+    box-shadow: 0 0 10px 5px #35cd7d;
+    border-radius: 20px;
+}
+
+#caixa h3 {
+    color: #36C67E;
+    font-size: 1.3rem;
+    font-weight: 500;
+    
+    margin-top: 1%;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.ExibirMedicamentos button {
+    width: 13.5rem;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 0 auto; 
+    margin-top: 5%;
+
+    color: #fff;
+    font-weight: bold;
+
+    background: #35cd7d;
+    box-shadow: 0 0 10px #35cd7d;
+
+    border: 0.15rem solid #fff;
+    border-radius: 0.8rem;
+    outline: none;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ExibirMedicamentos button:hover {
+    box-shadow: 0 2px 10px #fff;
+}
+
+.ExibirMedicamentos button:active {
+    box-shadow: 0 2px 10px #fff;
+}

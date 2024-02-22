@@ -10,8 +10,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+    <!-- Link do Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- Link do Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
 
     <!-- Link do CSS -->
     <link rel="stylesheet" href="/Css/Medicamento.css">
@@ -23,99 +27,74 @@
 
     <!-- link do FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+    <!-- link do Script -->
+    <script src="/Scripts//Medicamento.js"></script>
 </head>
 
 <body>
+    <!-- Header / Navbar -->
+    <header class="Header">
+        <nav class="Navbar">
+            <a class="PaginaInicial" href="/Html/Home.html" data-message="Home do Registro Saúde">Página Inicial</a>
+            <a class="Perfil" href="/Html/Perfil.html"
+                data-message="Visualize seu perfil ou atualize suas informações">Perfil</a>
+        </nav>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg Navbar">
-        <div class="container-fluid">
+        <a class="Logo" href="https://linktr.ee/registrosaude" target="_blank" data-message="Linktree">
+            <img src="/Resources/Logo.png" alt="Logo.png">
+        </a>
 
-            <button class="btn text-white" data-bs-toggle="modal" data-bs-target="#Modal">
-                <i class="fa fa-ellipsis-v"></i>
-            </button>
+        <nav class="Navbar">
+            <a class="Github" href="https://github.com/djowhend/registro-saude"
+                data-message="Repositório do Registro Saúde">Github</a>
+            <a class="SobreNos" href="/Html/Contatos.html" data-message="Conheça os criadores do Registro Saúde">Sobre
+                Nós</a>
+        </nav>
+    </header>
 
-            <a class="navbar-brand NavbarTitulo" href="/Html/Home.html">
-                <img src="/Resources/Logo.png" alt="Logo" width="30" height="25" class="d-inline-block align-text-top">
-                Registro Saúde
-            </a>
-        </div>
-    </nav>
+    <!-- Informações do Medicamento -->
+    <div class="Conteudo1">
+        <div class="Formulario">
+            <h3>Cadastro de Medicamentos</h3>
 
-    <!-- Modal -->
-    <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ModalConteudo">
-                <div class="Usuario">
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="/Resources/PerfilFoto.jpg" class="rounded-circle border border-5" alt="FotoUsuário.png">
-                            <br>
-                            <div class="UsuarioInfo">
-                                <span class="mt-2">Nome</span>
-                                <span class="mt-2">Gênero</span>
-                                <span class="mt-2">Idade</span>
-                            </div>
-                            <br>
-                            <p>Adicione aqui a biografia ou recado do usuário.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-left Informacoes">
-                    <p><strong>CPF:</strong> 123.456.789-09</p>
-                    <hr>
-                    <p><strong>Email:</strong> emailteste@gmail.com</p>
-                    <hr>
-                    <p><strong>Telefone:</strong> +55 00 1234-5678</p>
-                    <hr>
-                    <p><strong>Tipo Sanguíneo:</strong> O+</p>
-                    <hr>
-                </div>
-                <div class="Icones">
-                    <a href="/Html/Login.html" class="btn btn-outline BotaoIcone">
-                        <i class="fas fa-power-off"></i>
-                    </a>
-                    <a href="url_das_configuracoes" class="btn btn-outline BotaoIcone">
-                        <i class="fas fa-cog"></i>
-                    </a>
-                </div>
+            <div class="Informacoes">
+                <p>Nome da Medicação</p>
+                <input id="nomeMedicamento" type="text" placeholder="Digite o nome do medicamento">
+
+                <p>Início da Medicação</p>
+                <input id="inicioMedicacao" type="date">
+
+                <p>Término da Medicação</p>
+                <input id="terminoMedicacao" type="date">
+            </div>
+
+            <div class="CadastrarMedicamento">
+                <button>Cadastrar Medicamento</button>
             </div>
         </div>
     </div>
-<!-- --------- -->
-    
-    <div class="text-center Campo">
-        <h3>Cadastro de Medicamentos</h3>
-        <form onsubmit="cadastrarMedicamento(); return false;">
-            <h4>Nome da Medicação</h4>
-            <div class="input-group my-3">
-                <input type="text" id="nomeMedicamento" class="form-control border-secondary rounded-0" placeholder="Digite o nome do medicamento"
-                    aria-describedby="button-addon2" />
+
+    <!-- Pesquisar Medicamento por Nome/Exibição dos Medicamentos -->
+    <div class="Conteudo2">
+        <div class="Pesquisa-Exibição">
+            <h3>Pesquisa de Medicamentos</h3>
+
+            <div class="PesquisarMedicamento">
+                <p>Pesquisar por Nome</p>
+                <input id="nomePesquisa" type="text" placeholder="Digite o nome do medicamento">
+                <button onclick="pesquisarPorNome()">Pesquisar</button>
             </div>
-    
-            <h4>Início da Medicação</h4>
-            <div class="input-group my-3">
-                <input type="date" id="inicioMedicacao" class="form-control border-secondary rounded-0"
-                    aria-describedby="button-addon2" />
-            </div>
-    
-            <h4>Término da Medicação</h4>
-            <div class="input-group my-3">
-                <input type="date" id="terminoMedicacao" class="form-control border-secondary rounded-0"
-                    aria-describedby="button-addon2" />
-            </div>
-            <button type="submit" class="Botao">Cadastrar Medicamento</button>
-        </form>
+        </div>
+
+        <div id="caixa" class="text-center">
+            <h3>Informações Cadastradas</h3>
+        </div>
+
+        <div class="ExibirMedicamentos">
+            <button onclick="exibirTodosMedicamentos()">Ver Todas Os Medicamentos</button>
+        </div>
     </div>
-    <div id="listaMedicamentos"></div>
-
-    
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-        <script src="../src/front/cadastroMedicamento.js"></script>
 
 </body>
 

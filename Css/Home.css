@@ -8,9 +8,19 @@ body {
     height: 100vh;
     width: 100vw;
 
-    background: linear-gradient(45deg, #1b6945, #105942, #10493d, #143934);
-    background-size: 400% 400%;
-    animation: backgroundgradient 5s ease infinite, opacidade 2s ease;
+    background-image: url(/Resources/Fundo2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(2rem);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 @keyframes backgroundgradient {
@@ -27,16 +37,6 @@ body {
     }
 }
 
-@keyframes opacidade {
-    0% {
-        opacity: 0.0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 .Header {
     position: fixed;
     top: 0;
@@ -46,18 +46,67 @@ body {
 
     background-color: #10493d;
     box-shadow: 0px 0px 15px #35cd7d;
+    border-bottom: 0.15rem solid #35cd7d;
 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.Logo img {
-    position: relative;
-    width: 30px;
-    height: 25px;
-    top: 0;
-    left: 30%;
+.PaginaInicial::after {
+    position: absolute;
+    top: 165%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2rem;
+    width: 15rem;
+
+    content: attr(data-message);
+    color: #35dc7f;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1px;
+
+    background: #10493d;
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.PaginaInicial:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Perfil::after {
+    position: absolute;
+    top: 165%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2rem;
+    width: 26rem;
+
+    content: attr(data-message);
+    color: #35dc7f;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1px;
+
+    background: #10493d;
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.Perfil:hover::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 .Logo::after {
@@ -65,18 +114,19 @@ body {
     top: 120%;
     left: 50%;
     transform: translateX(-50%);
-    height: 3rem;
+    height: 2rem;
     width: 15rem;
 
     content: attr(data-message);
     color: #35dc7f;
+    font-size: 1.1rem;
+    font-weight: 500;
     text-align: center;
-    padding: 10px;
+    padding: 1px;
 
     background: #10493d;
     box-shadow: 0 0 10px #35cd7d;
     border-radius: 1rem;
-
 
     opacity: 0;
     visibility: hidden;
@@ -84,6 +134,117 @@ body {
 }
 
 .Logo:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Logo img {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    top: 0.8%;
+    left: 49%;
+    padding-bottom: 0.2rem;
+
+    animation: AnimacaoLogo 1.5s 1s both;
+}
+
+@keyframes AnimacaoLogo {
+    0% {
+        transform: translateY(-500px);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+
+    55% {
+        transform: translateY(-65px);
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+
+    81% {
+        transform: translateY(-28px);
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        transform: translateY(-8px);
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+}
+
+.Github::after {
+    position: absolute;
+    top: 165%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2rem;
+    width: 17rem;
+
+    content: attr(data-message);
+    color: #35dc7f;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1px;
+
+    background: #10493d;
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.Github:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.SobreNos::after {
+    position: absolute;
+    top: 165%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2rem;
+    width: 22rem;
+
+    content: attr(data-message);
+    color: #35dc7f;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1px;
+
+    background: #10493d;
+    box-shadow: 0 0 10px #35cd7d;
+    border-radius: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.SobreNos:hover::after {
     opacity: 1;
     visibility: visible;
 }
@@ -97,6 +258,24 @@ body {
     font-size: 1.2rem;
     font-weight: 500;
     text-decoration: none;
+
+    animation: AnimacaoNavbar 0.8s 0.8s both;
+}
+
+@keyframes AnimacaoNavbar {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
 }
 
 .Navbar a::before {
@@ -120,28 +299,47 @@ body {
     display: flex;
     left: 25%;
     top: 15%;
-    
+
     border-radius: 1rem;
+    border: 5px solid #10493d;
     background-color: #10493d;
     box-shadow: 0px 0px 15px #35cd7d;
 
-    animation: Carrossel;
-    animation-duration: 2s;
-    animation-timing-function: ease;
+    animation: Carrossel 0.7s 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 @keyframes Carrossel {
-    0% { 
-        transform: translateY(-50%);
+    0% {
+        transform: scale(2);
+        filter: blur(4px);
+        opacity: 0;
     }
 
     100% {
-        transform: translateY(0);
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
     }
 }
 
 .CarrosselConteudo {
     border-radius: 1rem;
+}
+
+.CarrosselItem {
+    animation: AnimacaoSlide 3s ease;
+}
+
+@keyframes AnimacaoSlide {
+    0% {
+        transform: translateZ(-1400px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateZ(0);
+        opacity: 1;
+    }
 }
 
 .CarrosselItem img {
@@ -183,7 +381,9 @@ body {
     top: 79%;
 }
 
-.Cartao1, .Cartao2, .Cartao3 {
+.Cartao1,
+.Cartao2,
+.Cartao3 {
     overflow: hidden;
     position: relative;
 
@@ -198,50 +398,56 @@ body {
 }
 
 .Cartao1 {
-    animation: Cartao1;
-    animation-duration: 2s;
-    animation-timing-function: ease;
+    animation: Cartao1 1.3s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .Cartao2 {
-    animation: Cartao2;
-    animation-duration: 2s;
-    animation-timing-function: ease;
+    animation: Cartao2 1.3s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .Cartao3 {
-    animation: Cartao3;
-    animation-duration: 2s;
-    animation-timing-function: ease;
+    animation: Cartao3 1.3s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes Cartao1 {
-    0% { 
-        transform: translateX(-100%);
+    0% {
+        transform: translateX(-800px) rotateY(30deg) scale(0);
+        transform-origin: -100% 50%;
+        opacity: 0;
     }
 
     100% {
-        transform: translateX(0);
+        transform: translateX(0) rotateY(0) scale(1);
+        transform-origin: 1800px 50%;
+        opacity: 1;
     }
 }
 
 @keyframes Cartao2 {
-    0% { 
-        transform: translateY(100%);
+    0% {
+        transform: translateY(600px) rotateX(30deg) scale(0);
+        transform-origin: 50% 100%;
+        opacity: 0;
     }
 
     100% {
-        transform: translateY(0);
+        transform: translateY(0) rotateX(0) scale(1);
+        transform-origin: 50% -1400px;
+        opacity: 1;
     }
 }
 
 @keyframes Cartao3 {
-    0% { 
-        transform: translateX(100%);
+    0% {
+        transform: translateX(800px) rotateY(-30deg) scale(0);
+        transform-origin: -100% 50%;
+        opacity: 0;
     }
 
     100% {
-        transform: translateY(0);
+        transform: translateX(0) rotateY(0) scale(1);
+        transform-origin: -1800px 50%;
+        opacity: 1;
     }
 }
 
@@ -274,7 +480,9 @@ body {
     transition: 1s ease;
 }
 
-.Cartao1:hover .CartaoBody, .Cartao2:hover .CartaoBody, .Cartao3:hover .CartaoBody {
+.Cartao1:hover .CartaoBody,
+.Cartao2:hover .CartaoBody,
+.Cartao3:hover .CartaoBody {
     bottom: 0;
 }
 
@@ -301,38 +509,65 @@ body {
     cursor: pointer;
 }
 
-.popup-container {
+.PopupContainer {
     display: none;
     position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    max-width: 300px;
+    top: 10%;
+    right: 0.5%;
+
+    background-color: #022c23;
+    border: 5px solid #10493d;
+    box-shadow: 0 0 10px 3px #35cd7d;
+
+    padding: 0.5rem;
+    max-width: 20rem;
+    animation: AnimacaoPopup 1.5s 5s 3 ease, Opacidade 2.5s ease;
 }
 
-.popup-content {
+@keyframes Opacidade {
+    0% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes AnimacaoPopup {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transform: translateY(0);
+    }
+
+    40% {
+        transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transform: translateY(-15px);
+    }
+}
+
+.PopupConteudo {
+    color: #35cd7d;
     text-align: center;
 }
 
-.popup-content a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.popup-content a:hover {
-    text-decoration: underline;
-}
-
-.close-btn {
+.PopupBtnFechar {
     position: absolute;
     top: 5px;
     right: 10px;
-    cursor: pointer;
-    font-size: 18px;
+
+    color: #fff;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #555;
+    cursor: pointer;
 }
