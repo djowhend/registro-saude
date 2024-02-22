@@ -7,7 +7,7 @@ export class UserDTO {
         public nome: string,
         public email: string,
         public senha: string,
-        public cpf: string,
+        // public cpf: string,
     ) { }
 
 
@@ -16,8 +16,8 @@ export class UserDTO {
         user.id,
         user.nome,
         user.email,
-        user.senha,
-        user.cpf
+        user.senha
+        // user.cpf
         );
         
         return userDTO;
@@ -28,7 +28,7 @@ export class UserDTO {
         newUser.nome = this.nome;
         newUser.email = this.email;
         newUser.senha = this.senha;
-        newUser.cpf = this.cpf;
+        // newUser.cpf = this.cpf;
         return newUser;
 
     }

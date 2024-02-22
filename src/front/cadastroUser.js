@@ -1,6 +1,4 @@
-
-//CADASTRA O USUÁRIO CHAMANDO A ROTA DE USUARIO
-
+// //CADASTRA O USUÁRIO CHAMANDO A ROTA DE USUARIO
 
 document.getElementById('user-form').addEventListener('submit', async function(event) {
     event.preventDefault();
@@ -9,10 +7,9 @@ document.getElementById('user-form').addEventListener('submit', async function(e
     const email = document.getElementById('inputemail').value;
     const senha = document.getElementById('inputsenha').value;
     const confirmarSenha = document.getElementById('inputconfirmasenha').value;
-    const cpf = document.getElementById('inputcpf').value;
-    
+    // const cpf = document.getElementById('inputcpf').value;
+
     if (senha !== confirmarSenha) {
-        console.error('As senhas não correspondem.');
         alert("As senhas não correspondem");
         return;
     }
@@ -20,29 +17,30 @@ document.getElementById('user-form').addEventListener('submit', async function(e
     const userData = {
         nome,
         email,
-        senha,
-        cpf
+        senha
+        // cpf
     };
     
     try {
-        const response = await fetch('http://localhost:3000/user', {
+        const response = await fetch("http://localhost:3000/user", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(userData)
         });
-
-        if (!response.ok) { 
+        
+        if (!response.ok) {
             throw new Error('Erro ao criar usuário');
         }
+        console.log("está passando aqui");
+
+        alert("Cadastro efetuado com sucesso!");
+
+        window.location.href = "../Html/Login.html";
         
-        const newUser = await response.json();
-        console.log('Novo usuário criado:', newUser);
     } catch (error) {
         console.error('Erro:', error.message);
+        alert("Erro ao criar usuário. Por favor, tente novamente.");
     }
 });
-
-    //"email": "rafaaaaaaa@gmail.com",
-    //"senha": "testeee",
