@@ -9,7 +9,7 @@ body {
     width: 100vw;
     background: linear-gradient(45deg, #1F7F4C, #1B6844, #18503C, #143934);
     background-size: 400% 400%;
-    animation: backgroundgradient 5s ease infinite, opacidade 3s ease;
+    /* animation: backgroundgradient 5s ease infinite, opacidade 3s ease; */
 }
 
 @keyframes backgroundgradient {
@@ -76,9 +76,9 @@ img[alt="Template.png"] {
     box-shadow: 0 0 10px #35cd7d;
     border-radius: 55px;
     text-align: center;
-    animation: AnimacaoTextos;
-    animation-duration: 2s;
-    animation-timing-function: ease;
+    /* animation: AnimacaoTextos; */
+    /* animation-duration: 2s; */
+    /* animation-timing-function: ease; */
 }
 
 .Textos h1 {
@@ -127,9 +127,9 @@ img[alt="Template.png"] {
     background: linear-gradient(0deg, #000, #143934, #143934, #000);
     box-shadow: 0px 0px 15px #35cd7d;
     border-radius: 20px;
-    animation: AnimacaoRegistro;
-    animation-duration: 2s;
-    animation-timing-function: ease;
+    /* animation: AnimacaoRegistro; */
+    /* animation-duration: 2s; */
+    /* animation-timing-function: ease; */
 }
 
 @keyframes AnimacaoRegistro {
@@ -229,4 +229,51 @@ img[alt="Template.png"] {
 
 .EntrarContaBtn p a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 1366px) {
+    .RegistroSaudeLgTi {
+        position: relative;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .RegistroSaudeLgTi h1 {
+        font-size: 1.8rem;
+    }
+
+    .RegistroSaudeLgTi img {
+        height: 40px;
+    }
+
+    .Textos h1 {
+        font-size: 1.3rem;
+    }
+    
+    .Textos p {
+        padding-top: 10px;
+        font-size: 1.3rem;
+    }
+
+    .Formulario h2 {
+        font-size: 1.5rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    .Input input {
+        width: 320px;
+    }
+
+    .CriarContaBtn {
+        top: 2rem;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .EntrarContaBtn {
+        top: 3.5rem;
+    }
 }
