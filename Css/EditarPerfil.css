@@ -194,7 +194,8 @@ body {
 .BoxUsuario {
     position: absolute;
     top: 10vh;
-    left: 20%;
+    left: 50%;
+    transform: translateX(-50%);
 
     width: 60vw;
     height: 80vh;
@@ -209,23 +210,23 @@ body {
 
 @keyframes AnimacaoPerfil {
     0% {
-        transform: scale(2);
+        transform: translate(-50%) scale(2);
         filter: blur(4px);
         opacity: 0;
     }
 
     100% {
-        transform: scale(1);
+        transform: translate(-50%) scale(1);
         filter: blur(0px);
         opacity: 1;
     }
 }
 
 .FotoUsuario {
-    position: relative;
-    position: relative;
+    position: absolute;
     top: 2rem;
     left: 50%;
+    transform: translateX(-50%);
 }
 
 #InputFoto {
@@ -246,14 +247,14 @@ body {
 
 @keyframes slide-in-blurred-top {
     0% {
-        transform: translateY(-1000px) translateX(-50%) scaleY(2.5) scaleX(0.2);
+        transform: translateY(-1000px) translateX(0%) scaleY(2.5) scaleX(0.2);
         transform-origin: 50% 0%;
         filter: blur(40px);
         opacity: 0;
     }
 
     100% {
-        transform: translateY(0) translateX(-50%) scaleY(1) scaleX(1);
+        transform: translateY(0) translateX(0%) scaleY(1) scaleX(1);
         transform-origin: 50% 50%;
         filter: blur(0);
         opacity: 1;
@@ -263,7 +264,7 @@ body {
 .FormGrupo {
     display: flex;
     position: relative;
-    top: 2rem;
+    top: 12rem;
     justify-content: space-evenly;
 }
 
@@ -339,7 +340,7 @@ body {
     display: flex;
     position: relative;
     justify-content: space-evenly;
-    top: 5rem;
+    top: 17rem;
     animation: AnimacaoBotoes 3s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
@@ -367,7 +368,7 @@ body {
 
     color: #fff;
     font-weight: bold;
-    
+
     background: #35cd7d;
     box-shadow: 0 0 10px #35cd7d;
 
@@ -385,4 +386,30 @@ body {
 
 .Botoes button:active {
     box-shadow: 0 2px 10px #fff;
+}
+
+@media (max-width:1366px) {
+    .Logo img {
+        width: 30px;
+        height: 30px;
+        top: 0.5%;
+    }
+
+    .BoxUsuario {
+        width: 80vw;
+        height: 90vh;
+        top: 6.5%;
+    }
+
+    .FormInput {
+        height: 5rem;
+    }
+
+    .FormGrupo select {
+        height: 5rem;
+    }
+
+    .Botoes {
+        top: 14rem;
+    }
 }
