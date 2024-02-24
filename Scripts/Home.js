@@ -18,7 +18,7 @@ function FecharPopup() {
 
 document.addEventListener('DOMContentLoaded', function () {
     // Tempo de mudança de um slide para o outro
-    var intervalo = 5000; 
+    var intervalo = 10000; 
     var carrossel = document.getElementById('CarrosselNoticias');
     var instanciaCarrossel = new bootstrap.Carousel(carrossel, {
         interval: false 

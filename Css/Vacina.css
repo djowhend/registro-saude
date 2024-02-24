@@ -342,9 +342,8 @@ body {
 
 .CadastrarVacina {
     display: flex;
-    position: relative;
     justify-content: center;
-    bottom: -5rem;
+    position: relative;
     animation: AnimacaoBotoes 3s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
@@ -413,72 +412,11 @@ body {
     bottom: 5rem;
 }
 
-.PesquisarVacina p {
-    color: #36C67E;
-    font-size: 1.2rem;
-
-    margin-bottom: 0.5rem;
-
-    display: flex;
-    justify-content: center;
-}
-
-.PesquisarVacina input {
-    width: 30.5rem;
-    height: 2rem;
-
-    color: #fff;
-    font-size: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-bottom: 1.5rem;
-
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 1rem;
-    border: none;
-    outline: none;
-
-    position: relative;
-    left: 5%;
-}
-
-.PesquisarVacina button {
-    width: 13.5rem;
-    height: 3rem;
-
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    margin: 0 auto; 
-    margin-bottom: 5%;
-
-    color: #fff;
-    font-weight: bold;
-
-    background: #35cd7d;
-    box-shadow: 0 0 10px #35cd7d;
-
-    border: 0.15rem solid #fff;
-    border-radius: 0.8rem;
-    outline: none;
-
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.PesquisarVacina button:hover {
-    box-shadow: 0 2px 10px #fff;
-}
-
-.PesquisarVacina button:active {
-    box-shadow: 0 2px 10px #fff;
-}
-
 #caixa {
     position: relative;
-    width: 25vw;
-    height: 27.5vh;
-    bottom: 0%;
+    width: 27.5vw;
+    height: 50vh;
+    bottom: 5%;
     margin: 0 auto; 
     
     overflow: auto;
@@ -507,7 +445,7 @@ body {
     justify-content: center;
     align-items: center; 
     margin: 0 auto; 
-    margin-top: 5%;
+    margin-top: -1.5%;
 
     color: #fff;
     font-weight: bold;
