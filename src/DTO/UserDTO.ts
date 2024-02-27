@@ -14,7 +14,7 @@ export class UserDTO {
         public numTelefone: string,
         public numTelefoneEmergencia: string,
         public tipoSanguineo: string,
-
+        public fotoPerfil: string,
     ) { }
 
 
@@ -30,9 +30,8 @@ export class UserDTO {
         user.dataNascimento,
         user.numTelefone,
         user.numTelefoneEmergencia,
-        user.tipoSanguineo
-
-
+        user.tipoSanguineo,
+        user.fotoPerfil
         );
         
         return userDTO;
@@ -49,7 +48,8 @@ export class UserDTO {
         newUser.numTelefone = this.numTelefone;
         newUser.numTelefoneEmergencia = this.numTelefoneEmergencia,
         newUser.tipoSanguineo = this.tipoSanguineo
-        
+        newUser.fotoPerfil = this.fotoPerfil
+
         return newUser;
 
     }

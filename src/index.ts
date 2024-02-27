@@ -12,9 +12,14 @@ import { AuthenticatedRequest, AuthenticationMiddleware, } from "./middleware/Au
 const SERVER_PORT = 3000;
 const server = express();
 const cors = require('cors');
+const multer = require('multer');
+const fs = require('fs');
+const qr = require('qrcode');
 
 server.use(express.json());
 server.use(cors());
+
+const upload = multer({ dest: 'uploads/' });
 
 server.post("/user", async (request: Request, response: Response) => {
   const userController = new UserController();
@@ -66,8 +71,16 @@ server.get("/users/:id", async (request: AuthenticatedRequest, response: Respons
     request.userId
   );
   return response.status(201).json(user);
-
 })
+
+server.get("/vacinas/:id", async (request: AuthenticatedRequest, response: Response) => {
+  const userController = new VacinaController();
+  const user = await userController.getVacinasByUserId(
+    request.userId
+  );
+  return response.status(201).json(user);
+})
+
 // server.put("/users", async (request: AuthenticatedRequest, response: Response) => {
 //   const userController = new UserController();
 //   const user = await userController.createUser(
@@ -87,7 +100,22 @@ server.get("/users/:id", async (request: AuthenticatedRequest, response: Respons
 // })
 
 
-server.patch("/users/:id", async (request: AuthenticatedRequest, response: Response) => {
+server.patch("/users/:id", upload.single('image'), async (request: AuthenticatedRequest & { file: any }, response: Response) => {
+  const imageFile = request.file;
+  let fotoPerfil;
+
+  if (imageFile) {
+    fotoPerfil = imageFile.originalname;
+
+    // Construct the destination path
+    const destinationPath = 'imagensPerfil/' + fotoPerfil;
+
+    if (!fs.existsSync(destinationPath)) {
+      fs.renameSync(imageFile.path, destinationPath);
+    }
+  }
+
+
   const userController = new UserController();
   const user = await userController.updateUser(
     request.userId,
@@ -100,7 +128,8 @@ server.patch("/users/:id", async (request: AuthenticatedRequest, response: Respo
     request.body.dataNascimento,
     request.body.numTelefone,
     request.body.numTelefoneEmergencia,
-    request.body.tipoSanguineo
+    request.body.tipoSanguineo,
+    fotoPerfil
   );
   return response.status(201).json(user);
 
@@ -145,7 +174,7 @@ server.post("/medicamento", async (request: AuthenticatedRequest, response: Resp
 
 })
 
-server.get("/medicamentos", async (request: AuthenticatedRequest, response: Response) => {
+server.get("/medicamentos/:id", async (request: AuthenticatedRequest, response: Response) => {
   const userId = request.userId
   const medicamentoController = new MedicamentoController();
   return response.json(await medicamentoController.getMedicamentosByUserId(userId));
@@ -167,6 +196,21 @@ server.get("/patologias", async (request: AuthenticatedRequest, response: Respon
   const userId = request.userId
   const patologiaController = new PatologiaController();
   return response.json(await patologiaController.getPatologiasByUserId(userId));
+});
+
+server.get("/qrCode", async (request: AuthenticatedRequest, response: Response) => {
+  const urlWithParams = 'http://localhost:49237/Html/Perfil.html';
+
+  // Generate QR code for the URL with parameters
+  qr.toDataURL(urlWithParams, (err, qrDataURL) => {
+    if (err) {
+      console.error('Error generating QR code:', err);
+      response.status(500).send('Error generating QR code');
+    } else {
+      // Send the QR code data URL in the response
+      response.send(`<img src="${qrDataURL}" alt="QR Code" />`);
+    }
+  });
 });
 
 

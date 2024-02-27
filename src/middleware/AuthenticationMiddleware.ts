@@ -4,6 +4,7 @@ import { SessionController } from "../controller/SessionController";
 
 export interface AuthenticatedRequest extends Request {
   userId: number;
+  
 }
 
 export class AuthenticationMiddleware {

@@ -57,6 +57,8 @@
                 </label>
             </div>
 
+            <div id="qrCodeContainer"></div>
+
             <div class="FormGrupo">
                 <!-- Informações Esquerda -->
                 <div class="FormGrupoEsquerda">
@@ -67,7 +69,7 @@
                     <input type="Text" class="FormInput" id="Sobrenome" disabled>
 
                     <label for="Genero">Gênero</label>
-                    <select id="inputgenero" class="FormInput" disabled>
+                    <select id="Genero" class="FormInput" disabled>
                         <option value="Masculino">Masculino</option>
                         <option value="Feminino">Feminino</option>
                         <option value="Outro">Outro</option>
@@ -75,19 +77,19 @@
 
                     <label for="DataNascimento">Data de Nascimento</label>
                     <input type="Date" class="FormInput" id="DataNascimento" disabled>
-
+<!-- 
                     
                     <label for="Peso">Peso</label>
                     <input type="Text" class="FormInput" id="Peso" disabled>
                     
                     <label for="Altura">Altura</label>
-                    <input type="Text" class="FormInput" id="Altura" disabled>
+                    <input type="Text" class="FormInput" id="Altura" disabled> -->
                 </div>
                 
                 <!-- Informações Direita -->
                 <div class="FormGrupoDireita">
                     <label for="CPF">CPF</label>
-                    <input type="Text" class="FormInput" id="Cpf1" disabled>
+                    <input type="Text" class="FormInput" id="Cpf" disabled>
                     
                     <label for="TipoSanguineo">Tipo Sanguíneo</label>
                     <input type="Text" class="FormInput" id="TipoSanguineo" disabled>
@@ -98,11 +100,11 @@
                     <label for="NumeroTelefoneEmergencia">Número de Telefone de Emergência</label>
                     <input type="Text" class="FormInput" id="NumeroTelefoneEmergencia" disabled>
 
-                    <label for="Email">Email</label>
+                    <!-- <label for="Email">Email</label>
                     <input type="Email" class="FormInput" id="Email" disabled>
 
                     <label for="Senha">Senha</label>
-                    <input type="Text" class="FormInput" id="Senha" disabled>
+                    <input type="Text" class="FormInput" id="Senha" disabled> -->
                 </div>
             </div>
 
@@ -116,29 +118,10 @@
             <!-- Informações do Usuário de Vacinas, Medicamentos e Patologias -->
             <div class="InfoUsuario">
                 <div id="InfoVacinas">
-                    <p>Nome da Vacina: (NomeVacina)</p>
-                    <p>Lote da Vacina: (LoteVacina)</p>
-                    <p>Data de Vacinação: (DataVacinação)</p>
-                    <p>Validação de Vacinação: (ValidaçãoVacinação)</p>
-                    <br>
-                    <p>Nome da Vacina: (NomeVacina)</p>
-                    <p>Lote da Vacina: (LoteVacina)</p>
-                    <p>Data de Vacinação: (DataVacinação)</p>
-                    <p>Validação de Vacinação: (ValidaçãoVacinação)</p>
                 </div>
                 <div id="InfoMedicamentos">
-                    <p>Nome da Medicação: (NomeMedicação)</p>
-                    <p>Início da Medicação: (InicioMedicação)</p>
-                    <p>Término da Medicação: (TérminoMedicação)</p>
-                    <br>
-                    <p>Nome da Medicação: (NomeMedicação)</p>
-                    <p>Início da Medicação: (InicioMedicação)</p>
-                    <p>Término da Medicação: (TérminoMedicação)</p>
                 </div>
                 <div id="InfoPatologias">
-                    <p>Condições Médicas Crônicas: (CondiçõesMédicas)</p>
-                    <br>
-                    <p>Condições Médicas Crônicas: (CondiçõesMédicas)</p>
                 </div>
             </div>
         </form>

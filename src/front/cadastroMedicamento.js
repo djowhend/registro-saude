@@ -49,7 +49,7 @@
 //GET MEDICAMENTOS COM O VINCULO DO USUARIO
 
 document.getElementById("buscar-medicamentos-btn").addEventListener('click', () => {
-    fetch("http://localhost:3000/medicamentos", {
+    fetch("http://localhost:3000/medicamentos/:id", {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${localStorage.getItem("token")}`
