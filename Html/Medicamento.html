@@ -29,7 +29,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 
     <!-- link do Script -->
-    <script src="/Scripts//Medicamento.js"></script>
+  
 </head>
 
 <body>
@@ -70,7 +70,7 @@
             </div>
 
             <div class="CadastrarMedicamento">
-                <button>Cadastrar Medicamento</button>
+                <button onclick="cadastrarMedicamento()">Cadastrar Medicamento</button>
             </div>
         </div>
     </div>
@@ -92,10 +92,10 @@
         </div>
 
         <div class="ExibirMedicamentos">
-            <button onclick="exibirTodosMedicamentos()">Ver Todas Os Medicamentos</button>
+            <button  id="buscar-medicamentos-btn" onclick="exibirTodosMedicamentos()">Ver Todas Os Medicamentos</button>
         </div>
     </div>
-
+    <script src="/src/FRONT/cadastroMedicamento.js"></script>
 </body>
 
 </html>

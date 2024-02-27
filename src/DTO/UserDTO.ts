@@ -5,9 +5,16 @@ export class UserDTO {
     constructor(
         public id: number,
         public nome: string,
+        public sobrenome: string,
         public email: string,
         public senha: string,
-        // public cpf: string,
+        public cpf: string,
+        public genero: string,
+        public dataNascimento: string,
+        public numTelefone: string,
+        public numTelefoneEmergencia: string,
+        public tipoSanguineo: string,
+
     ) { }
 
 
@@ -15,9 +22,17 @@ export class UserDTO {
         const userDTO = new UserDTO(
         user.id,
         user.nome,
+        user.sobrenome,
         user.email,
-        user.senha
-        // user.cpf
+        user.senha,
+        user.cpf,
+        user.genero,
+        user.dataNascimento,
+        user.numTelefone,
+        user.numTelefoneEmergencia,
+        user.tipoSanguineo
+
+
         );
         
         return userDTO;
@@ -28,7 +43,13 @@ export class UserDTO {
         newUser.nome = this.nome;
         newUser.email = this.email;
         newUser.senha = this.senha;
-        // newUser.cpf = this.cpf;
+        newUser.cpf = this.cpf;
+        newUser.genero = this.genero;
+        newUser.dataNascimento = this.dataNascimento;
+        newUser.numTelefone = this.numTelefone;
+        newUser.numTelefoneEmergencia = this.numTelefoneEmergencia,
+        newUser.tipoSanguineo = this.tipoSanguineo
+        
         return newUser;
 
     }

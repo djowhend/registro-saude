@@ -30,7 +30,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 
     <!-- Link do Script  -->
-    <script src="/Scripts/Vacina.js"></script>
+    
 </head>
 
 <body>
@@ -74,12 +74,13 @@
             </div>
 
             <div class="CadastrarVacina">
-                <button onclick="repassarInformacao()">Cadastrar Vacina</button>
+                <button onclick="cadastrarVacina()">Cadastrar Vacina</button>
             </div>
         </div>
     </div>
 
     <!-- Pesquisar Vacina por Nome/Exibição das Vacinas -->
+    
     <div class="Conteudo2">
         <div class="Pesquisa-Exibição">
             <h3>Pesquisa de Vacinas</h3>
@@ -96,10 +97,10 @@
         </div>
 
         <div class="ExibirVacinas">
-            <button onclick="exibirTodasVacinas()">Ver Todas As Vacinas</button>
+            <button  id="buscar-vacinas-btn" onclick="exibirTodasVacinas()">Ver Todas As Vacinas</button>
         </div>
     </div>
-
+    <script src="/src/FRONT/cadastroVacina.js" defer></script>
 </body>
 
 </html>
