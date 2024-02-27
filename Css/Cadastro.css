@@ -230,3 +230,50 @@ img[alt="Template.png"] {
 .EntrarContaBtn p a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 1366px) {
+    .RegistroSaudeLgTi {
+        position: relative;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .RegistroSaudeLgTi h1 {
+        font-size: 1.8rem;
+    }
+
+    .RegistroSaudeLgTi img {
+        height: 40px;
+    }
+
+    .Textos h1 {
+        font-size: 1.3rem;
+    }
+    
+    .Textos p {
+        padding-top: 10px;
+        font-size: 1.3rem;
+    }
+
+    .Formulario h2 {
+        font-size: 1.5rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    .Input input {
+        width: 320px;
+    }
+
+    .CriarContaBtn {
+        top: 2rem;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .EntrarContaBtn {
+        top: 3.5rem;
+    }
+}

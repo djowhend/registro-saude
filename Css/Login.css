@@ -15,18 +15,20 @@ body {
 @keyframes backgroundgradient {
     0% {
         background-position: 0% 50%;
-      }
-      50% {
+    }
+
+    50% {
         background-position: 100% 50%;
-      }
-      100% {
+    }
+
+    100% {
         background-position: 0% 50%;
-      }
+    }
 }
 
 @keyframes opacidade {
     0% {
-        opacity: 0.0;   
+        opacity: 0.0;
     }
 
     100% {
@@ -99,18 +101,18 @@ img[alt="Template.png"] {
     position: relative;
     top: 20vh;
     height: 15vh;
-    width: 40vw;    
+    width: 40vw;
     padding-top: 20px;
     color: #e4e8e7;
     font-size: 25px;
     text-align: center;
     background-color: rgba(20, 57, 52, 0.7);
     box-shadow: 0 0 10px #35cd7d;
-    border-radius: 55px; 
+    border-radius: 55px;
 }
 
 @keyframes AnimacaoTextos {
-    0% { 
+    0% {
         transform: translateX(-100%);
     }
 
@@ -134,7 +136,7 @@ img[alt="Template.png"] {
 }
 
 @keyframes AnimacaoRegistro {
-    0% { 
+    0% {
         transform: translateX(100%);
     }
 
@@ -184,12 +186,12 @@ img[alt="Template.png"] {
     transition: .5s ease;
 }
 
-.Input input:focus ~ label,
-.Input input:valid ~ label {
+.Input input:focus~label,
+.Input input:valid~label {
     top: -5px;
 }
 
-.Input input:invalid ~ label {
+.Input input:invalid~label {
     color: #35cd7d;
 }
 
@@ -230,4 +232,51 @@ img[alt="Template.png"] {
 
 .CriarContaBtn p a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 1366px) {
+    .RegistroSaudeLgTi {
+        position: relative;
+        bottom: 4rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .RegistroSaudeLgTi h1 {
+        font-size: 1.8rem;
+    }
+
+    .RegistroSaudeLgTi img {
+        height: 40px;
+    }
+
+    .Textos h1 {
+        font-size: 1.3rem;
+    }
+    
+    .Textos p {
+        padding-top: 10px;
+        font-size: 1.3rem;
+    }
+
+    .Formulario h2 {
+        font-size: 1.5rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    .Input input {
+        width: 320px;
+    }
+
+    .EntrarContaBtn {
+        top: 5rem;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .CriarContaBtn {
+        top: 7rem;
+    }
 }
