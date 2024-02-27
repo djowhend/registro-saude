@@ -276,7 +276,7 @@ body {
 
 .FormGrupo select {
     width: 24rem;
-    height: 20rem;
+    height: 2rem;
     padding: 0 15px;
 
     color: #fff;
@@ -318,7 +318,7 @@ body {
 
 .FormInput {
     width: 24rem;
-    height: 20rem;
+    height: 2rem;
     padding: 0 15px;
 
     color: #fff;
@@ -399,14 +399,6 @@ body {
         width: 80vw;
         height: 90vh;
         top: 6.5%;
-    }
-
-    .FormInput {
-        height: 5rem;
-    }
-
-    .FormGrupo select {
-        height: 5rem;
     }
 
     .Botoes {

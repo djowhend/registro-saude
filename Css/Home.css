@@ -59,7 +59,7 @@ body::before {
     left: 50%;
     transform: translateX(-50%);
     height: 2rem;
-    width: 15rem;
+    width: 17rem;
 
     content: attr(data-message);
     color: #35dc7f;
