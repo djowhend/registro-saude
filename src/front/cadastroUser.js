@@ -7,7 +7,11 @@ document.getElementById('user-form').addEventListener('submit', async function(e
     const email = document.getElementById('inputemail').value;
     const senha = document.getElementById('inputsenha').value;
     const confirmarSenha = document.getElementById('inputconfirmasenha').value;
-    // const cpf = document.getElementById('inputcpf').value;
+    // const cpf = document.getElementById('inputcpf').value;  
+    // const tipoSanguineo = document.getElementById('inputtiposanguineo').value;
+    // const numeroTelefone = document.getElementById('inputnumerotelefone').value;
+    // const numeroTelefoneEmergencia = document.getElementById('inputnumerotelefoneemergencia').value;
+    // const genero = document.getElementById('inputgenero').value;
 
     if (senha !== confirmarSenha) {
         alert("As senhas não correspondem");
@@ -18,7 +22,14 @@ document.getElementById('user-form').addEventListener('submit', async function(e
         nome,
         email,
         senha
-        // cpf
+        // cpf,
+        // tipoSanguineo,
+        // numeroTelefone,
+        // numeroTelefoneEmergencia,
+        // genero
+        
+
+
     };
     
     try {

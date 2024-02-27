@@ -1,5 +1,6 @@
 import { AppDataSource } from "../data-source";
 import { VacinaDTO } from "../DTO/VacinaDTO";
+import { User } from "../model/User";
 import { Vacina } from "../model/Vacina";
 
 
@@ -32,5 +33,7 @@ export class VacinaController {
         return vacinaList.map((vacina: Vacina) => VacinaDTO.fromModel(vacina));
     }
 
+
 }
+
 

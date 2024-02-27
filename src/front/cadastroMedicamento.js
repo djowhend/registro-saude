@@ -1,50 +1,24 @@
-    function cadastrarMedicamento() {
-    const nomeMedicamento = document.getElementById("nomeMedicamento").value;
-    const inicioMedicacao = document.getElementById("inicioMedicacao").value;
-    const terminoMedicacao = document.getElementById("terminoMedicacao").value;
 
-    const informacoesMedicamento =  "Nome do Medicamento: " + nomeMedicamento + "<br>" +
-                                    "Início da Medicação: " + inicioMedicacao + "<br>" +
-                                    "Término da Medicação: " + terminoMedicacao;
-
-    const novoParagrafo = document.createElement("p");
-    novoParagrafo.innerHTML = informacoesMedicamento;
-
-    const botaoExcluir = document.createElement("button");
-    botaoExcluir.textContent = "Excluir";
-    botaoExcluir.onclick = function() {
-        novoParagrafo.remove();
-
-        localStorage.removeItem("nomeMedicamento");
-        localStorage.removeItem("inicioMedicacao");
-        localStorage.removeItem("terminoMedicacao");
-    };
-
-    novoParagrafo.appendChild(botaoExcluir);
-    document.getElementById("listaMedicamentos").appendChild(novoParagrafo);
-    
-    console.log("Chegou!!!");
-
-    cadastrarMedicamento();
-
-    localStorage.setItem("nomeMedicamento", nomeMedicamento);
-    localStorage.setItem("inicioMedicacao", inicioMedicacao);
-    localStorage.setItem("terminoMedicacao", terminoMedicacao);
-    
-
-}
 
     function cadastrarMedicamento() {
     const nomeMedicamento = document.getElementById("nomeMedicamento").value;
     const inicioMedicacao = document.getElementById("inicioMedicacao").value;
     const terminoMedicacao = document.getElementById("terminoMedicacao").value;
+
+    if (nomeMedicamento.trim() === "") {
+        alert("Por favor, insira o nome do medicamento.");
+        return; // Retorna para evitar salvar dados vazios
+    } else {
+        alert("Medicamento cadastrado com sucesso!")
+    }
 
     const dadosMedicamento = {
         nomeMedicamento: nomeMedicamento,
         inicioTratamento: inicioMedicacao,
-        terminoTratamento: terminoMedicacao,
-        userId: userId
+        terminoTratamento: terminoMedicacao
+        
     };
+
 
     fetch("http://localhost:3000/medicamento", {
         method: "POST",
@@ -58,12 +32,55 @@
         if (!response.ok) {
             throw new Error("Erro ao salvar os dados no servidor.");
         }
+        document.getElementById("nomeMedicamento").value = "";
+        document.getElementById("inicioMedicacao").value = "";
+        document.getElementById("terminoMedicacao").value = "";
         return response.json();
     })
     .then(data => {
         // Dados foram salvos com sucesso, você pode tratar a resposta do servidor aqui se necessário
+        
         console.log("Dados salvos com sucesso:", data);
     })
     .catch(error => {
         console.error("Erro:", error);
     })};
+
+//GET MEDICAMENTOS COM O VINCULO DO USUARIO
+
+document.getElementById("buscar-medicamentos-btn").addEventListener('click', () => {
+    fetch("http://localhost:3000/medicamentos/:id", {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${localStorage.getItem("token")}`
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Erro ao obter informações dos medicamentos.");
+        }
+        return response.json();
+    })
+    .then(medicamentos => {
+        console.log('Informações dos medicamentos:', medicamentos);
+        // Limpa o conteúdo anteriormente exibido
+        document.getElementById('caixa').innerHTML = '';
+        console.log("chegando medicamento");
+
+        // Loop através das medicamentos e exibe cada uma no HTML
+        medicamentos.forEach(medicamento => {
+            const medicamentoElement = document.createElement('div');
+            medicamentoElement.innerHTML = `
+                <p>Nome do medicamento: ${medicamento.nomeMedicamento}</p>
+                <p>Inicio do tratamento: ${medicamento.inicioTratamento}</p>
+                <p>Término do tratamento: ${medicamento.terminoTratamento}</p>
+               
+            `;
+           let divMedicamento = document.getElementById('caixa')
+           divMedicamento.appendChild(medicamentoElement);
+        });
+    })
+    .catch(error => {
+        console.error("Erro:", error);
+    });
+});

@@ -28,7 +28,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 
     <!-- Script para Mudança de Foto Perfil -->
-    <script src="/Scripts//EditarPerfil.js"></script>
+    <!-- <script src="/Scripts//EditarPerfil.js"></script> -->
 
 </head>
 
@@ -52,7 +52,7 @@
 
     <!-- Conteúdo Perfil -->
     <div class="BoxUsuario">
-        <form class="FormUsuario">
+        <form id="user-form" class="FormUsuario">
 
             <!-- Foto Perfil Usuário -->
             <div class="FotoUsuario" id="FotoUsuario">
@@ -123,7 +123,7 @@
             <!-- Botões -->
             <div class="Botoes">
                 <div class="Botao1">
-                    <button type="button">Atualizar Perfil</button>
+                    <button type="submit">Atualizar Perfil</button>
                 </div>
 
                 <div class="Botao2">
@@ -134,7 +134,8 @@
             </div>
         </form>
     </div>
-
+    <script src="../src/FRONT/editarPerfil.js"></script>
+    <!-- <script src="../src/FRONT/getPerfil.js"></script> -->
 </body>
 
 </html>

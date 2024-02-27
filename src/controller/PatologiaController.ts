@@ -17,9 +17,14 @@ export class PatologiaController {
 
     }
 
-    async getPatologias() {
+    // async getPatologias() {
+    //     const patologiaRepository = AppDataSource.getRepository(Patologia);
+    //     const patologiaList = await patologiaRepository.find()
+    //     return patologiaList.map((patologia: Patologia) => PatologiaDTO.fromModel(patologia));
+
+    async getPatologiasByUserId(userId: number) {
         const patologiaRepository = AppDataSource.getRepository(Patologia);
-        const patologiaList = await patologiaRepository.find()
+        const patologiaList = await patologiaRepository.find({ where: { userId: userId } });
         return patologiaList.map((patologia: Patologia) => PatologiaDTO.fromModel(patologia));
 
     }

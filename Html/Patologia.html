@@ -33,7 +33,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 
     <!-- Link do Script  -->
-    <script src="/Scripts/Patologia.js"></script>
+    <!-- <script src="/Scripts/Patologia.js"></script> -->
 </head>
 
 <body>
@@ -69,7 +69,7 @@
             </div>
 
             <div class="CadastrarRegistros">
-                <button>Cadastrar Patologia</button>
+                <button onclick="cadastrarPatologia()">Cadastrar Patologia</button>
             </div>
         </div>
     </div>
@@ -91,10 +91,10 @@
         </div>
 
         <div class="ExibirPatologias">
-            <button onclick="exibirTodasPatologias()">Ver Todas As Patologias</button>
+            <button id="buscar-patologias-btn" onclick="exibirTodasPatologias()">Ver Todas As Patologias</button>
         </div>
     </div>
-
+    <script src="../src/FRONT/cadastroPatologia.js"></script>
 </body>
 
 </html>

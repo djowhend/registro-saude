@@ -10,7 +10,10 @@ export class User {
     @Column()
     nome: string;
 
-    @Column()
+    @Column({nullable: true})
+    sobrenome: string;
+
+    @Column({nullable: true})
     email: string;
 
     @Column()
@@ -35,7 +38,7 @@ export class User {
     tipoSanguineo: string;
 
     @Column({nullable: true})
-    alergia: string;
+    fotoPerfil: string;
 
     @OneToMany(() => Vacina, vacina => vacina.user)
     vacinas: Vacina[];

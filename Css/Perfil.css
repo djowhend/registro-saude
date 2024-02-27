@@ -177,9 +177,15 @@ body {
     }
 }
 
+<<<<<<< HEAD
 .FotoUsuario {
     position: absolute;
     top: 2rem;
+=======
+.FotoUsuario, #qrCodeContainer {
+    position: relative;
+    top: 4rem;
+>>>>>>> main
     left: 50%;
     transform: translateX(-50%);
 }

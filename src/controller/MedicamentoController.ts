@@ -19,9 +19,14 @@ export class MedicamentoController {
 
     }
 
-    async getMedicamentos() {
+    // async getMedicamentos() {
+    //     const medicamentoRepository = AppDataSource.getRepository(Medicamento);
+    //     const medicamentoList = await medicamentoRepository.find()
+    //     return medicamentoList.map((medicamento: Medicamento) => MedicamentoDTO.fromModel(medicamento));
+
+    async getMedicamentosByUserId(userId: number) {
         const medicamentoRepository = AppDataSource.getRepository(Medicamento);
-        const medicamentoList = await medicamentoRepository.find()
+        const medicamentoList = await medicamentoRepository.find({ where: { userId: userId } });
         return medicamentoList.map((medicamento: Medicamento) => MedicamentoDTO.fromModel(medicamento));
 
     }
