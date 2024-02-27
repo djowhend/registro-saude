@@ -176,7 +176,7 @@ body {
     }
 }
 
-.FotoUsuario {
+.FotoUsuario, #qrCodeContainer {
     position: relative;
     top: 4rem;
     left: 50%;

@@ -66,7 +66,8 @@ export class UserController {
         dataNascimento: string,
         numTelefone: string,
         numTelefoneEmergencia: string,
-        tipoSanguineo: string
+        tipoSanguineo: string,
+        fotoPerfil: string
         ){
         const userRepository = AppDataSource.getRepository(User);
         const userExists = await userRepository.findOneBy({
@@ -89,7 +90,8 @@ export class UserController {
                 dataNascimento,
                 numTelefone,
                 numTelefoneEmergencia,
-                tipoSanguineo
+                tipoSanguineo,
+                fotoPerfil
             }
         );
     }
