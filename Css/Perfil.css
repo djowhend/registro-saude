@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,768;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,768&display=swap');
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -7,7 +7,7 @@
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
     height: 100vh;
     width: 100vw;
 
@@ -34,26 +34,17 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 5vh;
+    z-index: 100 !important;
     width: 100%;
 
     background-color: #10493d;
     box-shadow: 0px 0px 15px #35cd7d;
     border-bottom: 0.15rem solid #35cd7d;
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 }
 
 .Logo img {
-    position: fixed;
     width: 35px;
     height: 35px;
-    top: 0.8%;
-    left: 49%;
-    padding-bottom: 0.2rem;
-
     animation: AnimacaoLogo 1.5s 1s both;
 }
 
@@ -141,6 +132,10 @@ body {
     transition: .2s ease;
 }
 
+.nav-item {
+    padding: 0 15px;
+}
+
 .Navbar a:hover::before {
     background-color: #35dc7f;
     width: 100%;
@@ -148,13 +143,13 @@ body {
 
 .BoxUsuario {
     position: absolute;
-    top: 8vh;
+    top: 100px;
     left: 7.5%;
 
     width: 85vw;
-    height: 90vh;
+    /* height: 90vh; */
 
-    background: linear-gradient(0deg, #000, #143934, #143934, #000);
+    background: linear-gradient(0deg, #222, #143934, #143934, #222);
     box-shadow: 0px 0px 15px #35cd7d;
     border: 0.15rem solid #35cd7d;
     border-radius: 3rem;
@@ -176,15 +171,10 @@ body {
     }
 }
 
-.FotoUsuario {
-    position: relative;
-    top: 4rem;
-    left: 50%;
-}
 
-#InputFoto {
+/* #InputFoto {
     display: none;
-}
+} */
 
 .FotoUsuario img {
     width: 10rem;
@@ -217,7 +207,7 @@ body {
 .FormGrupo {
     display: flex;
     position: relative;
-    top: -8rem;
+    /* top: -8rem; */
     justify-content: space-between;
 }
 
@@ -229,7 +219,6 @@ body {
 
 .FormGrupo select {
     width: 24rem;
-    height: 20rem;
     padding: 0 15px;
 
     color: #fff;
@@ -270,8 +259,7 @@ body {
 
 
 .FormInput {
-    width: 24rem;
-    height: 20rem;
+    width: 100%;
     padding: 0 15px;
 
     color: #fff;
@@ -282,7 +270,6 @@ body {
     border: none;
     outline: none;
 
-    margin-left: 1rem;
 }
 
 .FormInput:hover {
@@ -290,10 +277,6 @@ body {
 }
 
 .Botoes {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    bottom: 7rem;
     animation: AnimacaoBotoes 3s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
@@ -336,14 +319,16 @@ body {
     box-shadow: 0 2px 10px #fff;
 }
 
-.InfoUsuario {
-    display: flex;
-    position: relative;
-    justify-content: space-evenly;
-    bottom: 4rem;
+#InfoVacinas  {
+    background-color: #105942;
+    box-shadow: 0 0 10px 5px #35cd7d;
+    border: 0.15rem solid #fff;
+    border-radius: 0.8rem;
+    overflow-y: auto;
+    padding: 0px !important;
+    height: 100%;
 }
 
-#InfoVacinas,
 #InfoMedicamentos,
 #InfoPatologias {
     height: 20rem;
@@ -389,4 +374,68 @@ body {
     border-radius: 1rem;
     background-color: #ffffff80;
     margin: 2rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile-hide {
+        display: none;
+    }
+
+    .nav-item {
+        text-align: center;
+    }
+
+    .Navbar {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .Logo {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .FormGrupoEsquerda{
+        margin-top: 20%  ;
+        width: 100%;
+        position:relative;
+    }
+   
+    .BoxUsuario {
+        width: 80%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .FormGrupo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .FormInput {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 8px; 
+    }
+
+    
+    .Botoes {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Estilos para as informações do usuário */
+    .InfoUsuario {
+        margin-top: 20px;
+    }
+
+    #InfoMedicamentos,
+    #InfoPatologias {
+        width: 100%;
+    }
 }
