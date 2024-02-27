@@ -13,10 +13,37 @@ Além disso, o Registro Saúde oferece recursos adicionais, tais como:
 - Histórico completo: Armazena um registro completo e atualizado do histórico de saúde do usuário, facilitando o acompanhamento de mudanças ao longo do tempo.
 
 Com todas essas funcionalidades, o Registro Saúde proporciona uma solução abrangente e personalizada para gerenciar e acessar informações de saúde de forma conveniente e segura.
-![teladelogin](https://github.com/djowhend/registro-saude/assets/143847541/c6926490-6aa8-40da-9594-7e50bc3dd9bd)
-
-"Tela em desenvolvimento"
 
 # Nosso Objetivo
 
 O projeto Registro Saúde visa simplificar o gerenciamento das informações de saúde dos usuários. Permitirá o registro e acompanhamento de vacinas, medicamentos e condições médicas, com suas respectivas datas de validade. O objetivo é garantir acesso fácil a essas informações em situações de emergência e no dia a dia, proporcionando uma solução prática e abrangente para o controle do histórico de saúde.
+
+# Página Inicial
+![Alt text](Resources/Github1.jpg)
+
+# Login
+![!\[Alt text\](Resources/Github2.jpg)](Resources/Github2.png)
+
+# Registro
+![Alt text](Resources/Github3.png)
+
+# Home
+![Alt text](Resources/Github4.png)
+
+# Cadastro Vacinas
+![Alt text](Resources/Github5.png)
+
+# Cadastro Medicamentos
+![Alt text](Resources/Github6.png)
+
+# Cadastro Patologias
+![Alt text](Resources/Github7.png)
+
+# Perfil 
+![Alt text](Resources/Github8.png)
+
+# Editar Perfil
+![Alt text](Resources/Github9.png)
+
+# Linktree
+![Alt text](Resources/Github10.png)
