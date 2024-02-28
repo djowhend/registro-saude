@@ -199,7 +199,7 @@ server.get("/patologias", async (request: AuthenticatedRequest, response: Respon
 });
 
 server.get("/qrCode", async (request: AuthenticatedRequest, response: Response) => {
-  const urlWithParams = 'http://localhost:49237/Html/Perfil.html';
+  const urlWithParams = `http://10.10.206.161:57747/Html/PerfilQrcode.html?userId=${request.userId}`;
 
   // Generate QR code for the URL with parameters
   qr.toDataURL(urlWithParams, (err, qrDataURL) => {
