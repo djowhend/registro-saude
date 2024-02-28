@@ -152,8 +152,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
 
-    width: 85vw;
-    height: 90vh;
+    width: 95rem;
+    height: 55rem;
 
     background: linear-gradient(0deg, #000, #143934, #143934, #000);
     box-shadow: 0px 0px 15px #35cd7d;
@@ -177,15 +177,10 @@ body {
     }
 }
 
-<<<<<<< HEAD
-.FotoUsuario {
+.FotoUsuario,
+#qrCodeContainer {
     position: absolute;
-    top: 2rem;
-=======
-.FotoUsuario, #qrCodeContainer {
-    position: relative;
     top: 4rem;
->>>>>>> main
     left: 50%;
     transform: translateX(-50%);
 }
@@ -449,5 +444,417 @@ body {
     #InfoMedicamentos::-webkit-scrollbar,
     #InfoPatologias::-webkit-scrollbar {
         width: 0.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .Navbar {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .Navbar a {
+        font-size: 0.9rem;
+    }
+
+    .Logo img {
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 1%;
+    }
+
+    .BoxUsuario {
+        width: 85%;
+        height: 85%;
+    }
+
+    .FotoUsuario img {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .FormGrupo {
+        margin-top: 20%;
+        position: relative;
+        left: -4%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .FormGrupo label {
+        font-size: 0.7rem;
+    }
+
+    .FormGrupo select {
+        width: 13rem;
+        height: 1.5rem;
+        font-size: 0.7rem;
+    }
+
+    .FormInput {
+        width: 13rem;
+        height: 1.5rem;
+        font-size: 0.7rem;
+    }
+
+    .FormGrupoEsquerda {
+        margin-left: 5rem;
+    }
+
+    .FormGrupoDireita {
+        margin-right: 5rem;
+    }
+
+    .Botoes {
+        margin-top: -20%;
+    }
+
+    .Botoes button {
+        font-size: 0.9rem;
+    }
+
+    .InfoUsuario {
+        margin-top: 20px;
+    }
+
+    #InfoVacinas,
+    #InfoMedicamentos,
+    #InfoPatologias {
+        width: 30%;
+        height: 13rem;
+    }
+
+    #InfoVacinas p,
+    #InfoMedicamentos p,
+    #InfoPatologias p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 665px) {
+    .FormGrupo label {
+        font-size: 0.6rem;
+    }
+
+    .FormInput {
+        margin: 0 -0.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .Navbar {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .Navbar a {
+        font-size: 0.7rem;
+    }
+
+    .Logo img {
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 1%;
+    }
+
+    .BoxUsuario {
+        width: 85%;
+        height: 85%;
+    }
+
+    .FotoUsuario img {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .FormGrupo {
+        margin-top: 25%;
+        position: relative;
+        left: -4%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .FormGrupo select {
+        width: 12rem;
+        height: 1.5rem;
+        font-size: 0.7rem;
+    }
+
+    .FormInput {
+        width: 12rem;
+        height: 1.5rem;
+        font-size: 0.7rem;
+    }
+
+    .Botoes {
+        margin-top: -20%;
+    }
+
+    .Botoes button {
+        font-size: 0.9rem;
+    }
+
+    .InfoUsuario {
+        margin-top: 20px;
+    }
+
+    #InfoVacinas,
+    #InfoMedicamentos,
+    #InfoPatologias {
+        width: 30%;
+        height: 13rem;
+    }
+
+    #InfoVacinas p,
+    #InfoMedicamentos p,
+    #InfoPatologias p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .Navbar a {
+        font-size: 0.7rem;
+    }
+
+    .FormInput {
+        width: 10rem;
+    }
+
+    .FormGrupo select {
+        width: 10rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .Navbar {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .Navbar a {
+        font-size: 0.7rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .Logo img {
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 1%;
+    }
+
+    .BoxUsuario {
+        width: 85%;
+        height: 85%;
+    }
+
+    .FotoUsuario img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .FormGrupo {
+        margin-top: 25%;
+        position: relative;
+        left: -4%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .FormGrupo label {
+        font-size: 0.7rem;
+    }
+
+    .FormGrupo select {
+        width: 8rem;
+        height: 1.5rem;
+        font-size: 0.7rem;
+    }
+
+    .FormInput {
+        width: 8rem;
+        height: 1.5rem;
+        font-size: 0.7rem;
+    }
+
+    .Botoes {
+        margin-top: -30%;
+    }
+
+    .Botoes button {
+        font-size: 0.7rem;
+    }
+
+    .InfoUsuario {
+        margin-top: 20px;
+    }
+
+    #InfoVacinas,
+    #InfoMedicamentos,
+    #InfoPatologias {
+        width: 30%;
+        height: 14rem;
+    }
+
+    #InfoVacinas p,
+    #InfoMedicamentos p,
+    #InfoPatologias p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 475px) {
+    .Navbar {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .Navbar a {
+        font-size: 0.7rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .Logo img {
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 1%;
+    }
+
+    .BoxUsuario {
+        width: 85%;
+        height: 85%;
+    }
+
+    .FotoUsuario img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .FormGrupo {
+        margin-top: 25%;
+        position: relative;
+        left: -4%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .FormGrupo label {
+        font-size: 0.7rem;
+    }
+
+    .FormGrupo select {
+        width: 8rem;
+        height: 1.5rem;
+        font-size: 0.7rem;
+    }
+
+    .FormInput {
+        width: 8rem;
+        height: 1.5rem;
+        font-size: 0.7rem;
+    }
+
+    .Botoes {
+        margin-top: -30%;
+    }
+
+    .Botoes button {
+        font-size: 0.7rem;
+    }
+
+    .InfoUsuario {
+        margin-top: 20px;
+    }
+
+    #InfoVacinas,
+    #InfoMedicamentos,
+    #InfoPatologias {
+        width: 30%;
+        height: 14rem;
+    }
+
+    #InfoVacinas p,
+    #InfoMedicamentos p,
+    #InfoPatologias p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .FormGrupo {
+        left: -8%;
+    }
+
+    .FormGrupo select {
+        width: 7rem;
+    }
+
+    .FormInput {
+        width: 7rem;
+    }
+
+    .Botoes {
+        margin-top: -20%;
+    }
+
+    .Botoes button {
+        width: 7rem;
+    }
+}
+
+@media (max-width: 415px) {
+    .Logo img {
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 1%;
+    }
+
+    .BoxUsuario {
+        width: 85%;
+        height: 90%;
+    }
+
+    .FormGrupo {
+        margin-top: 25%;
+        position: relative;
+        left: -10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .FormGrupo select {
+        width: 6rem;
+    }
+
+    .FormInput {
+        width: 6rem;
+    }
+
+    .Botoes {
+        margin-top: -20%;
+    }
+
+    .Botoes button {
+        width: 7rem;
+    }
+
+    #InfoVacinas,
+    #InfoMedicamentos,
+    #InfoPatologias {
+        width: 30%;
+        height: 15rem;
     }
 }
