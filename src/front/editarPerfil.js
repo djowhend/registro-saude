@@ -48,7 +48,7 @@ document.getElementById('user-form').addEventListener('submit', async function(e
         // window.location.href = "../Html/Login.html";
         
     } catch (error) {
-        console.error('Erro:', error.message);
+        console.log('Erro:', error.message);
         alert(error.message);
         //alert("Erro ao criar usuário. Por favor, tente novamente.");
     }

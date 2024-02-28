@@ -12,7 +12,7 @@ window.onload = async () => {
 
         await getPatologias();
 
-        const response = await fetch(`http://10.10.206.161:3000/qrCode`, {
+        const response = await fetch(`http://192.168.2.114:3000/qrCode`, {
             method: 'GET',
             headers: {
                 "Authorization": `key ${userId}`,
@@ -28,7 +28,7 @@ window.onload = async () => {
     }
 
     async function getPatologias() {
-        const response = await fetch(`http://10.10.206.161:3000/patologias`, {
+        const response = await fetch(`http://192.168.2.114:3000/patologias`, {
             method: 'GET',
             headers: {
                 "Authorization": `key ${userId}`,
@@ -52,7 +52,7 @@ window.onload = async () => {
 
 
     async function getMedicamentos() {
-        const response = await fetch(`http://10.10.206.161:3000/medicamentos/:id`, {
+        const response = await fetch(`http://192.168.2.114:3000/medicamentos/:id`, {
             method: 'GET',
             headers: {
                 "Authorization": `key ${userId}`,
@@ -77,7 +77,7 @@ window.onload = async () => {
 
 
 async function getVacinas() {
-    const response = await fetch(`http://10.10.206.161:3000/vacinas/:id`, {
+    const response = await fetch(`http://192.168.2.114:3000/vacinas/:id`, {
         method: 'GET',
         headers: {
             "Authorization": `key ${userId}`,
@@ -102,7 +102,7 @@ async function getVacinas() {
 }
 
 async function getUser() {
-    const response = await fetch(`http://10.10.206.161:3000/users/:id`, {
+    const response = await fetch(`http://192.168.2.114:3000/users/:id`, {
         method: 'GET',
         headers: {
             "Authorization": `key ${userId}`,

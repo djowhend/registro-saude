@@ -20,7 +20,7 @@ window.onload = async () => {
         document.getElementById('qrCodeContainer').innerHTML = await response.text();
 
     } catch (error) {
-        console.error('Erro:', error.message);
+        console.log('Erro:', error.message);
         alert("Erro ao obter perfil. Por favor, tente novamente.");
     }
 
