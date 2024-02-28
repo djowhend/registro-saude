@@ -177,10 +177,9 @@ body {
     }
 }
 
-.FotoUsuario,
-#qrCodeContainer {
+.FotoUsuario {
     position: absolute;
-    top: 4rem;
+    top: 2%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -199,6 +198,17 @@ body {
     border-radius: 50%;
 
     animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1s both;
+}
+
+#qrCodeContainer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 23%;
+
+    width: 8rem;
+    height: 8rem;
+    border: 0.3rem solid #35dc7f;
 }
 
 @keyframes slide-in-blurred-top {
@@ -412,6 +422,10 @@ body {
         top: 3rem;
     }
 
+    #qrCodeContainer {
+        top: 30%;
+    }
+
     .Botoes {
         top: 4rem;
     }
@@ -473,6 +487,13 @@ body {
     .FotoUsuario img {
         width: 7rem;
         height: 7rem;
+    }
+
+    #qrCodeContainer {
+        top: 30%;
+    
+        width: 5rem;
+        height: 5rem;
     }
 
     .FormGrupo {
@@ -569,6 +590,10 @@ body {
     .FotoUsuario img {
         width: 7rem;
         height: 7rem;
+    }
+
+    .FormGrupoEsquerda {
+       margin-left: 12%; 
     }
 
     .FormGrupo {
@@ -793,8 +818,27 @@ body {
 }
 
 @media (max-width: 450px) {
+    #qrCodeContainer {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 23%;
+    
+        width: 4rem;
+        height: 4rem;
+        border: 0.3rem solid #35dc7f;
+    }
+
+    .FormGrupoDireita {
+        margin-right: 10%;
+    }
+
     .FormGrupo {
         left: -8%;
+    }
+
+    .FormGrupo label {
+        font-size: 0.6rem;
     }
 
     .FormGrupo select {

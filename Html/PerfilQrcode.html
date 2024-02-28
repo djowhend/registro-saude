@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro Saúde / Perfil</title>
+    <title>Registro Saúde / Perfil QRCode</title>
 
     <!-- Link do Icone Site -->
     <link rel="shortcut icon" type="image/png" href="/Resources/Logo.png" />
@@ -60,12 +60,14 @@
                 </label>
             </div>
 
+            <div id="qrCodeContainer"></div>
+
             <div class="FormGrupo">
                 <!-- Informações Esquerda -->
                 <div class="FormGrupoEsquerda">
                     <label for="Nome">Nome</label>
                     <input type="Text" class="FormInput" id="Nome" disabled>
-
+                    
                     <label for="Sobrenome">Sobrenome</label>
                     <input type="Text" class="FormInput" id="Sobrenome" disabled>
 
@@ -78,13 +80,14 @@
 
                     <label for="DataNascimento">Data de Nascimento</label>
                     <input type="Date" class="FormInput" id="DataNascimento" disabled>
-                </div>
 
+                </div>
+                
                 <!-- Informações Direita -->
                 <div class="FormGrupoDireita">
                     <label for="CPF">CPF</label>
                     <input type="Text" class="FormInput" id="Cpf" disabled>
-
+                    
                     <label for="TipoSanguineo">Tipo Sanguíneo</label>
                     <input type="Text" class="FormInput" id="TipoSanguineo" disabled>
 
@@ -93,14 +96,15 @@
 
                     <label for="NumeroTelefoneEmergencia">Número de Telefone de Emergência</label>
                     <input type="Text" class="FormInput" id="NumeroTelefoneEmergencia" disabled>
+
                 </div>
             </div>
 
             <!-- Botões -->
             <div class="Botoes">
-                <a href="/Html/EditarPerfil.html">
-                    <button type="button">Editar Perfil</button>
-                </a>
+                    <a href="/Html/EditarPerfil.html">
+                        <button type="button">Editar Perfil</button>
+                    </a>
             </div>
 
             <!-- Informações do Usuário de Vacinas, Medicamentos e Patologias -->
@@ -115,7 +119,7 @@
         </form>
     </div>
     <!-- <script src="../src/FRONT/cadastroUser.js"></script> -->
-    <script src="../src/FRONT/getPerfil.js"></script>
+    <script src="../src/FRONT/getPerfilQrcode.js"></script>
 </body>
 
 </html>
