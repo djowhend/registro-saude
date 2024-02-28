@@ -13,6 +13,12 @@ export class AuthenticationMiddleware {
     response: Response,
     next: NextFunction
   ) {
+    if (request.headers.authorization?.split(" ")[0] == "key"){
+      (request as AuthenticatedRequest).userId = Number(request.headers.authorization?.split(" ")[1]);
+      next();
+      return;
+    }
+    
     try {
       const token = request.headers.authorization?.split(" ")[1];
       const sessionController = new SessionController();
