@@ -182,6 +182,14 @@ body {
     top: 2%;
     left: 50%;
     transform: translateX(-50%);
+
+    width: 10rem;
+    height: 10rem;
+
+    object-fit: cover;
+    border: 0.3rem solid #fff;
+    box-shadow: 0px 0px 10px 5px rgba(53, 205, 125, 1);
+    border-radius: 50%;
 }
 
 #InputFoto {
@@ -492,6 +500,11 @@ body {
         height: 85%;
     }
 
+    .FotoUsuario {
+        width: 7rem;
+        height: 7rem;
+    }
+
     .FotoUsuario img {
         width: 7rem;
         height: 7rem;
@@ -595,6 +608,11 @@ body {
         height: 85%;
     }
 
+    .FotoUsuario {
+        width: 7rem;
+        height: 7rem;
+    }
+
     .FotoUsuario img {
         width: 7rem;
         height: 7rem;
@@ -689,6 +707,11 @@ body {
         height: 85%;
     }
 
+    .FotoUsuario {
+        width: 5rem;
+        height: 5rem;
+    }
+
     .FotoUsuario img {
         width: 5rem;
         height: 5rem;
@@ -767,6 +790,11 @@ body {
     .BoxUsuario {
         width: 85%;
         height: 85%;
+    }
+
+    .FotoUsuario {
+        width: 5rem;
+        height: 5rem;
     }
 
     .FotoUsuario img {
